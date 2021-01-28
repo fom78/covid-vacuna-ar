@@ -9,6 +9,7 @@ export default function Share () {
 
   const url = `https://twitter.com/share?${params}`
 
+  //ver
   const TwitterLogo = () => (
     <svg viewBox='0 0 612 612' width='24'>
       <path
