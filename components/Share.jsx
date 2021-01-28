@@ -2,7 +2,7 @@ import styles from 'styles/Share.module.css'
 
 export default function Share () {
   const params = new URLSearchParams({
-    url: 'https://covid-vacuna.app',
+    url: 'https://covid-vacuna-ar.fom78.vercel.app/',
     text:
       '¡Sigue el progreso de la vacunación contra el COVID19 en esta web adaptada por @fom78a para Argentina y creada por @midudev!\n\n'
   })
