@@ -8,8 +8,7 @@
     "start": "next start",
     "export": "next export",
     "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
-    "lint": "standard",
-    "postinstall": "git config core.hooksPath ./git-hooks"
+    "lint": "standard"
   },
   "dependencies": {
     "csvtojson": "2.0.10",
