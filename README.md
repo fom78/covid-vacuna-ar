@@ -1,6 +1,6 @@
 # Vacunación COVID-19
 
-Aplicación web que muestra el estado y progreso de la vacunación en Argentina 🇪🇸 contra el COVID-19.
+Aplicación web que muestra el estado y progreso de la vacunación en Argentina contra el COVID-19.
 
 ## ¿Cómo lo ejecuto en local?
 
