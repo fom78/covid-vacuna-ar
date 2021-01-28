@@ -6,16 +6,16 @@ const description =
 const SEO = {
   title,
   description,
-  canonical: 'https://covid-vacuna-ar.fom78.vercel.app/',
+  canonical: 'https://covid-vacuna-ar.vercel.app/',
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://covid-vacuna-ar.fom78.vercel.app/',
+    url: 'https://covid-vacuna-ar.vercel.app/',
     title,
     description,
     images: [
       {
-        url: 'https://covid-vacuna-ar.fom78.vercel.app/og.png',
+        url: 'https://covid-vacuna-ar.vercel.app/og.png',
         alt: title,
         width: 1200,
         height: 627

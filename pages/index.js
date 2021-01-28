@@ -38,7 +38,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
       <Head>
         <link
           rel='alternate icon'
-          href='https://covid-vacuna-ar.fom78.vercel.app/vacuna.png'
+          href='https://covid-vacuna-ar.vercel.app/vacuna.png'
           type='image/png'
         />
         <link rel='manifest' href='/manifest.json' />
