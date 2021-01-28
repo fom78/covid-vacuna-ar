@@ -30,7 +30,7 @@ export default function Table ({ data, filter, setFilter }) {
         primeraDosisCantidad,
         ...rest
       } = row
-      console.log(primeraDosisCantidad)
+      //console.log(primeraDosisCantidad)
       const porcentajePoblacionVacunada = primeraDosisCantidad / 45376763
       return {
         // porcentajeEntregadas: porcentajeEntregadas.toFixed(4),
@@ -39,6 +39,7 @@ export default function Table ({ data, filter, setFilter }) {
         porcentajePrimeraDosis: porcentajePrimeraDosis.toFixed(4),
         porcentajeSegundaDosis: porcentajeSegundaDosis.toFixed(4),
         porcentajePoblacionVacunada: porcentajePoblacionVacunada.toFixed(4),
+        primeraDosisCantidad:primeraDosisCantidad,
         ...rest
       }
     }), []
