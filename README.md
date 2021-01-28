@@ -11,7 +11,10 @@ npm install # instalar las dependencias
 npm run dev # levantar el entorno de desarrollo
 ```
 ## Desarrollo original
-- ES https://covid-vacuna.app/
+- ES: https://covid-vacuna.app/
+
+## Mi app
+- AR: https://covid-vacuna-ar.vercel.app/
 
 ## Forks para otros países
 
