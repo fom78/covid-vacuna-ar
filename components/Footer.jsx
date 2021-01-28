@@ -21,7 +21,7 @@ export default function Footer () {
         <span>&bull;</span>
         <a href='https://github.com/fom78' rel='nofollow noreferrer' target='_blank'>GitHub</a>
         <span>&bull;</span>
-        <a href='https://github.com/fom78/covid-vacuna/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
+        <a href='https://github.com/fom78/covid-vacuna-ar/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
       </div>
     </footer>
   )
