@@ -187,7 +187,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
             Descargar últimos datos en formato JSON
           </a>
 
-          {/* <Link href='/como-incrustar'>
+          <Link href='/como-incrustar'>
             <a className={styles.download}>
               <Image
                 width={32}
@@ -197,7 +197,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               />
               Quiero incrustar los datos de vacunación en otra página web
             </a>
-          </Link> */}
+          </Link>
         </main>
 
         <h2 className={styles.subtitle}>Por Provincias</h2>

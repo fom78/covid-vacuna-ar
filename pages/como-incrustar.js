@@ -13,7 +13,7 @@ export default function EjemploEmbed () {
   return (
     <>
       <Head>
-        <title>¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19? - covid-vacuna.app</title>
+        <title>¿Cómo puedo incrustar en una web los datos de vacunación del COVID-19? - covid-vacuna-ar.vercel.app</title>
       </Head>
       <section>
         <Link href='/'>
