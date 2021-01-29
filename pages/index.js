@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Contributors from 'components/Contributors.jsx'
+//import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
@@ -315,8 +315,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           </li>
         </ul> */}
 
-        <h2 className={styles.subtitle}>Contribuidores</h2>
-        <Contributors contributors={contributors} />
+        {/* <h2 className={styles.subtitle}>Contribuidores</h2>
+        <Contributors contributors={contributors} /> */}
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
@@ -338,13 +338,13 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
-  const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
-    .then(res => res.json())
-    .then(json =>
-      json.map(
-        ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
-      )
-    ).catch(() => [])
+  // const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
+  //   .then(res => res.json())
+  //   .then(json =>
+  //     json.map(
+  //       ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
+  //     )
+  //   ).catch(() => [])
 
   const chartDatasets = normalizeChartData()
 
@@ -352,8 +352,8 @@ export async function getStaticProps () {
     props: {
       data,
       info,
-      chartDatasets,
-      contributors
+      chartDatasets
+      //contributors
     }
   }
 }
