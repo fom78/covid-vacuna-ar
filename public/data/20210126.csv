@@ -1,25 +1,25 @@
-"jurisdiccion_codigo_indec,""jurisdiccion_nombre"",""vacuna_nombre"",primera_dosis_cantidad,segunda_dosis_cantidad"
-"06,""Buenos Aires"",""Sputnik V COVID19 Instituto Gamaleya"",103828,3515"
-"02,""CABA"",""Sputnik V COVID19 Instituto Gamaleya"",24066,2442"
-"10,""Catamarca"",""Sputnik V COVID19 Instituto Gamaleya"",2507,780"
-"22,""Chaco"",""Sputnik V COVID19 Instituto Gamaleya"",7738,1823"
-"26,""Chubut"",""Sputnik V COVID19 Instituto Gamaleya"",2919,296"
-"18,""Corrientes"",""Sputnik V COVID19 Instituto Gamaleya"",5788,1225"
-"14,""Córdoba"",""Sputnik V COVID19 Instituto Gamaleya"",21687,7810"
-"30,""Entre Ríos"",""Sputnik V COVID19 Instituto Gamaleya"",9140,540"
-"34,""Formosa"",""Sputnik V COVID19 Instituto Gamaleya"",3331,111"
-"38,""Jujuy"",""Sputnik V COVID19 Instituto Gamaleya"",4502,1985"
-"42,""La Pampa"",""Sputnik V COVID19 Instituto Gamaleya"",2262,832"
-"46,""La Rioja"",""Sputnik V COVID19 Instituto Gamaleya"",2817,1182"
-"50,""Mendoza"",""Sputnik V COVID19 Instituto Gamaleya"",9451,490"
-"54,""Misiones"",""Sputnik V COVID19 Instituto Gamaleya"",5405,1463"
-"58,""Neuquén"",""Sputnik V COVID19 Instituto Gamaleya"",3644,1428"
-"62,""Río Negro"",""Sputnik V COVID19 Instituto Gamaleya"",4485,1456"
-"66,""Salta"",""Sputnik V COVID19 Instituto Gamaleya"",7954,2416"
-"70,""San Juan"",""Sputnik V COVID19 Instituto Gamaleya"",3326,795"
-"74,""San Luis"",""Sputnik V COVID19 Instituto Gamaleya"",2949,1556"
-"78,""Santa Cruz"",""Sputnik V COVID19 Instituto Gamaleya"",2250,244"
-"82,""Santa Fe"",""Sputnik V COVID19 Instituto Gamaleya"",20769,1928"
-"86,""Santiago del Estero"",""Sputnik V COVID19 Instituto Gamaleya"",5628,1007"
-"94,""Tierra del Fuego"",""Sputnik V COVID19 Instituto Gamaleya"",1276,222"
-"90,""Tucumán"",""Sputnik V COVID19 Instituto Gamaleya"",9247,3365"
+"jurisdiccion_codigo_indec","jurisdiccion_nombre","vacuna_nombre",primera_dosis_cantidad,segunda_dosis_cantidad
+"06","Buenos Aires","Sputnik V COVID19 Instituto Gamaleya",103828,3515
+"02","CABA","Sputnik V COVID19 Instituto Gamaleya",24066,2442
+"10","Catamarca","Sputnik V COVID19 Instituto Gamaleya",2507,780
+"22","Chaco","Sputnik V COVID19 Instituto Gamaleya",7738,1823
+"26","Chubut","Sputnik V COVID19 Instituto Gamaleya",2919,296
+"18","Corrientes","Sputnik V COVID19 Instituto Gamaleya",5788,1225
+"14","Córdoba","Sputnik V COVID19 Instituto Gamaleya",21687,7810
+"30","Entre Ríos","Sputnik V COVID19 Instituto Gamaleya",9140,540
+"34","Formosa","Sputnik V COVID19 Instituto Gamaleya",3331,111
+"38","Jujuy","Sputnik V COVID19 Instituto Gamaleya",4502,1985
+"42","La Pampa","Sputnik V COVID19 Instituto Gamaleya",2262,832
+"46","La Rioja","Sputnik V COVID19 Instituto Gamaleya",2817,1182
+"50","Mendoza","Sputnik V COVID19 Instituto Gamaleya",9451,490
+"54","Misiones","Sputnik V COVID19 Instituto Gamaleya",5405,1463
+"58","Neuquén","Sputnik V COVID19 Instituto Gamaleya",3644,1428
+"62","Río Negro","Sputnik V COVID19 Instituto Gamaleya",4485,1456
+"66","Salta","Sputnik V COVID19 Instituto Gamaleya",7954,2416
+"70","San Juan","Sputnik V COVID19 Instituto Gamaleya",3326,795
+"74","San Luis","Sputnik V COVID19 Instituto Gamaleya",2949,1556
+"78","Santa Cruz","Sputnik V COVID19 Instituto Gamaleya",2250,244
+"82","Santa Fe","Sputnik V COVID19 Instituto Gamaleya",20769,1928
+"86","Santiago del Estero","Sputnik V COVID19 Instituto Gamaleya",5628,1007
+"94","Tierra del Fuego","Sputnik V COVID19 Instituto Gamaleya",1276,222
+"90","Tucumán","Sputnik V COVID19 Instituto Gamaleya",9247,3365

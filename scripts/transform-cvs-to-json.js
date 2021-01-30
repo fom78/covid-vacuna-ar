@@ -37,7 +37,7 @@ module.exports = async function transformCvsToJson (cvsFileName) {
           totalesPrimerasDosis = totalesPrimerasDosis + primeraDosisCantidad
           totalesSegundasDosis = totalesSegundasDosis + segundaDosisCantidad
         }
-        
+        const totalDosisAplicadas = primeraDosisCantidad + segundaDosisCantidad
          const normalizedJurisdiccionNombre = populationCodigo[jurisdiccionCodigoIndec]
          let populationJurisdiccionNombre = population[normalizedJurisdiccionNombre]
          if (populationJurisdiccionNombre === 0) {populationJurisdiccionNombre=0}
@@ -49,6 +49,7 @@ module.exports = async function transformCvsToJson (cvsFileName) {
           vacunaNombre,
           primeraDosisCantidad,
           segundaDosisCantidad,
+          totalDosisAplicadas,
           porcentajePrimeraDosis: primeraDosisCantidad / populationJurisdiccionNombre,
           porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre
         }

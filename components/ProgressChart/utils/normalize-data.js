@@ -85,4 +85,5 @@ export const datasetFields = [
   "vacunaNombre",
   "primeraDosisCantidad",
   "segundaDosisCantidad",
+  "totalDosisAplicadas",
 ];

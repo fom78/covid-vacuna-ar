@@ -21,7 +21,7 @@ export function DosisAdministradasTooltip ({ active, payload, label }) {
   return (
     <div className={styles.chartTooltip}>
       <p>
-        A día <Bold text={label} /> se han administrado{' '}
+        Al día <Bold text={label} /> se han administrado{' '}
         <Bold text={value} /> dosis.
       </p>
     </div>
@@ -36,7 +36,7 @@ export function DosisEntregadasTooltip ({ active, payload, label }) {
   return (
     <div className={styles.chartTooltip}>
       <p>
-        A día <Bold text={label} /> se han entregado{' '}
+        Al día <Bold text={label} /> se han aplicado{' '}
         <Bold text={value} /> dosis.
       </p>
     </div>

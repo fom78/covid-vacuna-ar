@@ -10,28 +10,36 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Select from 'components/Select'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
 
 import styles from 'styles/Home.module.css'
+import useSearch from 'hooks/useSearchReport'
 import TimeAgo from 'components/TimeAgo.jsx'
 
-// import ProgressChart from 'components/ProgressChart'
-// import {
-//   DosisAdministradasTooltip,
-//   DosisEntregadasTooltip
-// } from 'components/ProgressChart/tooltips'
+import ProgressChart from 'components/ProgressChart'
+import {
+  DosisAdministradasTooltip,
+  DosisEntregadasTooltip
+} from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import ClientSideComponent from 'components/ClientSideComponent'
 
-export default function Home ({ contributors, data, info, chartDatasets }) {
+export default function Home ({ contributors, data, info, reports, chartDatasets }) {
   const [filter, setFilter] = useState('Totales')
-  // setFilter(filter)
+  const [valueSearch, setValueSearch] = useState('')
+  const reportFound = useSearch({ valueSearch })
+  // const totals = useMemo(
+  //   () => data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
+  //   [data, filter]
+  // )
   const totals = useMemo(
-    () => data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
-    [data, filter]
+    () => reportFound !== undefined ? reportFound.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter) : data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
+    [data, filter, reportFound]
   )
+const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaDosisCantidad
 
   return (
     <>
@@ -56,6 +64,8 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
               Datos Abiertos del Ministerio de Salud
             </a>
           </small>
+
+          <Select data={reports} onChange={setValueSearch} />
 
           <div className={styles.grid}>
             <div className={styles.card}>
@@ -204,12 +214,12 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 
         <Table data={data} filter={filter} setFilter={setFilter} />
 
-        {/* <h2 className={styles.subtitle}>Evolución de dosis entregadas</h2> */}
+        <h2 className={styles.subtitle}>Evolución de dosis aplicadas</h2>
 
-        {/* <ProgressChart
-          dataset={chartDatasets.dosisEntregadas}
+        <ProgressChart
+          dataset={chartDatasets.totalDosisAplicadas}
           tooltip={DosisEntregadasTooltip}
-        /> */}
+        />
 
         {/* <h2 className={styles.subtitle}>Evolución de dosis administradas</h2>
 
@@ -243,52 +253,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
           </li> */}
         </ul>
 
-        {/* <h2 className={styles.subtitle}>Changelog</h2>
-        <ul>
-          <li>
-            <strong>1.5.0</strong>: Añadidas gráficas{' '}
-            <span aria-label='Gráfica subiendo' role='img'>
-              📈
-            </span>{' '}
-            y contribuidores{' '}
-            <span aria-label='Emoji de ciclista' role='img'>
-              🚵‍♀️
-            </span>
-          </li>
-          <li>
-            <strong>1.4.0</strong>: Añadida la posibilidad de incrustar los
-            datos en otra página{' '}
-            <span aria-label='Globo del mundo con meridianos' role='img'>
-              🌐
-            </span>
-          </li>
-          <li>
-            <strong>1.3.0</strong>: Añadido modo oscuro a la app{' '}
-            <span aria-label='Luna' role='img'>
-              🌚
-            </span>
-          </li>
-          <li>
-            <strong>1.2.0</strong>: Añadida barra de progreso de vacunación en
-            población{' '}
-            <span aria-label='Globo terrícola con vistas a América' role='img'>
-              🌎
-            </span>
-          </li>
-          <li>
-            <strong>1.1.0</strong>: Añadidas personas con pauta completa{' '}
-            <span aria-label='Jeringuilla' role='img'>
-              💉
-            </span>
-          </li>
-          <li>
-            <strong>1.0.0</strong>: Primera versión{' '}
-            <span aria-label='Fuego' role='img'>
-              🔥
-            </span>
-          </li>
-        </ul> */}
-
+        
         {/* <h2 className={styles.subtitle}>En los medios</h2>
         <ul>
           <li>
@@ -338,6 +303,7 @@ export default function Home ({ contributors, data, info, chartDatasets }) {
 export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
+  const reports = require('../public/data/reports.json')
   // const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
   //   .then(res => res.json())
   //   .then(json =>
@@ -352,7 +318,8 @@ export async function getStaticProps () {
     props: {
       data,
       info,
-      chartDatasets
+      chartDatasets,
+      reports
       //contributors
     }
   }

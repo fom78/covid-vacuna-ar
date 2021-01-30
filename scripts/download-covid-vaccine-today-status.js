@@ -1,6 +1,7 @@
 const download = require('download')
 const fs = require('fs-extra')
 const transformCvsToJson = require('./transform-cvs-to-json')
+const getNameReports = require('./get-everything-name-reports')
 
 const PREFIX_URL = 'https://sisa.msal.gov.ar/datos/descargas/covid-19/files/Covid19VacunasAgrupadas'
 const SUFFIX_URL = '.csv'
@@ -16,13 +17,6 @@ const filename = `${year}${month}${day}.csv`
 
 const latestJson = require('../public/data/latest.json')
 
-// async () => {
-// const json =  await transformOdsToJson(filename)
-//     const jsonFileName = filename.replace('.csv', '.json')
-
-//    await fs.writeJson(`./public/data/${jsonFileName}`, json)
-// }
-
 download(url, 'public/data', { filename })
   .then(async () => {
     console.log(`${url} downloaded`)
@@ -35,6 +29,7 @@ download(url, 'public/data', { filename })
         const jsonFileName = filename.replace('.csv', '.json')
 
         await fs.writeJson(`./public/data/${jsonFileName}`, json,'utf8')
+        await getNameReports()
         await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
         await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
       } 
