@@ -10,6 +10,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
+import Prevision from "components/Prevision";
 import Select from 'components/Select'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
@@ -149,7 +150,7 @@ const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaD
                   <h4>% sobre distribuidas</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
-                      {totals.primeraDosisCantidad/(totals.primeraDosisCantidad+totals.segundaDosisCantidad)}
+                      {totals.primeraDosisCantidad/(totals.totalDosisAplicadas)}
                     </NumberPercentage>
                   </p>
                 </div>
@@ -174,10 +175,10 @@ const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaD
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre dsitribuidas</h4>
+                  <h4>% sobre distribuidas</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
-                      {totals.segundaDosisCantidad/(totals.primeraDosisCantidad+totals.segundaDosisCantidad)}
+                      {totals.segundaDosisCantidad/(totals.totalDosisAplicadas)}
                     </NumberPercentage>
                   </p>
                 </div>
@@ -186,6 +187,7 @@ const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaD
           </div>
 
           <Progress totals={totals} />
+          <Prevision totals={totals} />
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image

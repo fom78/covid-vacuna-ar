@@ -1,1 +1,252 @@
-[{"jurisdiccionNombre":"Buenos Aires","jurisdiccionCodigoIndec":6,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":110642,"segundaDosisCantidad":10735,"totalDosisAplicadas":121377,"porcentajePrimeraDosis":0.0063075714401930865,"porcentajeSegundaDosis":0.0006119898357809221},{"jurisdiccionNombre":"CABA","jurisdiccionCodigoIndec":2,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":24272,"segundaDosisCantidad":5102,"totalDosisAplicadas":29374,"porcentajePrimeraDosis":0.007891675439891327,"porcentajeSegundaDosis":0.0016588385009198069},{"jurisdiccionNombre":"Catamarca","jurisdiccionCodigoIndec":10,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2533,"segundaDosisCantidad":1442,"totalDosisAplicadas":3975,"porcentajePrimeraDosis":0.006097179362504152,"porcentajeSegundaDosis":0.003471035389155542},{"jurisdiccionNombre":"Chaco","jurisdiccionCodigoIndec":22,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":7851,"segundaDosisCantidad":2696,"totalDosisAplicadas":10547,"porcentajePrimeraDosis":0.006517835424447985,"porcentajeSegundaDosis":0.0022381969563510084},{"jurisdiccionNombre":"Chubut","jurisdiccionCodigoIndec":26,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2963,"segundaDosisCantidad":729,"totalDosisAplicadas":3692,"porcentajePrimeraDosis":0.004786799225840638,"porcentajeSegundaDosis":0.0011777173930603527},{"jurisdiccionNombre":"Corrientes","jurisdiccionCodigoIndec":18,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":6632,"segundaDosisCantidad":1820,"totalDosisAplicadas":8452,"porcentajePrimeraDosis":0.005917196719132121,"porcentajeSegundaDosis":0.0016238386653830608},{"jurisdiccionNombre":"Córdoba","jurisdiccionCodigoIndec":14,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":21704,"segundaDosisCantidad":9698,"totalDosisAplicadas":31402,"porcentajePrimeraDosis":0.005771649669587416,"porcentajeSegundaDosis":0.0025789466686167877},{"jurisdiccionNombre":"Entre Ríos","jurisdiccionCodigoIndec":30,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":9454,"segundaDosisCantidad":1505,"totalDosisAplicadas":10959,"porcentajePrimeraDosis":0.006821259761277554,"porcentajeSegundaDosis":0.0010858891411807403},{"jurisdiccionNombre":"Formosa","jurisdiccionCodigoIndec":34,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":3343,"segundaDosisCantidad":1667,"totalDosisAplicadas":5010,"porcentajePrimeraDosis":0.0055238576784595985,"porcentajeSegundaDosis":0.00275449319473292},{"jurisdiccionNombre":"Jujuy","jurisdiccionCodigoIndec":38,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":4503,"segundaDosisCantidad":1985,"totalDosisAplicadas":6488,"porcentajePrimeraDosis":0.005841368512130926,"porcentajeSegundaDosis":0.002574975904192735},{"jurisdiccionNombre":"La Pampa","jurisdiccionCodigoIndec":42,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2269,"segundaDosisCantidad":1167,"totalDosisAplicadas":3436,"porcentajePrimeraDosis":0.006330420614460924,"porcentajeSegundaDosis":0.00325588402691754},{"jurisdiccionNombre":"La Rioja","jurisdiccionCodigoIndec":46,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2822,"segundaDosisCantidad":1272,"totalDosisAplicadas":4094,"porcentajePrimeraDosis":0.0071709725536234755,"porcentajeSegundaDosis":0.0032322739504638772},{"jurisdiccionNombre":"Mendoza","jurisdiccionCodigoIndec":50,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":10347,"segundaDosisCantidad":1863,"totalDosisAplicadas":12210,"porcentajePrimeraDosis":0.00519861450668178,"porcentajeSegundaDosis":0.0009360219219047217},{"jurisdiccionNombre":"Misiones","jurisdiccionCodigoIndec":54,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":5379,"segundaDosisCantidad":1830,"totalDosisAplicadas":7209,"porcentajePrimeraDosis":0.004264667872835358,"porcentajeSegundaDosis":0.001450890910445939},{"jurisdiccionNombre":"Neuquén","jurisdiccionCodigoIndec":58,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":3646,"segundaDosisCantidad":2237,"totalDosisAplicadas":5883,"porcentajePrimeraDosis":0.005490492533020508,"porcentajeSegundaDosis":0.0033686867241818096},{"jurisdiccionNombre":"Río Negro","jurisdiccionCodigoIndec":62,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":4526,"segundaDosisCantidad":2006,"totalDosisAplicadas":6532,"porcentajePrimeraDosis":0.006053958614785784,"porcentajeSegundaDosis":0.0026832171854309066},{"jurisdiccionNombre":"Salta","jurisdiccionCodigoIndec":66,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":7981,"segundaDosisCantidad":3178,"totalDosisAplicadas":11159,"porcentajePrimeraDosis":0.005603072738850194,"porcentajeSegundaDosis":0.0022311195544500585},{"jurisdiccionNombre":"San Juan","jurisdiccionCodigoIndec":70,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":3889,"segundaDosisCantidad":1212,"totalDosisAplicadas":5101,"porcentajePrimeraDosis":0.004978130276222867,"porcentajeSegundaDosis":0.0015514255322144808},{"jurisdiccionNombre":"San Luis","jurisdiccionCodigoIndec":74,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2970,"segundaDosisCantidad":1730,"totalDosisAplicadas":4700,"porcentajePrimeraDosis":0.005842684251113455,"porcentajeSegundaDosis":0.0034033143954297226},{"jurisdiccionNombre":"Santa Cruz","jurisdiccionCodigoIndec":78,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":2255,"segundaDosisCantidad":785,"totalDosisAplicadas":3040,"porcentajePrimeraDosis":0.006166290217611253,"porcentajeSegundaDosis":0.0021465799648890615},{"jurisdiccionNombre":"Santa Fe","jurisdiccionCodigoIndec":82,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":21610,"segundaDosisCantidad":4707,"totalDosisAplicadas":26317,"porcentajePrimeraDosis":0.0061107029768539805,"porcentajeSegundaDosis":0.0013310078163836967},{"jurisdiccionNombre":"Santiago del Estero","jurisdiccionCodigoIndec":86,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":5682,"segundaDosisCantidad":1831,"totalDosisAplicadas":7513,"porcentajePrimeraDosis":0.005807957167082519,"porcentajeSegundaDosis":0.0018715891539824168},{"jurisdiccionNombre":"Tierra del Fuego","jurisdiccionCodigoIndec":94,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":1355,"segundaDosisCantidad":384,"totalDosisAplicadas":1739,"porcentajePrimeraDosis":0.007812860371788367,"porcentajeSegundaDosis":0.002214124267724526},{"jurisdiccionNombre":"Tucumán","jurisdiccionCodigoIndec":90,"vacunaNombre":"Sputnik V COVID19 Instituto Gamaleya","primeraDosisCantidad":9823,"segundaDosisCantidad":4002,"totalDosisAplicadas":13825,"porcentajePrimeraDosis":0.005796456626005514,"porcentajeSegundaDosis":0.002361541221345217},{"jurisdiccionNombre":"Totales","jurisdiccionCodigoIndec":0,"vacunaNombre":"Sputnik","primeraDosisCantidad":278451,"segundaDosisCantidad":65583,"totalDosisAplicadas":344034,"porcentajePrimeraDosis":0.0061364227324897545,"porcentajeSegundaDosis":0.0014452992162530412}]
+[
+    {
+        "jurisdiccionNombre": "Buenos Aires",
+        "jurisdiccionCodigoIndec": 6,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 110642,
+        "segundaDosisCantidad": 10735,
+        "totalDosisAplicadas": 121377,
+        "porcentajePrimeraDosis": 0.0063075714401930865,
+        "porcentajeSegundaDosis": 0.0006119898357809221
+    },
+    {
+        "jurisdiccionNombre": "CABA",
+        "jurisdiccionCodigoIndec": 2,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 24272,
+        "segundaDosisCantidad": 5102,
+        "totalDosisAplicadas": 29374,
+        "porcentajePrimeraDosis": 0.007891675439891327,
+        "porcentajeSegundaDosis": 0.0016588385009198069
+    },
+    {
+        "jurisdiccionNombre": "Catamarca",
+        "jurisdiccionCodigoIndec": 10,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2533,
+        "segundaDosisCantidad": 1442,
+        "totalDosisAplicadas": 3975,
+        "porcentajePrimeraDosis": 0.006097179362504152,
+        "porcentajeSegundaDosis": 0.003471035389155542
+    },
+    {
+        "jurisdiccionNombre": "Chaco",
+        "jurisdiccionCodigoIndec": 22,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 7851,
+        "segundaDosisCantidad": 2696,
+        "totalDosisAplicadas": 10547,
+        "porcentajePrimeraDosis": 0.006517835424447985,
+        "porcentajeSegundaDosis": 0.0022381969563510084
+    },
+    {
+        "jurisdiccionNombre": "Chubut",
+        "jurisdiccionCodigoIndec": 26,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2963,
+        "segundaDosisCantidad": 729,
+        "totalDosisAplicadas": 3692,
+        "porcentajePrimeraDosis": 0.004786799225840638,
+        "porcentajeSegundaDosis": 0.0011777173930603527
+    },
+    {
+        "jurisdiccionNombre": "Corrientes",
+        "jurisdiccionCodigoIndec": 18,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 6632,
+        "segundaDosisCantidad": 1820,
+        "totalDosisAplicadas": 8452,
+        "porcentajePrimeraDosis": 0.005917196719132121,
+        "porcentajeSegundaDosis": 0.0016238386653830608
+    },
+    {
+        "jurisdiccionNombre": "Córdoba",
+        "jurisdiccionCodigoIndec": 14,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 21704,
+        "segundaDosisCantidad": 9698,
+        "totalDosisAplicadas": 31402,
+        "porcentajePrimeraDosis": 0.005771649669587416,
+        "porcentajeSegundaDosis": 0.0025789466686167877
+    },
+    {
+        "jurisdiccionNombre": "Entre Ríos",
+        "jurisdiccionCodigoIndec": 30,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 9454,
+        "segundaDosisCantidad": 1505,
+        "totalDosisAplicadas": 10959,
+        "porcentajePrimeraDosis": 0.006821259761277554,
+        "porcentajeSegundaDosis": 0.0010858891411807403
+    },
+    {
+        "jurisdiccionNombre": "Formosa",
+        "jurisdiccionCodigoIndec": 34,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 3343,
+        "segundaDosisCantidad": 1667,
+        "totalDosisAplicadas": 5010,
+        "porcentajePrimeraDosis": 0.0055238576784595985,
+        "porcentajeSegundaDosis": 0.00275449319473292
+    },
+    {
+        "jurisdiccionNombre": "Jujuy",
+        "jurisdiccionCodigoIndec": 38,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 4503,
+        "segundaDosisCantidad": 1985,
+        "totalDosisAplicadas": 6488,
+        "porcentajePrimeraDosis": 0.005841368512130926,
+        "porcentajeSegundaDosis": 0.002574975904192735
+    },
+    {
+        "jurisdiccionNombre": "La Pampa",
+        "jurisdiccionCodigoIndec": 42,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2269,
+        "segundaDosisCantidad": 1167,
+        "totalDosisAplicadas": 3436,
+        "porcentajePrimeraDosis": 0.006330420614460924,
+        "porcentajeSegundaDosis": 0.00325588402691754
+    },
+    {
+        "jurisdiccionNombre": "La Rioja",
+        "jurisdiccionCodigoIndec": 46,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2822,
+        "segundaDosisCantidad": 1272,
+        "totalDosisAplicadas": 4094,
+        "porcentajePrimeraDosis": 0.0071709725536234755,
+        "porcentajeSegundaDosis": 0.0032322739504638772
+    },
+    {
+        "jurisdiccionNombre": "Mendoza",
+        "jurisdiccionCodigoIndec": 50,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 10347,
+        "segundaDosisCantidad": 1863,
+        "totalDosisAplicadas": 12210,
+        "porcentajePrimeraDosis": 0.00519861450668178,
+        "porcentajeSegundaDosis": 0.0009360219219047217
+    },
+    {
+        "jurisdiccionNombre": "Misiones",
+        "jurisdiccionCodigoIndec": 54,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 5379,
+        "segundaDosisCantidad": 1830,
+        "totalDosisAplicadas": 7209,
+        "porcentajePrimeraDosis": 0.004264667872835358,
+        "porcentajeSegundaDosis": 0.001450890910445939
+    },
+    {
+        "jurisdiccionNombre": "Neuquén",
+        "jurisdiccionCodigoIndec": 58,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 3646,
+        "segundaDosisCantidad": 2237,
+        "totalDosisAplicadas": 5883,
+        "porcentajePrimeraDosis": 0.005490492533020508,
+        "porcentajeSegundaDosis": 0.0033686867241818096
+    },
+    {
+        "jurisdiccionNombre": "Río Negro",
+        "jurisdiccionCodigoIndec": 62,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 4526,
+        "segundaDosisCantidad": 2006,
+        "totalDosisAplicadas": 6532,
+        "porcentajePrimeraDosis": 0.006053958614785784,
+        "porcentajeSegundaDosis": 0.0026832171854309066
+    },
+    {
+        "jurisdiccionNombre": "Salta",
+        "jurisdiccionCodigoIndec": 66,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 7981,
+        "segundaDosisCantidad": 3178,
+        "totalDosisAplicadas": 11159,
+        "porcentajePrimeraDosis": 0.005603072738850194,
+        "porcentajeSegundaDosis": 0.0022311195544500585
+    },
+    {
+        "jurisdiccionNombre": "San Juan",
+        "jurisdiccionCodigoIndec": 70,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 3889,
+        "segundaDosisCantidad": 1212,
+        "totalDosisAplicadas": 5101,
+        "porcentajePrimeraDosis": 0.004978130276222867,
+        "porcentajeSegundaDosis": 0.0015514255322144808
+    },
+    {
+        "jurisdiccionNombre": "San Luis",
+        "jurisdiccionCodigoIndec": 74,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2970,
+        "segundaDosisCantidad": 1730,
+        "totalDosisAplicadas": 4700,
+        "porcentajePrimeraDosis": 0.005842684251113455,
+        "porcentajeSegundaDosis": 0.0034033143954297226
+    },
+    {
+        "jurisdiccionNombre": "Santa Cruz",
+        "jurisdiccionCodigoIndec": 78,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 2255,
+        "segundaDosisCantidad": 785,
+        "totalDosisAplicadas": 3040,
+        "porcentajePrimeraDosis": 0.006166290217611253,
+        "porcentajeSegundaDosis": 0.0021465799648890615
+    },
+    {
+        "jurisdiccionNombre": "Santa Fe",
+        "jurisdiccionCodigoIndec": 82,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 21610,
+        "segundaDosisCantidad": 4707,
+        "totalDosisAplicadas": 26317,
+        "porcentajePrimeraDosis": 0.0061107029768539805,
+        "porcentajeSegundaDosis": 0.0013310078163836967
+    },
+    {
+        "jurisdiccionNombre": "Santiago del Estero",
+        "jurisdiccionCodigoIndec": 86,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 5682,
+        "segundaDosisCantidad": 1831,
+        "totalDosisAplicadas": 7513,
+        "porcentajePrimeraDosis": 0.005807957167082519,
+        "porcentajeSegundaDosis": 0.0018715891539824168
+    },
+    {
+        "jurisdiccionNombre": "Tierra del Fuego",
+        "jurisdiccionCodigoIndec": 94,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 1355,
+        "segundaDosisCantidad": 384,
+        "totalDosisAplicadas": 1739,
+        "porcentajePrimeraDosis": 0.007812860371788367,
+        "porcentajeSegundaDosis": 0.002214124267724526
+    },
+    {
+        "jurisdiccionNombre": "Tucumán",
+        "jurisdiccionCodigoIndec": 90,
+        "vacunaNombre": "Sputnik V COVID19 Instituto Gamaleya",
+        "primeraDosisCantidad": 9823,
+        "segundaDosisCantidad": 4002,
+        "totalDosisAplicadas": 13825,
+        "porcentajePrimeraDosis": 0.005796456626005514,
+        "porcentajeSegundaDosis": 0.002361541221345217
+    },
+    {
+        "jurisdiccionNombre": "Totales",
+        "jurisdiccionCodigoIndec": 0,
+        "vacunaNombre": "Sputnik",
+        "primeraDosisCantidad": 278451,
+        "segundaDosisCantidad": 65583,
+        "totalDosisAplicadas": 344034,
+        "porcentajePrimeraDosis": 0.0061364227324897545,
+        "porcentajeSegundaDosis": 0.0014452992162530412
+    }
+]

@@ -19,7 +19,7 @@ export default function Footer () {
           {/* <img width='92' height='24' loading='lazy' src='https://midu.dev/logo.png' alt='midudev' /> */}
         </a>
         <span>&bull;</span>
-        <a href='https://github.com/fom78' rel='nofollow noreferrer' target='_blank'>GitHub</a>
+        <a href='https://github.com/fom78/covid-vacuna-ar' rel='nofollow noreferrer' target='_blank'>GitHub</a>
         <span>&bull;</span>
         <a href='https://github.com/fom78/covid-vacuna-ar/issues/new' rel='nofollow noreferrer' target='_blank'>Enviar sugerencia</a>
       </div>
