@@ -10,7 +10,7 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
-import Prevision from "components/Prevision";
+//import Prevision from "components/Prevision/Prevision";
 import PrevisionOriginal from "components/PrevisionOriginal";
 import Select from 'components/Select'
 import Share from 'components/Share.jsx'
