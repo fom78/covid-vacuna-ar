@@ -27,7 +27,7 @@ function getMedia(newReports,filter) {
     }
   }
   
-  const mediaOfLastsDays = vacunadosCompletos / (newReports.length-1)
+  const mediaOfLastsDays = vacunadosCompletos / 7 // la media es en la semana
   return mediaOfLastsDays
 }
 
@@ -63,6 +63,7 @@ export default function Progress ({ data, totals }) {
   return (
     <>
       <h2>Estimación población vacunada</h2>
+      <small>Se toma en cuenta la media de los ultimos 7 dias.</small>
       {totals.porcentajeSegundaDosis
         ? (
           <section>

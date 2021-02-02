@@ -3,7 +3,7 @@ import path from "path";
 
 export default function getNewReports(reports) {
   const dataPath = path.join("public", "data");
-  const QTY_REPORTS_FOR_MEDIA = -1*3;
+  const QTY_REPORTS_FOR_MEDIA = -1*7 // Para hacer la semana se debe colocar el numero de dias que entregan reportes mas uno.
 
   const newReports = reports.slice(QTY_REPORTS_FOR_MEDIA).map((date) => {
     const fileName = date + ".json";
