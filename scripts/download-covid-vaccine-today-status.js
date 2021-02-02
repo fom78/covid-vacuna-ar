@@ -26,12 +26,19 @@ download(url, 'public/data', { filename })
     if (totales) {
       const totalesLatest = latestJson.find(({ jurisdiccionNombre }) => jurisdiccionNombre === 'Totales')
       if (totalesLatest.primeraDosisCantidad !== totales.primeraDosisCantidad) {
-        const jsonFileName = filename.replace('.csv', '.json')
+        //Es otro dia!
+        //ver si hay datos.... sino lo hay domingo!!
+        if (totales.segundaDosisCantidad !== 0) {
+          const jsonFileName = filename.replace('.csv', '.json')
 
-        await fs.writeJson(`./public/data/${jsonFileName}`, json,'utf8')
-        await getNameReports()
-        await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
-        await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
+          await fs.writeJson(`./public/data/${jsonFileName}`, json,'utf8')
+          await getNameReports()
+          await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
+          await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
+        } else {
+          console.log("No hay Data, probablmente sea Domingo.")
+        }
+        
       } 
     }
     

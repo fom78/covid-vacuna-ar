@@ -14,7 +14,7 @@ module.exports = async function transformCvsToJson (cvsFileName) {
     jurisdiccion_nombre: "Totales",
     vacuna_nombre: "Sputnik",
     primera_dosis_cantidad: 9999,
-    segunda_dosis_cantidad: 5555
+    segunda_dosis_cantidad: 3
   }
   let totalesPrimerasDosis = 0
   let totalesSegundasDosis = 0
