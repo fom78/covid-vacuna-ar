@@ -137,7 +137,7 @@ export default function Table ({ data, filter, setFilter }) {
                 <td className={styles.mobileData}>
                   {row.cells.map((cell, index) => {
                     return (
-                      <span>
+                      <span key={index}>
                         {index === 0 ? '' : `${headerGroups[0].headers[index].Header} - ${cell.column.format(cell.value)}`}
                       </span>
                     )

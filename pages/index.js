@@ -10,8 +10,8 @@ import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
-//import Prevision from "components/Prevision/Prevision";
-import PrevisionOriginal from "components/PrevisionOriginal";
+import Prevision from "components/Prevision/Prevision";
+//import PrevisionOriginal from "components/PrevisionOriginal";
 import Select from 'components/Select'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
@@ -27,22 +27,19 @@ import {
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
-import getNewReports from 'scripts/get-lasts-reports'
+import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
 export default function Home ({ contributors, data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
-  // const totals = useMemo(
-  //   () => data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
-  //   [data, filter]
-  // )
+ 
   const totals = useMemo(
     () => reportFound !== undefined ? reportFound.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter) : data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
     [data, filter, reportFound]
   )
-const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaDosisCantidad
+//const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaDosisCantidad
 
   return (
     <>
@@ -189,8 +186,8 @@ const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaD
           </div>
 
           <Progress totals={totals} />
-          {/* <Prevision data={newReports} totals={totals} /> */}
-          <PrevisionOriginal totals={totals} />
+          <Prevision data={newReports} totals={totals} />
+          {/* <PrevisionOriginal totals={totals} /> */}
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -306,59 +303,13 @@ const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaD
 }
 
 export async function getStaticProps () {
-  const path =require("path")
-
-  const fs = require("fs-extra")
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
   const reports = require('../public/data/reports.json')
   
-//   const dataPath = path.join("public", "data");
-//   console.log(dataPath)
-//   fs.readJson(dataPath+'/20210128.json')
-// .then(json => {
-//   console.log(json) // => 0.1.3
-// })
-// .catch(err => {
-//   console.error(err)
-// })
-console.log("Hola")
-
-  // const contributors = await fetch('https://api.github.com/repos/midudev/covid-vacuna/contributors')
-  //   .then(res => res.json())
-  //   .then(json =>
-  //     json.map(
-  //       ({ login, avatar_url: avatar, html_url: url }) => ({ login, avatar, url })
-  //     )
-  //   ).catch(() => [])
-  
-  // const medias = (reports) => {
-  //   const week = -2
-  //   const dataPath = path.join("public", "data");
-  //   console.log(dataPath)
-  
-  //   return reports.slice(week).map((date) => {
-  //     //console.log(date)
-  //      const fileName = date+'.json'
-  //      const completeFile = dataPath+'/'+fileName
-  //      //console.log(fileName)
-  //      fs.readFile(completeFile, (err, data) => {
-  //       if (err) throw err;
-
-  //       const json = JSON.parse(data);
-  //       json.map((e)=>{
-  //        // console.log(e.segundaDosisCantidad)
-
-  //       })
-  //       //console.log(json);
-  //   });
-  //   })
-  // }
-  // const temp = medias(reports)  
-  // console.log(media)
   const chartDatasets = normalizeChartData()
   const newReports = getNewReports(reports)
-  console.log('nuevos reportes: '+newReports)
+  
   return {
     props: {
       data,

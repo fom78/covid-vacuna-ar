@@ -1,14 +1,8 @@
 import { useLocale } from 'hooks/useLocale.js'
-//import getNewReports from "scripts/get-lasts-reports";
 
- const { population } = require('../public/data/bbdd.json')
- const dataLatest = require('../public/data/latest.json')
-const MILISECONDS_DAY = 1000 * 60 * 60 * 24
+ const { population } = require('public/data/bbdd.json')
+ const dataLatest = require('public/data/latest.json')
 const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-
-const getDaysFromStartVaccination = () => {
-  return (new Date().getTime() - new Date(START_DATA_VACCINATION).getTime()) / MILISECONDS_DAY
-}
 
 function getTotalPopulationToBeVaccinated(filter) {
   const populationJurisdiccionNombre = population[filter]
@@ -17,25 +11,34 @@ function getTotalPopulationToBeVaccinated(filter) {
   return totalPopulationToBeVaccinated
 }
 
-function getMedia(newReports) {
+function getMedia(newReports,filter) {
   
-  //const newReports = getNewReports(filter,reports)
+  let vacunadosCompletos = 0
+  let base = 0
+  for (let i = 0; i < newReports.length; i++) {
+    const element = newReports[i]
+    const jurisdiccionActual = element.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter)
+    if (i===0) {
+      base = jurisdiccionActual.segundaDosisCantidad
+    } else {
+      vacunadosCompletos = vacunadosCompletos + jurisdiccionActual.segundaDosisCantidad - base
+      base = jurisdiccionActual.segundaDosisCantidad
+    
+    }
+  }
   
-  const reducer = (accumulator, currentValue) => accumulator.completos + currentValue.completos
-  const suma = newReports.reduce(reducer)
-  const mediaOfLastsDays = suma / newReports.length
-
+  const mediaOfLastsDays = vacunadosCompletos / (newReports.length-1)
   return mediaOfLastsDays
 }
 
 function prevision(filter,percentage,newReports) {
-  const mediaOfLastsDays = getMedia(newReports)
+  const mediaOfLastsDays = getMedia(newReports,filter)
   const totalPopulationToBeVaccinated = getTotalPopulationToBeVaccinated(filter) * percentage/100
-  const ahora = new Date().getTime() 
-  const previsionCalculada = (ahora - new Date(((totalPopulationToBeVaccinated / mediaOfLastsDays)* MILISECONDS_DAY)))
-  console.log('previons en dias calculada: ' + previsionCalculada)
-  console.log('media: ' +mediaOfLastsDays+' total vacunados: ' + totalPopulationToBeVaccinated)
-  console.log('Ahora: '+ahora)
+  const daysToComplete = parseInt((totalPopulationToBeVaccinated / mediaOfLastsDays))
+  
+  const ahora = new Date()
+  const previsionCalculada = ahora.setDate(ahora.getDate() + daysToComplete)
+ 
   return new Date(previsionCalculada)
 
 }
@@ -56,9 +59,6 @@ export default function Progress ({ data, totals }) {
   const { locale } = useLocale()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
-  // const newReports = getLastsDays(data)
- console.log('Prevision Viendo totals de  '+totals.jurisdiccionNombre)
-  //const getDays = days => getDaysToAchievePercentage(days, totals.porcentajeSegundaDosis)
 
   return (
     <>
