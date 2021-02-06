@@ -83,55 +83,82 @@ export default function Progress ({ data, totals }) {
           </p>
           )}
 
-      <style jsx>{`
-        section {
-          align-items: center;
-          display: flex;
-          display: grid;
-          gap: 32px;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          justify-content: center;
-          justify-items: center;
-          place-content: center;
-          margin-bottom: 4rem;
-          max-width: 1000px;
-          place-content: center;
-          width: 100%;
-        }
-
-        div {
-          display: flex;
-          flex-direction: column;
-        }
-
-        div span, div time {
-          background: #fff;
-        }
-
-        div time {
-          color: #333;
-          font-size: .9rem;
-          font-weight: 500;
-          margin-top: .7rem;
-        }
-
-        div span {
-          color: var(--color);
-          font-size: 5ch;
-          font-weight: 500;
-        }
-        
-        .card {
-          background: #ffffff;
-          border-radius: 8px;
-          border: 2px solid #111;
-          margin: 1rem 0 0;
-          padding: 1rem 1.5rem 1.5rem;
-          text-align: center;
-          box-shadow: rgb(210,239,253) 14px 14px;
+<style jsx>{`
+          section {
+            align-items: center;
+            display: flex;
+            display: grid;
+            gap: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-content: center;
+            place-content: center;
+            margin-bottom: 4rem;
+            max-width: 1000px;
+            place-content: center;
+            width: 100%;
           }
-        }
-    `}
+
+          div {
+            display: flex;
+            flex-direction: column;
+          }
+
+          div span, div time {
+            background: #fff;
+          }
+
+          div time {
+            color: #333;
+            font-size: .9rem;
+            font-weight: 500;
+            margin-top: .7rem;
+          }
+
+          div span {
+            color: var(--color);
+            font-size: 5ch;
+            font-weight: 500;
+          }
+          
+          .card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 2px solid #111;
+            margin: 1rem 0 0;
+            padding: 1rem 1.5rem 1.5rem;
+            text-align: center;
+            box-shadow: rgb(210,239,253) 14px 14px;
+            }
+            label {
+              font-weight: 500;
+              line-height: 150%;
+              margin-right: 1rem;
+              display: flex;
+              align-items: center;
+              border-radius: 10px;
+              cursor: pointer;
+              padding: 6px;
+            }
+
+            label:hover {
+              background-color: #d2effd;
+            }
+
+            label input[type="checkbox"] {
+              appearance: none;
+              background: #ffffff;
+              border: 2px solid #111;
+              border-radius: 500%;
+              box-shadow: rgb(210, 239, 253) 4px 4px;
+              margin-right: 8px;
+              padding: 6px;
+              outline: 0;
+            }
+            label input[type="checkbox"]:checked {
+              background: radial-gradient(currentcolor 50%, rgba(255, 0, 0, 0) 51%);
+            }
+          }
+      `}
       </style>
     </>
   )
