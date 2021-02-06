@@ -13,6 +13,7 @@ import Progress from 'components/Progress.jsx'
 import Prevision from "components/Prevision/Prevision";
 //import PrevisionOriginal from "components/PrevisionOriginal";
 import Select from 'components/Select'
+import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
@@ -291,6 +292,8 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         <p>Las vacunas distribuidas...</p>
       </dialog>
 
+      <ScrollToTop showButton={250} />
+      
       <ClientSideComponent>
         <SchemeColorSwitcher />
       </ClientSideComponent>
