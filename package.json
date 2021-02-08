@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev -p 8030",
     "start": "next start",
     "export": "next export",
     "download-today-status": "node scripts/download-covid-vaccine-today-status.js",
