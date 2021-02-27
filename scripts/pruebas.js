@@ -10,4 +10,4 @@ hacertran()
 
 
 //genera getNameReports.json
-getNameReports()
+//getNameReports()
