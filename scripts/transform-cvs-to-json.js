@@ -32,13 +32,6 @@ module.exports = async function transformCvsToJson (cvsFileName) {
     } = element
     jurisdiccionNombre=populationCodigo[jurisdiccionCodigoIndec]
     
-    // if (element.jurisdiccion_nombre === 'Totales') {
-    //   primeraDosisCantidad = totalesPrimerasDosis
-    //   segundaDosisCantidad = totalesSegundasDosis
-    // } else {
-    //   totalesPrimerasDosis = totalesPrimerasDosis + primeraDosisCantidad
-    //   totalesSegundasDosis = totalesSegundasDosis + segundaDosisCantidad
-    // }
     const totalDosisAplicadas = primeraDosisCantidad + segundaDosisCantidad
       const normalizedJurisdiccionNombre = populationCodigo[jurisdiccionCodigoIndec]
       let populationJurisdiccionNombre = population[normalizedJurisdiccionNombre]

@@ -5,16 +5,22 @@ const hacertran = require('./prueba1')
 
 const crearJson = require('./prueba2')
 
-const year = "2021"
-const month = "02"
-const day = "23"
+// dado un csv, haga el json correspondiente.
+hacertran()
+    .then(()=>{
+        const year = "2021"
+const month = "03"
+const day = "04"
 const jsonFileName = `${year}${month}${day}.json`
 const json = fs.readJSONSync(`./public/data/${jsonFileName}`)
 crearJson(json, jsonFileName)
+console.log(json);
+    })
 
 
-// dado un csv, haga el json correspondiente.
-//hacertran()
+
+
+
 
 
 //genera getNameReports.json

@@ -23,17 +23,21 @@ download(url, 'public/data', { filename })
   .then(async () => {
     console.log(`${url} downloaded`)
     const json = await transformCvsToJson(filename)
+    console.log('**************************');
+    console.log(json)
+    console.log('**************************');
     // Leer si es del mismo dia ?
     const totales = json.find(({ jurisdiccionNombre }) => jurisdiccionNombre === 'Totales')
+    console.log(totales);
     if (totales) {
       const totalesLatest = latestJson.find(({ jurisdiccionNombre }) => jurisdiccionNombre === 'Totales')
       if (totalesLatest.primeraDosisCantidad !== totales.primeraDosisCantidad) {
         //Es otro dia!
         //ver si hay datos.... sino lo hay domingo!!
-        if (totales.segundaDosisCantidad !== 0) {
+        //if (totales.segundaDosisCantidad !== 0) {
          
           let nuevoJson = []
-          let COVISHIELDPrimeraDosis, COVISHIELDSegundaDosis,sputnikPrimeraDosis,sputnikSegundaDosis
+          let COVISHIELDPrimeraDosis, COVISHIELDSegundaDosis,sputnikPrimeraDosis,sputnikSegundaDosis,otrasPrimeraDosis,otrasSegundaDosis
           let obj = {}
           let vacunas = {}
           let totalesPrimerasDosis = 0
@@ -53,18 +57,27 @@ download(url, 'public/data', { filename })
               COVISHIELDSegundaDosis = 0
               sputnikPrimeraDosis=0
               sputnikSegundaDosis=0
+              otrasPrimeraDosis=0
+              otrasSegundaDosis=0
+              console.log(json);
               json.map(e => {
                 
                 if (Number(key) === e.jurisdiccionCodigoIndec) {
-                    if (e.vacunaNombre.substr(0,4)==='COVI') {
-                      COVISHIELDPrimeraDosis = e.primeraDosisCantidad
-                      COVISHIELDSegundaDosis = e.segundaDosisCantidad
+                    
+                    switch (e.vacunaNombre.substr(0,4)) {
+                      case 'COVI':
+                        COVISHIELDPrimeraDosis += e.primeraDosisCantidad
+                        COVISHIELDSegundaDosis += e.segundaDosisCantidad
+                        break;
+                      case 'Sput':
+                        sputnikPrimeraDosis += e.primeraDosisCantidad
+                        sputnikSegundaDosis += e.segundaDosisCantidad
+                        break;
+                      default:
+                        otrasPrimeraDosis += e.primeraDosisCantidad
+                        otrasSegundaDosis += e.segundaDosisCantidad
+                        break;
                     }
-                    if (e.vacunaNombre.substr(0,4)==='Sput') {
-                      sputnikPrimeraDosis = e.primeraDosisCantidad
-                      sputnikSegundaDosis = e.segundaDosisCantidad
-                    }
-  
                   
                   obj = {
                     jurisdiccionCodigoIndec: e.jurisdiccionCodigoIndec,
@@ -82,13 +95,15 @@ download(url, 'public/data', { filename })
                 COVISHIELDSegundaDosis,
                 sputnikPrimeraDosis,
                 sputnikSegundaDosis,
+                otrasPrimeraDosis,
+                otrasSegundaDosis,
               }
         
               obj = {
                 ...obj,
-                primeraDosisCantidad:COVISHIELDPrimeraDosis+sputnikPrimeraDosis,
-                segundaDosisCantidad:COVISHIELDSegundaDosis+sputnikSegundaDosis,
-                totalDosisAplicadas:COVISHIELDPrimeraDosis+sputnikPrimeraDosis+COVISHIELDSegundaDosis+sputnikSegundaDosis,
+                primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis,
+                segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
+                totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
                 porcentajePrimeraDosis: obj.primeraDosisCantidad / populationJurisdiccionNombre,
                 porcentajeSegundaDosis: obj.segundaDosisCantidad / populationJurisdiccionNombre,
                 vacunas
@@ -118,9 +133,9 @@ download(url, 'public/data', { filename })
           await getNameReports()
           await fs.copyFile(`./public/data/${jsonFileName}`, './public/data/latest.json')
           await fs.writeJson('./public/data/info.json', { lastModified: +new Date() })
-        } else {
-          console.log("No hay Data, probablmente sea Domingo.")
-        }
+        // } else {
+        //   console.log("No hay Data, probablmente sea Domingo.")
+        // }
 
       }
     }

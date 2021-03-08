@@ -27,17 +27,34 @@ for (var key in populationCodigo) {
         COVISHIELDSegundaDosis = 0
         sputnikPrimeraDosis = 0
         sputnikSegundaDosis = 0
+        otrasPrimeraDosis=0
+              otrasSegundaDosis=0
+              console.log(json);
         json.map(e => {
 
             if (Number(key) === e.jurisdiccionCodigoIndec) {
-                if (e.vacunaNombre.substr(0, 4) === 'COVI') {
-                    COVISHIELDPrimeraDosis = e.primeraDosisCantidad
-                    COVISHIELDSegundaDosis = e.segundaDosisCantidad
-                }
-                if (e.vacunaNombre.substr(0, 4) === 'Sput') {
-                    sputnikPrimeraDosis = e.primeraDosisCantidad
-                    sputnikSegundaDosis = e.segundaDosisCantidad
-                }
+                // if (e.vacunaNombre.substr(0,4)==='COVI') {
+                    //   COVISHIELDPrimeraDosis = e.primeraDosisCantidad
+                    //   COVISHIELDSegundaDosis = e.segundaDosisCantidad
+                    // }
+                    // if (e.vacunaNombre.substr(0,4)==='Sput') {
+                    //   sputnikPrimeraDosis = e.primeraDosisCantidad
+                    //   sputnikSegundaDosis = e.segundaDosisCantidad
+                    // }
+                    switch (e.vacunaNombre.substr(0,4)) {
+                        case 'COVI':
+                          COVISHIELDPrimeraDosis += e.primeraDosisCantidad
+                          COVISHIELDSegundaDosis += e.segundaDosisCantidad
+                          break;
+                        case 'Sput':
+                          sputnikPrimeraDosis += e.primeraDosisCantidad
+                          sputnikSegundaDosis += e.segundaDosisCantidad
+                          break;
+                        default:
+                          otrasPrimeraDosis += e.primeraDosisCantidad
+                          otrasSegundaDosis += e.segundaDosisCantidad
+                          break;
+                      }
 
 
                 obj = {
@@ -56,13 +73,15 @@ for (var key in populationCodigo) {
             COVISHIELDSegundaDosis,
             sputnikPrimeraDosis,
             sputnikSegundaDosis,
+            otrasPrimeraDosis,
+            otrasSegundaDosis,
         }
 
         obj = {
             ...obj,
-            primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis,
-            segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis,
-            totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis,
+            primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis,
+            segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
+            totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
             porcentajePrimeraDosis: obj.primeraDosisCantidad / populationJurisdiccionNombre,
             porcentajeSegundaDosis: obj.segundaDosisCantidad / populationJurisdiccionNombre,
             vacunas
@@ -84,7 +103,7 @@ const totales = {
     porcentajeSegundaDosis: totalesSegundasDosis / populationJurisdiccionNombre,
 }
 nuevoJson.push(totales)
-// console.log('NuevoJson: ', nuevoJson)
+ console.log('NuevoJson: ', nuevoJson)
 // console.log('NuevoJson: ', totales)
 await fs.writeJson(`./public/data/${jsonFileName}`, nuevoJson, 'utf8')
 }

@@ -1,1 +1,419 @@
-[{"jurisdiccionCodigoIndec":2,"jurisdiccionNombre":"CABA","primeraDosisCantidad":122195,"segundaDosisCantidad":35605,"totalDosisAplicadas":157800,"porcentajePrimeraDosis":0.026006569026474437,"porcentajeSegundaDosis":0.011499372814686736,"vacunas":{"COVISHIELDPrimeraDosis":42208,"COVISHIELDSegundaDosis":237,"sputnikPrimeraDosis":79987,"sputnikSegundaDosis":35368}},{"jurisdiccionCodigoIndec":6,"jurisdiccionNombre":"Buenos Aires","primeraDosisCantidad":349177,"segundaDosisCantidad":124173,"totalDosisAplicadas":473350,"porcentajePrimeraDosis":0.014322443448804158,"porcentajeSegundaDosis":0.007078957976564922,"vacunas":{"COVISHIELDPrimeraDosis":97945,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":251232,"sputnikSegundaDosis":124173}},{"jurisdiccionCodigoIndec":10,"jurisdiccionNombre":"Catamarca","primeraDosisCantidad":9770,"segundaDosisCantidad":3618,"totalDosisAplicadas":13388,"porcentajePrimeraDosis":0.016989298042066444,"porcentajeSegundaDosis":0.008704066551446907,"vacunas":{"COVISHIELDPrimeraDosis":2712,"COVISHIELDSegundaDosis":2,"sputnikPrimeraDosis":7058,"sputnikSegundaDosis":3616}},{"jurisdiccionCodigoIndec":14,"jurisdiccionNombre":"Córdoba","primeraDosisCantidad":84056,"segundaDosisCantidad":24233,"totalDosisAplicadas":108289,"porcentajePrimeraDosis":0.013836110040021806,"porcentajeSegundaDosis":0.006444175564094723,"vacunas":{"COVISHIELDPrimeraDosis":32026,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":52030,"sputnikSegundaDosis":24233}},{"jurisdiccionCodigoIndec":18,"jurisdiccionNombre":"Corrientes","primeraDosisCantidad":20821,"segundaDosisCantidad":7634,"totalDosisAplicadas":28455,"porcentajePrimeraDosis":0.013593849398778196,"porcentajeSegundaDosis":0.006810307985092804,"vacunas":{"COVISHIELDPrimeraDosis":5585,"COVISHIELDSegundaDosis":1,"sputnikPrimeraDosis":15236,"sputnikSegundaDosis":7633}},{"jurisdiccionCodigoIndec":22,"jurisdiccionNombre":"Chaco","primeraDosisCantidad":27622,"segundaDosisCantidad":8171,"totalDosisAplicadas":35793,"porcentajePrimeraDosis":0.014442845864109233,"porcentajeSegundaDosis":0.006774364675008987,"vacunas":{"COVISHIELDPrimeraDosis":10225,"COVISHIELDSegundaDosis":11,"sputnikPrimeraDosis":17397,"sputnikSegundaDosis":8160}},{"jurisdiccionCodigoIndec":26,"jurisdiccionNombre":"Chubut","primeraDosisCantidad":10892,"segundaDosisCantidad":3595,"totalDosisAplicadas":14487,"porcentajePrimeraDosis":0.013562328552457698,"porcentajeSegundaDosis":0.005807810738068544,"vacunas":{"COVISHIELDPrimeraDosis":2497,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":8395,"sputnikSegundaDosis":3595}},{"jurisdiccionCodigoIndec":30,"jurisdiccionNombre":"Entre Ríos","primeraDosisCantidad":26218,"segundaDosisCantidad":10624,"totalDosisAplicadas":36842,"porcentajePrimeraDosis":0.014181495727513257,"porcentajeSegundaDosis":0.007663996317356693,"vacunas":{"COVISHIELDPrimeraDosis":6563,"COVISHIELDSegundaDosis":2,"sputnikPrimeraDosis":19655,"sputnikSegundaDosis":10622}},{"jurisdiccionCodigoIndec":34,"jurisdiccionNombre":"Formosa","primeraDosisCantidad":12347,"segundaDosisCantidad":3560,"totalDosisAplicadas":15907,"porcentajePrimeraDosis":0.013466778366570665,"porcentajeSegundaDosis":0.005882420979753566,"vacunas":{"COVISHIELDPrimeraDosis":4197,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":8150,"sputnikSegundaDosis":3560}},{"jurisdiccionCodigoIndec":38,"jurisdiccionNombre":"Jujuy","primeraDosisCantidad":20560,"segundaDosisCantidad":6602,"totalDosisAplicadas":27162,"porcentajePrimeraDosis":0.016124408306859295,"porcentajeSegundaDosis":0.008564227163466215,"vacunas":{"COVISHIELDPrimeraDosis":8130,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":12430,"sputnikSegundaDosis":6602}},{"jurisdiccionCodigoIndec":42,"jurisdiccionNombre":"La Pampa","primeraDosisCantidad":10835,"segundaDosisCantidad":3633,"totalDosisAplicadas":14468,"porcentajePrimeraDosis":0.01876806499492227,"porcentajeSegundaDosis":0.010135926880712444,"vacunas":{"COVISHIELDPrimeraDosis":4108,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":6727,"sputnikSegundaDosis":3633}},{"jurisdiccionCodigoIndec":46,"jurisdiccionNombre":"La Rioja","primeraDosisCantidad":11048,"segundaDosisCantidad":3996,"totalDosisAplicadas":15044,"porcentajePrimeraDosis":0.018001123164375868,"porcentajeSegundaDosis":0.010146595820913727,"vacunas":{"COVISHIELDPrimeraDosis":3964,"COVISHIELDSegundaDosis":3,"sputnikPrimeraDosis":7084,"sputnikSegundaDosis":3993}},{"jurisdiccionCodigoIndec":50,"jurisdiccionNombre":"Mendoza","primeraDosisCantidad":26360,"segundaDosisCantidad":11304,"totalDosisAplicadas":37664,"porcentajePrimeraDosis":0.01174172426994812,"porcentajeSegundaDosis":0.005678934934669388,"vacunas":{"COVISHIELDPrimeraDosis":2990,"COVISHIELDSegundaDosis":1,"sputnikPrimeraDosis":23370,"sputnikSegundaDosis":11303}},{"jurisdiccionCodigoIndec":54,"jurisdiccionNombre":"Misiones","primeraDosisCantidad":21540,"segundaDosisCantidad":5253,"totalDosisAplicadas":26793,"porcentajePrimeraDosis":0.00822409366888291,"porcentajeSegundaDosis":0.004147328061498747,"vacunas":{"COVISHIELDPrimeraDosis":11167,"COVISHIELDSegundaDosis":22,"sputnikPrimeraDosis":10373,"sputnikSegundaDosis":5231}},{"jurisdiccionCodigoIndec":58,"jurisdiccionNombre":"Neuquén","primeraDosisCantidad":17197,"segundaDosisCantidad":4676,"totalDosisAplicadas":21873,"porcentajePrimeraDosis":0.017433744392424143,"porcentajeSegundaDosis":0.007041564203072929,"vacunas":{"COVISHIELDPrimeraDosis":5620,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":11577,"sputnikSegundaDosis":4676}},{"jurisdiccionCodigoIndec":62,"jurisdiccionNombre":"Río Negro","primeraDosisCantidad":20047,"segundaDosisCantidad":5932,"totalDosisAplicadas":25979,"porcentajePrimeraDosis":0.016251789034389588,"porcentajeSegundaDosis":0.007934618317036958,"vacunas":{"COVISHIELDPrimeraDosis":7897,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":12150,"sputnikSegundaDosis":5932}},{"jurisdiccionCodigoIndec":66,"jurisdiccionNombre":"Salta","primeraDosisCantidad":35267,"segundaDosisCantidad":9244,"totalDosisAplicadas":44511,"porcentajePrimeraDosis":0.014029094416795318,"porcentajeSegundaDosis":0.006488359635691454,"vacunas":{"COVISHIELDPrimeraDosis":15284,"COVISHIELDSegundaDosis":2,"sputnikPrimeraDosis":19983,"sputnikSegundaDosis":9242}},{"jurisdiccionCodigoIndec":70,"jurisdiccionNombre":"San Juan","primeraDosisCantidad":14347,"segundaDosisCantidad":5182,"totalDosisAplicadas":19529,"porcentajePrimeraDosis":0.013098793293028698,"porcentajeSegundaDosis":0.00663196013399606,"vacunas":{"COVISHIELDPrimeraDosis":4114,"COVISHIELDSegundaDosis":1,"sputnikPrimeraDosis":10233,"sputnikSegundaDosis":5181}},{"jurisdiccionCodigoIndec":74,"jurisdiccionNombre":"San Luis","primeraDosisCantidad":14293,"segundaDosisCantidad":4324,"totalDosisAplicadas":18617,"porcentajePrimeraDosis":0.018714294707354306,"porcentajeSegundaDosis":0.008506318754819723,"vacunas":{"COVISHIELDPrimeraDosis":4780,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":9513,"sputnikSegundaDosis":4324}},{"jurisdiccionCodigoIndec":78,"jurisdiccionNombre":"Santa Cruz","primeraDosisCantidad":9661,"segundaDosisCantidad":3400,"totalDosisAplicadas":13061,"porcentajePrimeraDosis":0.017749618537700507,"porcentajeSegundaDosis":0.009294554523131108,"vacunas":{"COVISHIELDPrimeraDosis":3170,"COVISHIELDSegundaDosis":1,"sputnikPrimeraDosis":6491,"sputnikSegundaDosis":3399}},{"jurisdiccionCodigoIndec":82,"jurisdiccionNombre":"Santa Fe","primeraDosisCantidad":69358,"segundaDosisCantidad":24162,"totalDosisAplicadas":93520,"porcentajePrimeraDosis":0.014684915640628455,"porcentajeSegundaDosis":0.006828661091533863,"vacunas":{"COVISHIELDPrimeraDosis":17426,"COVISHIELDSegundaDosis":13,"sputnikPrimeraDosis":51932,"sputnikSegundaDosis":24149}},{"jurisdiccionCodigoIndec":86,"jurisdiccionNombre":"Santiago del Estero","primeraDosisCantidad":18925,"segundaDosisCantidad":5475,"totalDosisAplicadas":24400,"porcentajePrimeraDosis":0.011203980730093538,"porcentajeSegundaDosis":0.005596368442410558,"vacunas":{"COVISHIELDPrimeraDosis":7964,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":10961,"sputnikSegundaDosis":5475}},{"jurisdiccionCodigoIndec":90,"jurisdiccionNombre":"Tucumán","primeraDosisCantidad":29799,"segundaDosisCantidad":10915,"totalDosisAplicadas":40714,"porcentajePrimeraDosis":0.012299841383738056,"porcentajeSegundaDosis":0.006440835190150686,"vacunas":{"COVISHIELDPrimeraDosis":8955,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":20844,"sputnikSegundaDosis":10915}},{"jurisdiccionCodigoIndec":94,"jurisdiccionNombre":"Tierra del Fuego","primeraDosisCantidad":4241,"segundaDosisCantidad":1779,"totalDosisAplicadas":6020,"porcentajePrimeraDosis":0.017828313114073527,"porcentajeSegundaDosis":0.010257622584067531,"vacunas":{"COVISHIELDPrimeraDosis":1149,"COVISHIELDSegundaDosis":0,"sputnikPrimeraDosis":3092,"sputnikSegundaDosis":1779}},{"jurisdiccionCodigoIndec":0,"jurisdiccionNombre":"Totales","totalDosisAplicadas":1313666,"primeraDosisCantidad":986576,"segundaDosisCantidad":327090,"porcentajePrimeraDosis":0.021741877004316065,"porcentajeSegundaDosis":0.007208314969492205}]
+[
+    {
+        "jurisdiccionCodigoIndec": 2,
+        "jurisdiccionNombre": "CABA",
+        "primeraDosisCantidad": 122195,
+        "segundaDosisCantidad": 35605,
+        "totalDosisAplicadas": 157800,
+        "porcentajePrimeraDosis": 0.026006569026474437,
+        "porcentajeSegundaDosis": 0.011499372814686736,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 42208,
+            "COVISHIELDSegundaDosis": 237,
+            "sputnikPrimeraDosis": 79987,
+            "sputnikSegundaDosis": 35368,
+            "otrasPrimeraDosis": 0,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 6,
+        "jurisdiccionNombre": "Buenos Aires",
+        "primeraDosisCantidad": 362471,
+        "segundaDosisCantidad": 124173,
+        "totalDosisAplicadas": 486644,
+        "porcentajePrimeraDosis": 0.014322443448804158,
+        "porcentajeSegundaDosis": 0.007078957976564922,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 97945,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 251232,
+            "sputnikSegundaDosis": 124173,
+            "otrasPrimeraDosis": 13294,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 10,
+        "jurisdiccionNombre": "Catamarca",
+        "primeraDosisCantidad": 10295,
+        "segundaDosisCantidad": 3618,
+        "totalDosisAplicadas": 13913,
+        "porcentajePrimeraDosis": 0.016989298042066444,
+        "porcentajeSegundaDosis": 0.008704066551446907,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 2712,
+            "COVISHIELDSegundaDosis": 2,
+            "sputnikPrimeraDosis": 7058,
+            "sputnikSegundaDosis": 3616,
+            "otrasPrimeraDosis": 525,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 14,
+        "jurisdiccionNombre": "Córdoba",
+        "primeraDosisCantidad": 93132,
+        "segundaDosisCantidad": 24233,
+        "totalDosisAplicadas": 117365,
+        "porcentajePrimeraDosis": 0.013836110040021806,
+        "porcentajeSegundaDosis": 0.006444175564094723,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 32026,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 52030,
+            "sputnikSegundaDosis": 24233,
+            "otrasPrimeraDosis": 9076,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 18,
+        "jurisdiccionNombre": "Corrientes",
+        "primeraDosisCantidad": 20875,
+        "segundaDosisCantidad": 7634,
+        "totalDosisAplicadas": 28509,
+        "porcentajePrimeraDosis": 0.013593849398778196,
+        "porcentajeSegundaDosis": 0.006810307985092804,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 5585,
+            "COVISHIELDSegundaDosis": 1,
+            "sputnikPrimeraDosis": 15236,
+            "sputnikSegundaDosis": 7633,
+            "otrasPrimeraDosis": 54,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 22,
+        "jurisdiccionNombre": "Chaco",
+        "primeraDosisCantidad": 28493,
+        "segundaDosisCantidad": 8171,
+        "totalDosisAplicadas": 36664,
+        "porcentajePrimeraDosis": 0.014442845864109233,
+        "porcentajeSegundaDosis": 0.006774364675008987,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 10225,
+            "COVISHIELDSegundaDosis": 11,
+            "sputnikPrimeraDosis": 17397,
+            "sputnikSegundaDosis": 8160,
+            "otrasPrimeraDosis": 871,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 26,
+        "jurisdiccionNombre": "Chubut",
+        "primeraDosisCantidad": 11211,
+        "segundaDosisCantidad": 3595,
+        "totalDosisAplicadas": 14806,
+        "porcentajePrimeraDosis": 0.013562328552457698,
+        "porcentajeSegundaDosis": 0.005807810738068544,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 2497,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 8395,
+            "sputnikSegundaDosis": 3595,
+            "otrasPrimeraDosis": 319,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 30,
+        "jurisdiccionNombre": "Entre Ríos",
+        "primeraDosisCantidad": 26218,
+        "segundaDosisCantidad": 10624,
+        "totalDosisAplicadas": 36842,
+        "porcentajePrimeraDosis": 0.014181495727513257,
+        "porcentajeSegundaDosis": 0.007663996317356693,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 6563,
+            "COVISHIELDSegundaDosis": 2,
+            "sputnikPrimeraDosis": 19655,
+            "sputnikSegundaDosis": 10622,
+            "otrasPrimeraDosis": 0,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 34,
+        "jurisdiccionNombre": "Formosa",
+        "primeraDosisCantidad": 13710,
+        "segundaDosisCantidad": 3560,
+        "totalDosisAplicadas": 17270,
+        "porcentajePrimeraDosis": 0.013466778366570665,
+        "porcentajeSegundaDosis": 0.005882420979753566,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 4197,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 8150,
+            "sputnikSegundaDosis": 3560,
+            "otrasPrimeraDosis": 1363,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 38,
+        "jurisdiccionNombre": "Jujuy",
+        "primeraDosisCantidad": 21601,
+        "segundaDosisCantidad": 6603,
+        "totalDosisAplicadas": 28204,
+        "porcentajePrimeraDosis": 0.016124408306859295,
+        "porcentajeSegundaDosis": 0.008564227163466215,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 8130,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 12430,
+            "sputnikSegundaDosis": 6602,
+            "otrasPrimeraDosis": 1041,
+            "otrasSegundaDosis": 1
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 42,
+        "jurisdiccionNombre": "La Pampa",
+        "primeraDosisCantidad": 12135,
+        "segundaDosisCantidad": 3633,
+        "totalDosisAplicadas": 15768,
+        "porcentajePrimeraDosis": 0.01876806499492227,
+        "porcentajeSegundaDosis": 0.010135926880712444,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 4108,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 6727,
+            "sputnikSegundaDosis": 3633,
+            "otrasPrimeraDosis": 1300,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 46,
+        "jurisdiccionNombre": "La Rioja",
+        "primeraDosisCantidad": 11982,
+        "segundaDosisCantidad": 3996,
+        "totalDosisAplicadas": 15978,
+        "porcentajePrimeraDosis": 0.018001123164375868,
+        "porcentajeSegundaDosis": 0.010146595820913727,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 3964,
+            "COVISHIELDSegundaDosis": 3,
+            "sputnikPrimeraDosis": 7084,
+            "sputnikSegundaDosis": 3993,
+            "otrasPrimeraDosis": 934,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 50,
+        "jurisdiccionNombre": "Mendoza",
+        "primeraDosisCantidad": 26360,
+        "segundaDosisCantidad": 11304,
+        "totalDosisAplicadas": 37664,
+        "porcentajePrimeraDosis": 0.01174172426994812,
+        "porcentajeSegundaDosis": 0.005678934934669388,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 2990,
+            "COVISHIELDSegundaDosis": 1,
+            "sputnikPrimeraDosis": 23370,
+            "sputnikSegundaDosis": 11303,
+            "otrasPrimeraDosis": 0,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 54,
+        "jurisdiccionNombre": "Misiones",
+        "primeraDosisCantidad": 25112,
+        "segundaDosisCantidad": 5254,
+        "totalDosisAplicadas": 30366,
+        "porcentajePrimeraDosis": 0.00822409366888291,
+        "porcentajeSegundaDosis": 0.004147328061498747,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 11167,
+            "COVISHIELDSegundaDosis": 22,
+            "sputnikPrimeraDosis": 10373,
+            "sputnikSegundaDosis": 5231,
+            "otrasPrimeraDosis": 3572,
+            "otrasSegundaDosis": 1
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 58,
+        "jurisdiccionNombre": "Neuquén",
+        "primeraDosisCantidad": 18703,
+        "segundaDosisCantidad": 4676,
+        "totalDosisAplicadas": 23379,
+        "porcentajePrimeraDosis": 0.017433744392424143,
+        "porcentajeSegundaDosis": 0.007041564203072929,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 5620,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 11577,
+            "sputnikSegundaDosis": 4676,
+            "otrasPrimeraDosis": 1506,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 62,
+        "jurisdiccionNombre": "Río Negro",
+        "primeraDosisCantidad": 20158,
+        "segundaDosisCantidad": 5932,
+        "totalDosisAplicadas": 26090,
+        "porcentajePrimeraDosis": 0.016251789034389588,
+        "porcentajeSegundaDosis": 0.007934618317036958,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 7897,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 12150,
+            "sputnikSegundaDosis": 5932,
+            "otrasPrimeraDosis": 111,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 66,
+        "jurisdiccionNombre": "Salta",
+        "primeraDosisCantidad": 36933,
+        "segundaDosisCantidad": 9244,
+        "totalDosisAplicadas": 46177,
+        "porcentajePrimeraDosis": 0.014029094416795318,
+        "porcentajeSegundaDosis": 0.006488359635691454,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 15284,
+            "COVISHIELDSegundaDosis": 2,
+            "sputnikPrimeraDosis": 19983,
+            "sputnikSegundaDosis": 9242,
+            "otrasPrimeraDosis": 1666,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 70,
+        "jurisdiccionNombre": "San Juan",
+        "primeraDosisCantidad": 16038,
+        "segundaDosisCantidad": 5182,
+        "totalDosisAplicadas": 21220,
+        "porcentajePrimeraDosis": 0.013098793293028698,
+        "porcentajeSegundaDosis": 0.00663196013399606,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 4114,
+            "COVISHIELDSegundaDosis": 1,
+            "sputnikPrimeraDosis": 10233,
+            "sputnikSegundaDosis": 5181,
+            "otrasPrimeraDosis": 1691,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 74,
+        "jurisdiccionNombre": "San Luis",
+        "primeraDosisCantidad": 15692,
+        "segundaDosisCantidad": 4324,
+        "totalDosisAplicadas": 20016,
+        "porcentajePrimeraDosis": 0.018714294707354306,
+        "porcentajeSegundaDosis": 0.008506318754819723,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 4780,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 9513,
+            "sputnikSegundaDosis": 4324,
+            "otrasPrimeraDosis": 1399,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 78,
+        "jurisdiccionNombre": "Santa Cruz",
+        "primeraDosisCantidad": 9944,
+        "segundaDosisCantidad": 3400,
+        "totalDosisAplicadas": 13344,
+        "porcentajePrimeraDosis": 0.017749618537700507,
+        "porcentajeSegundaDosis": 0.009294554523131108,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 3170,
+            "COVISHIELDSegundaDosis": 1,
+            "sputnikPrimeraDosis": 6491,
+            "sputnikSegundaDosis": 3399,
+            "otrasPrimeraDosis": 283,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 82,
+        "jurisdiccionNombre": "Santa Fe",
+        "primeraDosisCantidad": 71324,
+        "segundaDosisCantidad": 24162,
+        "totalDosisAplicadas": 95486,
+        "porcentajePrimeraDosis": 0.014684915640628455,
+        "porcentajeSegundaDosis": 0.006828661091533863,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 17426,
+            "COVISHIELDSegundaDosis": 13,
+            "sputnikPrimeraDosis": 51932,
+            "sputnikSegundaDosis": 24149,
+            "otrasPrimeraDosis": 1966,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 86,
+        "jurisdiccionNombre": "Santiago del Estero",
+        "primeraDosisCantidad": 20358,
+        "segundaDosisCantidad": 5475,
+        "totalDosisAplicadas": 25833,
+        "porcentajePrimeraDosis": 0.011203980730093538,
+        "porcentajeSegundaDosis": 0.005596368442410558,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 7964,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 10961,
+            "sputnikSegundaDosis": 5475,
+            "otrasPrimeraDosis": 1433,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 90,
+        "jurisdiccionNombre": "Tucumán",
+        "primeraDosisCantidad": 31299,
+        "segundaDosisCantidad": 10915,
+        "totalDosisAplicadas": 42214,
+        "porcentajePrimeraDosis": 0.012299841383738056,
+        "porcentajeSegundaDosis": 0.006440835190150686,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 8955,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 20844,
+            "sputnikSegundaDosis": 10915,
+            "otrasPrimeraDosis": 1500,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 94,
+        "jurisdiccionNombre": "Tierra del Fuego",
+        "primeraDosisCantidad": 4265,
+        "segundaDosisCantidad": 1779,
+        "totalDosisAplicadas": 6044,
+        "porcentajePrimeraDosis": 0.017828313114073527,
+        "porcentajeSegundaDosis": 0.010257622584067531,
+        "vacunas": {
+            "COVISHIELDPrimeraDosis": 1149,
+            "COVISHIELDSegundaDosis": 0,
+            "sputnikPrimeraDosis": 3092,
+            "sputnikSegundaDosis": 1779,
+            "otrasPrimeraDosis": 24,
+            "otrasSegundaDosis": 0
+        }
+    },
+    {
+        "jurisdiccionCodigoIndec": 0,
+        "jurisdiccionNombre": "Totales",
+        "totalDosisAplicadas": 1357596,
+        "primeraDosisCantidad": 1030504,
+        "segundaDosisCantidad": 327092,
+        "porcentajePrimeraDosis": 0.022709949583666865,
+        "porcentajeSegundaDosis": 0.007208359044914685
+    }
+]
