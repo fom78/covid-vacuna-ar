@@ -95,36 +95,51 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
-                  {/* <small>
+                   <small>
                     <Image
-                      alt='Pfizer Logo'
+                      alt='Sputnik Logo'
                       className={styles.companyLogo}
-                      src='/pfizer-logo.png'
-                      height={29}
+                      src='/sputnikv-logo.png'
+                      height={39}
                       width={72}
                       priority
                     />
                     <span>
                       <NumberDigits>
-                        {totals.dosisEntregadasPfizer}
+                        {totals.vacunas.sputnikPrimeraDosis+totals.vacunas.sputnikSegundaDosis}
                       </NumberDigits>
                     </span>
                   </small>
                   <small>
                     <Image
-                      alt='Moderna Logo'
+                      alt='AstraZeneca Logo'
                       className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={16.5}
+                      src='/astrazeneca-logo.png'
+                      height={20}
                       width={72}
                       priority
                     />
                     <span>
                       <NumberDigits>
-                        {totals.dosisEntregadasModerna}
+                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.COVISHIELDSegundaDosis}
                       </NumberDigits>
                     </span>
-                  </small> */}
+                  </small>
+                  <small>
+                    <Image
+                      alt='Sinopharm Logo'
+                      className={styles.companyLogo}
+                      src='/sino.png'
+                      height={55}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.sinopharmPrimeraDosis+totals.vacunas.sinopharmSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
                 </div>
               </section>
             </div>
