@@ -162,13 +162,60 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre distribuidas</h4>
+                   <small>
+                    <Image
+                      alt='Sputnik Logo'
+                      className={styles.companyLogo}
+                      src='/sputnikv-logo.png'
+                      height={39}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.sputnikPrimeraDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='AstraZeneca Logo'
+                      className={styles.companyLogo}
+                      src='/astrazeneca-logo.png'
+                      height={20}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.COVISHIELDPrimeraDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='Sinopharm Logo'
+                      className={styles.companyLogo}
+                      src='/sino.png'
+                      height={55}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.sinopharmPrimeraDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                </div>
+                {/* <div>
+                  <h4>% sobre Total de dosis</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
                       {totals.primeraDosisCantidad/(totals.totalDosisAplicadas)}
                     </NumberPercentage>
                   </p>
-                </div>
+                </div> */}
               </section>
             </div>
 
@@ -190,13 +237,60 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
-                  <h4>% sobre distribuidas</h4>
+                   <small>
+                    <Image
+                      alt='Sputnik Logo'
+                      className={styles.companyLogo}
+                      src='/sputnikv-logo.png'
+                      height={39}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.sputnikSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='AstraZeneca Logo'
+                      className={styles.companyLogo}
+                      src='/astrazeneca-logo.png'
+                      height={20}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.COVISHIELDSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='Sinopharm Logo'
+                      className={styles.companyLogo}
+                      src='/sino.png'
+                      height={55}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.sinopharmSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                </div>
+                {/* <div>
+                  <h4>% sobre Total de dosis</h4>
                   <p className={styles.secondary}>
                     <NumberPercentage>
                       {totals.segundaDosisCantidad/(totals.totalDosisAplicadas)}
                     </NumberPercentage>
                   </p>
-                </div>
+                </div> */}
               </section>
             </div>
           </div>
