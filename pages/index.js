@@ -105,10 +105,9 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       priority
                     />
                     <span>
-                      {/* <NumberDigits>
-                        {totals.dosisEntregadasPfizer}
-                      </NumberDigits> */}
-                      99999999
+                      <NumberDigits>
+                        {totals.vacunas.sputnikPrimeraDosis+totals.vacunas.sputnikSegundaDosis}
+                      </NumberDigits>
                     </span>
                   </small>
                   <small>
@@ -121,10 +120,9 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       priority
                     />
                     <span>
-                      {/* <NumberDigits>
-                        {totals.dosisEntregadasModerna}
-                      </NumberDigits> */}
-                      88888
+                      <NumberDigits>
+                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.COVISHIELDSegundaDosis}
+                      </NumberDigits>
                     </span>
                   </small>
                   <small>
@@ -137,10 +135,9 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                       priority
                     />
                     <span>
-                      {/* <NumberDigits>
-                        {totals.dosisEntregadasModerna}
-                      </NumberDigits> */}
-                      777
+                      <NumberDigits>
+                        {totals.vacunas.sinopharmPrimeraDosis+totals.vacunas.sinopharmSegundaDosis}
+                      </NumberDigits>
                     </span>
                   </small>
                 </div>

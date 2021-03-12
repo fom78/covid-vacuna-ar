@@ -13,6 +13,16 @@ otrasPrimeraDosis,otrasSegundaDosis,sinopharmPrimeraDosis,sinopharmSegundaDosis
 
 let obj = {}
 let vacunas = {}
+let totalesVacunas = {
+    COVISHIELDPrimeraDosis:0,
+    COVISHIELDSegundaDosis:0,
+    sputnikPrimeraDosis:0,
+    sputnikSegundaDosis:0,
+    sinopharmPrimeraDosis:0,
+    sinopharmSegundaDosis:0,
+    otrasPrimeraDosis:0,
+    otrasSegundaDosis:0,
+    }
 let totalesPrimerasDosis = 0
 let totalesSegundasDosis = 0
 let normalizedJurisdiccionNombre = 0
@@ -35,7 +45,7 @@ for (var key in populationCodigo) {
         otrasPrimeraDosis=0
         otrasSegundaDosis=0
         
-        console.log(json);
+        //console.log(json);
         json.map(e => {
         
         if (Number(key) === e.jurisdiccionCodigoIndec) {
@@ -44,18 +54,26 @@ for (var key in populationCodigo) {
                 case 'COVI':
                 COVISHIELDPrimeraDosis += e.primeraDosisCantidad
                 COVISHIELDSegundaDosis += e.segundaDosisCantidad
+                totalesVacunas.COVISHIELDPrimeraDosis += e.primeraDosisCantidad
+                totalesVacunas.COVISHIELDSegundaDosis += e.segundaDosisCantidad
                 break;
                 case 'Sput':
                 sputnikPrimeraDosis += e.primeraDosisCantidad
                 sputnikSegundaDosis += e.segundaDosisCantidad
+                totalesVacunas.sputnikPrimeraDosis += e.primeraDosisCantidad
+                totalesVacunas.sputnikSegundaDosis += e.segundaDosisCantidad
                 break;
                 case 'Sino':
                 sinopharmPrimeraDosis += e.primeraDosisCantidad
                 sinopharmSegundaDosis += e.segundaDosisCantidad
+                totalesVacunas.sinopharmPrimeraDosis += e.primeraDosisCantidad
+                totalesVacunas.sinopharmSegundaDosis += e.segundaDosisCantidad
                 break;
                 default:
                 otrasPrimeraDosis += e.primeraDosisCantidad
                 otrasSegundaDosis += e.segundaDosisCantidad
+                totalesVacunas.otrasPrimeraDosis += e.primeraDosisCantidad
+                totalesVacunas.otrasSegundaDosis += e.segundaDosisCantidad
                 break;
             }
             
@@ -97,6 +115,16 @@ for (var key in populationCodigo) {
 
 }
 populationJurisdiccionNombre = population['Totales']
+vacunas = {
+    COVISHIELDPrimeraDosis,
+    COVISHIELDSegundaDosis,
+    sputnikPrimeraDosis,
+    sputnikSegundaDosis,
+    sinopharmPrimeraDosis,
+    sinopharmSegundaDosis,
+    otrasPrimeraDosis,
+    otrasSegundaDosis,
+    }
 const totales = {
     jurisdiccionCodigoIndec: 0,
     jurisdiccionNombre: "Totales",
@@ -105,9 +133,10 @@ const totales = {
     segundaDosisCantidad: totalesSegundasDosis,
     porcentajePrimeraDosis: totalesPrimerasDosis / populationJurisdiccionNombre,
     porcentajeSegundaDosis: totalesSegundasDosis / populationJurisdiccionNombre,
+    vacunas: totalesVacunas
 }
 nuevoJson.push(totales)
-console.log('NuevoJson: ', nuevoJson)
+//console.log('NuevoJson: ', nuevoJson)
 await fs.writeJson(`./public/data/${jsonFileName}`, nuevoJson, 'utf8')
 }
 
