@@ -95,36 +95,54 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
                   </p>
                 </div>
                 <div>
-                  {/* <small>
+                   <small>
                     <Image
-                      alt='Pfizer Logo'
+                      alt='Sputnik Logo'
                       className={styles.companyLogo}
-                      src='/pfizer-logo.png'
-                      height={29}
+                      src='/sputnikv-logo.png'
+                      height={39}
                       width={72}
                       priority
                     />
                     <span>
-                      <NumberDigits>
+                      {/* <NumberDigits>
                         {totals.dosisEntregadasPfizer}
-                      </NumberDigits>
+                      </NumberDigits> */}
+                      99999999
                     </span>
                   </small>
                   <small>
                     <Image
-                      alt='Moderna Logo'
+                      alt='AstraZeneca Logo'
                       className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={16.5}
+                      src='/astrazeneca-logo.png'
+                      height={20}
                       width={72}
                       priority
                     />
                     <span>
-                      <NumberDigits>
+                      {/* <NumberDigits>
                         {totals.dosisEntregadasModerna}
-                      </NumberDigits>
+                      </NumberDigits> */}
+                      88888
                     </span>
-                  </small> */}
+                  </small>
+                  <small>
+                    <Image
+                      alt='Sinopharm Logo'
+                      className={styles.companyLogo}
+                      src='/sino.png'
+                      height={55}
+                      width={72}
+                      priority
+                    />
+                    <span>
+                      {/* <NumberDigits>
+                        {totals.dosisEntregadasModerna}
+                      </NumberDigits> */}
+                      777
+                    </span>
+                  </small>
                 </div>
               </section>
             </div>
