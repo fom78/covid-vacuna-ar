@@ -1,7 +1,14 @@
+
 .share {
   position: fixed;
+  display: flex;
   right: 32px;
   top: 16px;
+}
+
+.share h3{
+  font-size: 1rem;
+  margin:3px auto
 }
 
 .share a {
@@ -17,6 +24,7 @@
   justify-content: center;
   line-height: 110%;
   padding: 4px 16px;
+  margin-right: 10px;
 }
 
 .share a:hover {
