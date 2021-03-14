@@ -1,5 +1,5 @@
 /* global fetch */
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -31,6 +31,11 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-192099299-1');
+
+
+
 export default function Home ({ contributors, data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
@@ -41,6 +46,10 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
     [data, filter, reportFound]
   )
 //const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaDosisCantidad
+useEffect(()=>{
+  ReactGA.pageview('/');
+  console.log('Visitante sumando...');
+}),[]
 
   return (
     <>
@@ -52,6 +61,7 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
         />
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
+        
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
