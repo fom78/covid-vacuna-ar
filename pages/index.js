@@ -131,7 +131,7 @@ useEffect(()=>{
                     />
                     <span>
                       <NumberDigits>
-                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.COVISHIELDSegundaDosis}
+                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.astraZenecaPrimeraDosis+totals.vacunas.COVISHIELDSegundaDosis+totals.vacunas.astraZenecaSegundaDosis}
                       </NumberDigits>
                     </span>
                   </small>
@@ -198,7 +198,7 @@ useEffect(()=>{
                     />
                     <span>
                       <NumberDigits>
-                        {totals.vacunas.COVISHIELDPrimeraDosis}
+                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.astraZenecaPrimeraDosis}
                       </NumberDigits>
                     </span>
                   </small>
@@ -273,7 +273,7 @@ useEffect(()=>{
                     />
                     <span>
                       <NumberDigits>
-                        {totals.vacunas.COVISHIELDSegundaDosis}
+                        {totals.vacunas.COVISHIELDSegundaDosis+totals.vacunas.astraZenecaSegundaDosis}
                       </NumberDigits>
                     </span>
                   </small>
