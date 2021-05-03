@@ -11,6 +11,7 @@
     "lint": "standard"
   },
   "dependencies": {
+    "adm-zip": "^0.5.5",
     "csvtojson": "2.0.10",
     "download": "8.0.0",
     "fathom-client": "3.0.0",
