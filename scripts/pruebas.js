@@ -9,9 +9,8 @@ const year = "2021";
 const month = "05";
 
 //Colocar de que dia a que dia del mes arriba colocado se rehace todo.
-const dayInicial = 2;
-const dayFinal = 2;
-
+const dayInicial = 4;
+const dayFinal = 4;
 //Damos una fecha lee el csv y lo transforma a json "hacertran"
 //Luego si es exitoso lee el json y genera el nuevo para tipos de vacunas.
 for (let i = dayInicial; i <= dayFinal; i++) {
