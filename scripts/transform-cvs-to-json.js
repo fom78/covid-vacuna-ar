@@ -31,7 +31,7 @@ module.exports = async function transformCvsToJson (cvsFileName) {
 
     } = element
     jurisdiccionNombre=populationCodigo[jurisdiccionCodigoIndec]
-    
+
     const totalDosisAplicadas = primeraDosisCantidad + segundaDosisCantidad
       const normalizedJurisdiccionNombre = populationCodigo[jurisdiccionCodigoIndec]
       let populationJurisdiccionNombre = population[normalizedJurisdiccionNombre]

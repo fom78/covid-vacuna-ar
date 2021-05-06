@@ -41,6 +41,7 @@ download(url, "public/data", { filename })
     const totales = json.find(
       ({ jurisdiccionNombre }) => jurisdiccionNombre === "Totales"
     );
+
     if (totales) {
       const totalesLatest = latestJson.find(
         ({ jurisdiccionNombre }) => jurisdiccionNombre === "Totales"
@@ -48,8 +49,10 @@ download(url, "public/data", { filename })
       if (totalesLatest.primeraDosisCantidad !== totales.primeraDosisCantidad) {
         //Es otro dia!
         //ver si hay datos.... sino lo hay domingo!!
-        const jsonFileName = filename.replace(".csv", ".json")
+
+        const jsonFileName = filename.replace(".zip", ".json")
         crearJson(json, jsonFileName);
+
         await getNameReports();
         await fs.copyFile(
           `./public/data/${jsonFileName}`,
