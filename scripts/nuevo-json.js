@@ -29,6 +29,8 @@ let totalesPrimerasDosis = 0
 let totalesSegundasDosis = 0
 let normalizedJurisdiccionNombre = 0
 let populationJurisdiccionNombre = 0
+let primeraDosisCantidad = 0
+let segundaDosisCantidad = 0
 
 
 for (var key in populationCodigo) {
@@ -48,7 +50,8 @@ for (var key in populationCodigo) {
         astraZenecaSegundaDosis=0
         otrasPrimeraDosis=0
         otrasSegundaDosis=0
-        
+        primeraDosisCantidad=0
+        segundaDosisCantidad=0
         //console.log(json);
         json.map(e => {
         
@@ -86,18 +89,23 @@ for (var key in populationCodigo) {
                 totalesVacunas.otrasSegundaDosis += e.segundaDosisCantidad
                 break;
             }
+
+            // Sumamos cantidades a provincia
+            primeraDosisCantidad += e.primeraDosisCantidad
+            segundaDosisCantidad += e.segundaDosisCantidad
             
             obj = {
             jurisdiccionCodigoIndec: e.jurisdiccionCodigoIndec,
             jurisdiccionNombre: e.jurisdiccionNombre,
-            primeraDosisCantidad: e.primeraDosisCantidad,
-            segundaDosisCantidad: e.segundaDosisCantidad,
+            primeraDosisCantidad,
+            segundaDosisCantidad,
             totalDosisAplicadas: e.totalDosisAplicadas,
             }
 
         }
 
         })
+
         vacunas = {
         COVISHIELDPrimeraDosis,
         COVISHIELDSegundaDosis,
@@ -113,15 +121,15 @@ for (var key in populationCodigo) {
 
         obj = {
         ...obj,
-        primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + sinopharmPrimeraDosis +astraZenecaPrimeraDosis+  otrasPrimeraDosis,
-        segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis+ sinopharmSegundaDosis +astraZenecaSegundaDosis+ otrasSegundaDosis,
+        //primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + sinopharmPrimeraDosis +astraZenecaPrimeraDosis+  otrasPrimeraDosis,
+        //segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis+ sinopharmSegundaDosis +astraZenecaSegundaDosis+ otrasSegundaDosis,
         totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
-        porcentajePrimeraDosis: obj.primeraDosisCantidad / populationJurisdiccionNombre,
-        porcentajeSegundaDosis: obj.segundaDosisCantidad / populationJurisdiccionNombre,
+        porcentajePrimeraDosis: primeraDosisCantidad / populationJurisdiccionNombre,
+        porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre,
         vacunas
         }
-        totalesPrimerasDosis = totalesPrimerasDosis + obj.primeraDosisCantidad
-        totalesSegundasDosis = totalesSegundasDosis + obj.segundaDosisCantidad
+        totalesPrimerasDosis = totalesPrimerasDosis + primeraDosisCantidad
+        totalesSegundasDosis = totalesSegundasDosis + segundaDosisCantidad
         nuevoJson.push(obj)
     } 
 
