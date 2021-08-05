@@ -9,7 +9,7 @@ module.exports = async function crearJson(json,jsonFileName) {
 let nuevoJson = []
 let COVISHIELDPrimeraDosis, 
 COVISHIELDSegundaDosis,sputnikPrimeraDosis,sputnikSegundaDosis,
-otrasPrimeraDosis,otrasSegundaDosis,sinopharmPrimeraDosis,sinopharmSegundaDosis,astraZenecaPrimeraDosis,astraZenecaSegundaDosis
+otrasPrimeraDosis,otrasSegundaDosis,sinopharmPrimeraDosis,sinopharmSegundaDosis,astraZenecaPrimeraDosis,astraZenecaSegundaDosis,modernaPrimeraDosis,modernaSegundaDosis
 
 let obj = {}
 let vacunas = {}
@@ -22,6 +22,8 @@ let totalesVacunas = {
     sinopharmSegundaDosis:0,
     astraZenecaPrimeraDosis:0,
     astraZenecaSegundaDosis:0,
+    modernaPrimeraDosis:0,
+    modernaSegundaDosis:0,
     otrasPrimeraDosis:0,
     otrasSegundaDosis:0,
     }
@@ -48,6 +50,8 @@ for (var key in populationCodigo) {
         sinopharmSegundaDosis=0
         astraZenecaPrimeraDosis=0
         astraZenecaSegundaDosis=0
+        modernaPrimeraDosis=0
+        modernaSegundaDosis=0
         otrasPrimeraDosis=0
         otrasSegundaDosis=0
         primeraDosisCantidad=0
@@ -82,6 +86,12 @@ for (var key in populationCodigo) {
                 totalesVacunas.astraZenecaPrimeraDosis += e.primeraDosisCantidad
                 totalesVacunas.astraZenecaSegundaDosis += e.segundaDosisCantidad
                 break;
+                case 'Mode':
+                modernaPrimeraDosis += e.primeraDosisCantidad
+                modernaSegundaDosis += e.segundaDosisCantidad
+                totalesVacunas.modernaPrimeraDosis += e.primeraDosisCantidad
+                totalesVacunas.modernaSegundaDosis += e.segundaDosisCantidad
+                break;
                 default:
                 otrasPrimeraDosis += e.primeraDosisCantidad
                 otrasSegundaDosis += e.segundaDosisCantidad
@@ -115,14 +125,15 @@ for (var key in populationCodigo) {
         sinopharmSegundaDosis,
         astraZenecaPrimeraDosis,
         astraZenecaSegundaDosis,
+        modernaPrimeraDosis,
+        modernaSegundaDosis,
         otrasPrimeraDosis,
         otrasSegundaDosis,
         }
 
         obj = {
         ...obj,
-        //primeraDosisCantidad: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + sinopharmPrimeraDosis +astraZenecaPrimeraDosis+  otrasPrimeraDosis,
-        //segundaDosisCantidad: COVISHIELDSegundaDosis + sputnikSegundaDosis+ sinopharmSegundaDosis +astraZenecaSegundaDosis+ otrasSegundaDosis,
+
         totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
         porcentajePrimeraDosis: primeraDosisCantidad / populationJurisdiccionNombre,
         porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre,
@@ -144,6 +155,8 @@ vacunas = {
     sinopharmSegundaDosis,
     astraZenecaPrimeraDosis,
     astraZenecaSegundaDosis,
+    modernaPrimeraDosis,
+    modernaSegundaDosis,
     otrasPrimeraDosis,
     otrasSegundaDosis,
     }
