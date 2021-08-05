@@ -150,6 +150,21 @@ useEffect(()=>{
                       </NumberDigits>
                     </span>
                   </small>
+                  <small>
+                    <Image
+                      alt='Moderna Logo'
+                      className={styles.companyLogo}
+                      src='/moderna-logo.png'
+                      height={20}
+                      width={50}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.modernaPrimeraDosis+totals.vacunas.modernaSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
                 </div>
               </section>
             </div>
@@ -214,6 +229,21 @@ useEffect(()=>{
                     <span>
                       <NumberDigits>
                         {totals.vacunas.sinopharmPrimeraDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='Moderna Logo'
+                      className={styles.companyLogo}
+                      src='/moderna-logo.png'
+                      height={20}
+                      width={50}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.modernaPrimeraDosis}
                       </NumberDigits>
                     </span>
                   </small>
@@ -289,6 +319,21 @@ useEffect(()=>{
                     <span>
                       <NumberDigits>
                         {totals.vacunas.sinopharmSegundaDosis}
+                      </NumberDigits>
+                    </span>
+                  </small>
+                  <small>
+                    <Image
+                      alt='Moderna Logo'
+                      className={styles.companyLogo}
+                      src='/moderna-logo.png'
+                      height={20}
+                      width={50}
+                      priority
+                    />
+                    <span>
+                      <NumberDigits>
+                        {totals.vacunas.modernaSegundaDosis}
                       </NumberDigits>
                     </span>
                   </small>
