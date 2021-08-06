@@ -3,7 +3,7 @@ name: Download latest COVID-19 Status vaccination
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 8,10,15,18,22 * * *
+    - cron: 0 2,12,18,22 * * *
 
 jobs:
   downloadStatus:
@@ -21,5 +21,5 @@ jobs:
         git config user.name fom78
         git config user.email fom78a@gmail.com
         git add .
-        git commit -m "Add report for today"
+        git commit -m "Add report for today AUTO"
         git push
