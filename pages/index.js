@@ -5,18 +5,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-//import Contributors from 'components/Contributors.jsx'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
-import NumberPercentage from 'components/NumberPercentage.jsx'
 import Progress from 'components/Progress.jsx'
 import Prevision from "components/Prevision/Prevision";
-//import PrevisionOriginal from "components/PrevisionOriginal";
 import Select from 'components/Select'
 import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
 import SchemeColorSwitcher from 'components/SchemeColorSwitcher'
+import Vacuna from 'components/Vacuna'
 
 import styles from 'styles/Home.module.css'
 import useSearch from 'hooks/useSearchReport'
@@ -24,19 +22,18 @@ import TimeAgo from 'components/TimeAgo.jsx'
 
 import ProgressChart from 'components/ProgressChart'
 import {
-  DosisAdministradasTooltip,
   DosisEntregadasTooltip
 } from 'components/ProgressChart/tooltips'
 import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
+import {vacunas} from 'config/vacunas'
+
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-192099299-1');
 
-
-
-export default function Home ({ contributors, data, info, reports, chartDatasets, newReports }) {
+export default function Home ({  data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
@@ -45,11 +42,11 @@ export default function Home ({ contributors, data, info, reports, chartDatasets
     () => reportFound !== undefined ? reportFound.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter) : data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
     [data, filter, reportFound]
   )
-//const dosisAplicadas = chartDatasets.primeraDosisCantidad+chartDatasets.segundaDosisCantidad
 useEffect(()=>{
   ReactGA.pageview('/');
   console.log('Visitante sumando...');
 }),[]
+
 
   return (
     <>
@@ -105,66 +102,22 @@ useEffect(()=>{
                   </p>
                 </div>
                 <div>
-                   <small>
-                    <Image
-                      alt='Sputnik Logo'
-                      className={styles.companyLogo}
-                      src='/sputnikv-logo.png'
-                      height={39}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sputnikPrimeraDosis+totals.vacunas.sputnikSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='AstraZeneca Logo'
-                      className={styles.companyLogo}
-                      src='/astrazeneca-logo.png'
-                      height={20}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.astraZenecaPrimeraDosis+totals.vacunas.COVISHIELDSegundaDosis+totals.vacunas.astraZenecaSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Sinopharm Logo'
-                      className={styles.companyLogo}
-                      src='/sino.png'
-                      height={55}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sinopharmPrimeraDosis+totals.vacunas.sinopharmSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Moderna Logo'
-                      className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={20}
-                      width={50}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.modernaPrimeraDosis+totals.vacunas.modernaSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
+                  {vacunas.map(vacuna => {
+                    let cantidadAgrupada = 0
+                    vacuna.primeraDosis.map((tipo, index) => {
+                      cantidadAgrupada += totals.vacunas[tipo]+totals.vacunas[vacuna.segundaDosis[index]]
+                    })
+                    return(
+                      <Vacuna 
+                      key = {vacuna.grupo}
+                        alt={vacuna.alt}
+                        src={vacuna.src}
+                        height={vacuna.height}
+                        width={vacuna.width}
+                        cantidad={cantidadAgrupada}
+                      />
+                    )
+                  })}
                 </div>
               </section>
             </div>
@@ -187,75 +140,23 @@ useEffect(()=>{
                   </p>
                 </div>
                 <div>
-                   <small>
-                    <Image
-                      alt='Sputnik Logo'
-                      className={styles.companyLogo}
-                      src='/sputnikv-logo.png'
-                      height={39}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sputnikPrimeraDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='AstraZeneca Logo'
-                      className={styles.companyLogo}
-                      src='/astrazeneca-logo.png'
-                      height={20}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.COVISHIELDPrimeraDosis+totals.vacunas.astraZenecaPrimeraDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Sinopharm Logo'
-                      className={styles.companyLogo}
-                      src='/sino.png'
-                      height={55}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sinopharmPrimeraDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Moderna Logo'
-                      className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={20}
-                      width={50}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.modernaPrimeraDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
+                  {vacunas.map(vacuna => {
+                    let cantidadAgrupada = 0
+                    vacuna.primeraDosis.map((tipo, index) => {
+                      cantidadAgrupada += totals.vacunas[tipo]
+                    })
+                    return(
+                      <Vacuna 
+                      key = {vacuna.grupo}
+                        alt={vacuna.alt}
+                        src={vacuna.src}
+                        height={vacuna.height}
+                        width={vacuna.width}
+                        cantidad={cantidadAgrupada}
+                      />
+                    )
+                  })}
                 </div>
-                {/* <div>
-                  <h4>% sobre Total de dosis</h4>
-                  <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.primeraDosisCantidad/(totals.totalDosisAplicadas)}
-                    </NumberPercentage>
-                  </p>
-                </div> */}
               </section>
             </div>
 
@@ -277,82 +178,29 @@ useEffect(()=>{
                   </p>
                 </div>
                 <div>
-                   <small>
-                    <Image
-                      alt='Sputnik Logo'
-                      className={styles.companyLogo}
-                      src='/sputnikv-logo.png'
-                      height={39}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sputnikSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='AstraZeneca Logo'
-                      className={styles.companyLogo}
-                      src='/astrazeneca-logo.png'
-                      height={20}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.COVISHIELDSegundaDosis+totals.vacunas.astraZenecaSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Sinopharm Logo'
-                      className={styles.companyLogo}
-                      src='/sino.png'
-                      height={55}
-                      width={72}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.sinopharmSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
-                  <small>
-                    <Image
-                      alt='Moderna Logo'
-                      className={styles.companyLogo}
-                      src='/moderna-logo.png'
-                      height={20}
-                      width={50}
-                      priority
-                    />
-                    <span>
-                      <NumberDigits>
-                        {totals.vacunas.modernaSegundaDosis}
-                      </NumberDigits>
-                    </span>
-                  </small>
+                  {vacunas.map(vacuna => {
+                    let cantidadAgrupada = 0
+                    vacuna.segundaDosis.map((tipo, index) => {
+                      cantidadAgrupada += totals.vacunas[tipo]
+                    })
+                    return(
+                      <Vacuna 
+                      key = {vacuna.grupo}
+                        alt={vacuna.alt}
+                        src={vacuna.src}
+                        height={vacuna.height}
+                        width={vacuna.width}
+                        cantidad={cantidadAgrupada}
+                      />
+                    )
+                  })}
                 </div>
-                {/* <div>
-                  <h4>% sobre Total de dosis</h4>
-                  <p className={styles.secondary}>
-                    <NumberPercentage>
-                      {totals.segundaDosisCantidad/(totals.totalDosisAplicadas)}
-                    </NumberPercentage>
-                  </p>
-                </div> */}
               </section>
             </div>
           </div>
 
           <Progress totals={totals} />
           <Prevision data={newReports} totals={totals} />
-          {/* <PrevisionOriginal totals={totals} /> */}
 
           <a className={styles.download} download href='/data/latest.json'>
             <Image
@@ -388,13 +236,6 @@ useEffect(()=>{
           tooltip={DosisEntregadasTooltip}
         />
 
-        {/* <h2 className={styles.subtitle}>Evolución de dosis administradas</h2>
-
-        <ProgressChart
-          dataset={chartDatasets.dosisAdministradas}
-          tooltip={DosisAdministradasTooltip}
-        /> */}
-
         <h2 className={styles.subtitle}>
           Fuentes de datos y enlaces de interés
         </h2>
@@ -408,47 +249,8 @@ useEffect(()=>{
               Estrategia de Vacunación COVID-19 en Argentina
             </a>
           </li>
-          {/* <li>
-            <a
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.vacunacovid.gob.es'
-            >
-              Información oficial sobre la vacunación contra el nuevo
-              coronavirus
-            </a>
-          </li> */}
         </ul>
 
-        
-        {/* <h2 className={styles.subtitle}>En los medios</h2>
-        <ul>
-          <li>
-            <a
-              className={styles.news}
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.20minutos.es/noticia/4552926/0/lanzan-una-web-con-datos-del-gobierno-que-permite-ver-como-avanza-en-espana-la-vacunacion-contra-el-coronavirus/'
-            >
-              Lanzan una web con datos del Gobierno que permite ver cómo avanza
-              en España la vacunación contra el coronavirus (20 Minutos)
-            </a>
-          </li>
-          <li>
-            <a
-              className={styles.news}
-              target='_blank'
-              rel='noreferrer'
-              href='https://www.meneame.net/m/actualidad/web-revisar-estado-progreso-vacunacion-covid-19-espana'
-            >
-              Web para revisar el estado y progreso de la vacunación del
-              COVID-19 en España (Menéame)
-            </a>
-          </li>
-        </ul> */}
-
-        {/* <h2 className={styles.subtitle}>Contribuidores</h2>
-        <Contributors contributors={contributors} /> */}
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
