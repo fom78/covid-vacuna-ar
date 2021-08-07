@@ -3,6 +3,14 @@ const withPWA = require('next-pwa')
 const withImages = require('next-images')
 const withPlugins = require('next-compose-plugins')
 
+const esLintConf = {
+  eslint: {
+  // Warning: Dangerously allow production builds to successfully complete even if
+  // your project has ESLint errors.
+  ignoreDuringBuilds: true,
+}
+}
+
 module.exports = withPlugins([
   [
     withImages,
@@ -21,4 +29,4 @@ module.exports = withPlugins([
       }
     }
   ]
-])
+],esLintConf)
