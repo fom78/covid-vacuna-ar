@@ -1,4 +1,3 @@
-/* global fetch */
 import { useEffect, useMemo, useState } from 'react'
 
 import Head from 'next/head'
@@ -8,7 +7,7 @@ import Link from 'next/link'
 import Footer from 'components/Footer.jsx'
 import NumberDigits from 'components/NumberDigits'
 import Progress from 'components/Progress.jsx'
-import Prevision from "components/Prevision/Prevision";
+import Prevision from 'components/Prevision/Prevision'
 import Select from 'components/Select'
 import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
@@ -28,24 +27,23 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
-import {vacunas} from 'config/vacunas'
+import { vacunas } from 'config/vacunas'
 
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-192099299-1');
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-192099299-1')
 
-export default function Home ({  data, info, reports, chartDatasets, newReports }) {
+export default function Home ({ data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const reportFound = useSearch({ valueSearch })
- 
+
   const totals = useMemo(
     () => reportFound !== undefined ? reportFound.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter) : data.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter),
     [data, filter, reportFound]
   )
-useEffect(()=>{
-  ReactGA.pageview('/')
-}),[]
-
+  useEffect(() => {
+    ReactGA.pageview('/')
+  }, [])
 
   return (
     <>
@@ -57,7 +55,7 @@ useEffect(()=>{
         />
         <link rel='manifest' href='/manifest.json' />
         <meta name='theme-color' content='#d2effd' />
-        
+
       </Head>
       <div className={styles.container}>
         <main className={styles.main}>
@@ -78,7 +76,7 @@ useEffect(()=>{
             <div className={styles.card}>
               <button
                 title='Abrir diálogo con explicación sobre Dosis Distribuidas'
-                onClick={() => {}}
+                onClick={() => { }}
               >
                 ❔
               </button>
@@ -97,18 +95,16 @@ useEffect(()=>{
                 <div>
                   <h3>Total de Dosis</h3>
                   <p>
-                    <NumberDigits>{totals.primeraDosisCantidad+totals.segundaDosisCantidad}</NumberDigits>
+                    <NumberDigits>{totals.primeraDosisCantidad + totals.segundaDosisCantidad}</NumberDigits>
                   </p>
                 </div>
                 <div>
                   {vacunas.map(vacuna => {
                     let cantidadAgrupada = 0
-                    vacuna.primeraDosis.map((tipo, index) => {
-                      cantidadAgrupada += totals.vacunas[tipo]+totals.vacunas[vacuna.segundaDosis[index]]
-                    })
-                    return(
-                      <Vacuna 
-                      key = {vacuna.grupo}
+                    vacuna.primeraDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo] + totals.vacunas[vacuna.segundaDosis[index]]))
+                    return (
+                      <Vacuna
+                        key={vacuna.grupo}
                         alt={vacuna.alt}
                         src={vacuna.src}
                         height={vacuna.height}
@@ -141,12 +137,10 @@ useEffect(()=>{
                 <div>
                   {vacunas.map(vacuna => {
                     let cantidadAgrupada = 0
-                    vacuna.primeraDosis.map((tipo, index) => {
-                      cantidadAgrupada += totals.vacunas[tipo]
-                    })
-                    return(
-                      <Vacuna 
-                      key = {vacuna.grupo}
+                    vacuna.primeraDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo]))
+                    return (
+                      <Vacuna
+                        key={vacuna.grupo}
                         alt={vacuna.alt}
                         src={vacuna.src}
                         height={vacuna.height}
@@ -179,12 +173,10 @@ useEffect(()=>{
                 <div>
                   {vacunas.map(vacuna => {
                     let cantidadAgrupada = 0
-                    vacuna.segundaDosis.map((tipo, index) => {
-                      cantidadAgrupada += totals.vacunas[tipo]
-                    })
-                    return(
-                      <Vacuna 
-                      key = {vacuna.grupo}
+                    vacuna.segundaDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo]))
+                    return (
+                      <Vacuna
+                        key={vacuna.grupo}
                         alt={vacuna.alt}
                         src={vacuna.src}
                         height={vacuna.height}
@@ -258,7 +250,7 @@ useEffect(()=>{
       </dialog>
 
       <ScrollToTop showButtonAt={250} />
-      
+
       <ClientSideComponent>
         <SchemeColorSwitcher />
       </ClientSideComponent>
@@ -274,10 +266,10 @@ export async function getStaticProps () {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
   const reports = require('../public/data/reports.json')
-  
+
   const chartDatasets = normalizeChartData()
   const newReports = getNewReports(reports)
-  
+
   return {
     props: {
       data,

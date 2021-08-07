@@ -7,8 +7,8 @@ const esLintConf = {
   eslint: {
   // Warning: Dangerously allow production builds to successfully complete even if
   // your project has ESLint errors.
-  ignoreDuringBuilds: true,
-}
+    ignoreDuringBuilds: true
+  }
 }
 
 module.exports = withPlugins([
@@ -29,4 +29,4 @@ module.exports = withPlugins([
       }
     }
   ]
-],esLintConf)
+], esLintConf)

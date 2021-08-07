@@ -14,7 +14,7 @@ const getDaysToAchievePercentage = (percentageGoal, actualPercentage) => {
 
 const addDaysToInitialData = (days) => {
   const initialData = new Date(START_DATA_VACCINATION).getTime() + (days * MILISECONDS_DAY)
-  //console.log('veamos: ' + initialData)
+  // console.log('veamos: ' + initialData)
   return new Date(initialData)
 }
 

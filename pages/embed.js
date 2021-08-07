@@ -24,10 +24,10 @@ export default function Embed ({ data, info, totalPopulation }) {
               <div>
                 <h3>Dosis distribuidas:</h3>
                 <p>
-                  <NumberDigits>{totals.primeraDosisCantidad+totals.segundaDosisCantidad}</NumberDigits>
+                  <NumberDigits>{totals.primeraDosisCantidad + totals.segundaDosisCantidad}</NumberDigits>
                 </p>
               </div>
-              <p>Es el <strong><NumberPercentage>{totals.primeraDosisCantidad+totals.segundaDosisCantidad / totalPopulation}</NumberPercentage></strong> del total de Argentina</p>
+              <p>Es el <strong><NumberPercentage>{totals.primeraDosisCantidad + totals.segundaDosisCantidad / totalPopulation}</NumberPercentage></strong> del total de Argentina</p>
             </section>
           </div>
 

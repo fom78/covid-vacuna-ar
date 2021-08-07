@@ -1,6 +1,6 @@
 const fs = require('fs-extra')
 
-const ignoredFiles = ['bbdd', 'bbddco','info', 'latest', 'reports']
+const ignoredFiles = ['bbdd', 'bbddco', 'info', 'latest', 'reports']
 
 module.exports = async () => {
   const files = await fs.readdir('./public/data').catch(error => console.error(error))

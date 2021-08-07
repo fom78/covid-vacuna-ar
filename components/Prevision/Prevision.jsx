@@ -4,15 +4,14 @@ const { population } = require('public/data/bbdd.json')
 const dataLatest = require('public/data/latest.json')
 const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
-function getTotalPopulationToBeVaccinated(filter) {
+function getTotalPopulationToBeVaccinated (filter) {
   const populationJurisdiccionNombre = population[filter]
   const vaccinatedPopuplation = dataLatest.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter)
   const totalPopulationToBeVaccinated = populationJurisdiccionNombre - vaccinatedPopuplation.segundaDosisCantidad
   return totalPopulationToBeVaccinated
 }
 
-function getMedia(newReports, filter) {
-
+function getMedia (newReports, filter) {
   let vacunadosCompletos = 0
   let base = 0
   for (let i = 0; i < newReports.length; i++) {
@@ -23,7 +22,6 @@ function getMedia(newReports, filter) {
     } else {
       vacunadosCompletos = vacunadosCompletos + jurisdiccionActual.segundaDosisCantidad - base
       base = jurisdiccionActual.segundaDosisCantidad
-
     }
   }
 
@@ -31,7 +29,7 @@ function getMedia(newReports, filter) {
   return mediaOfLastsDays
 }
 
-function prevision(filter, percentage, newReports) {
+function prevision (filter, percentage, newReports) {
   const mediaOfLastsDays = getMedia(newReports, filter)
   const totalPopulationToBeVaccinated = getTotalPopulationToBeVaccinated(filter) * percentage / 100
   const daysToComplete = parseInt((totalPopulationToBeVaccinated / mediaOfLastsDays))
@@ -40,10 +38,9 @@ function prevision(filter, percentage, newReports) {
   const previsionCalculada = ahora.setDate(ahora.getDate() + daysToComplete)
 
   return new Date(previsionCalculada)
-
 }
 
-export default function Progress({ data, totals }) {
+export default function Progress ({ data, totals }) {
   const { locale } = useLocale()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
@@ -51,17 +48,17 @@ export default function Progress({ data, totals }) {
     {
       color: '#dd8f01',
       percentage: 50,
-      show: (totals.porcentajeSegundaDosis >= 0.50) ? false : true
+      show: !((totals.porcentajeSegundaDosis >= 0.50))
     },
     {
       color: '#a3dd01',
       percentage: 75,
-      show: (totals.porcentajeSegundaDosis >= 0.75) ? false : true
+      show: !((totals.porcentajeSegundaDosis >= 0.75))
     },
     {
       color: '#41ca0d',
       percentage: 100,
-      show: (totals.porcentajeSegundaDosis >= 1) ? false : true
+      show: !((totals.porcentajeSegundaDosis >= 1))
     }]
 
   return (
@@ -70,29 +67,28 @@ export default function Progress({ data, totals }) {
       {totals.porcentajeSegundaDosis && totals.porcentajeSegundaDosis < 1
         ? (
           <>
-          <small>Se toma en cuenta la media de los ultimos 7 dias.</small>
-          <section>
-            {
-              points.map(({ color, percentage,show }) => (
+            <small>Se toma en cuenta la media de los ultimos 7 dias.</small>
+            <section>
+              {
+              points.map(({ color, percentage, show }) => (
                 show &&
-                <div className='card' key={percentage}>
-                  <span style={{ '--color': color }}>{percentage}%</span>
-                  <time>{intl.format(prevision(totals.jurisdiccionNombre, percentage, data))}</time>
-                  {data.jurisdiccionNombre}
-                </div>
+                  <div className='card' key={percentage}>
+                    <span style={{ '--color': color }}>{percentage}%</span>
+                    <time>{intl.format(prevision(totals.jurisdiccionNombre, percentage, data))}</time>
+                    {data.jurisdiccionNombre}
+                  </div>
               ))
             }
-          </section>
+            </section>
           </>)
-        : ( 
-          totals.porcentajeSegundaDosis >= 1
-            ?( <p>
-              <h1>TODOS VACUNADOS</h1>
-            </p>)
-            :( <p>
-                <b>No disponemos de datos para esa fecha.</b>
-              </p>)
-        )}
+        : (
+            totals.porcentajeSegundaDosis >= 1
+              ? (<h1>TODOS VACUNADOS</h1>)
+              : (
+                <p>
+                  <b>No disponemos de datos para esa fecha.</b>
+                </p>)
+          )}
 
       <style jsx>{`
         section {
