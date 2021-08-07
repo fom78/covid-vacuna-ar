@@ -1,5 +1,4 @@
 const fs = require("fs-extra");
-//const getNameReports = require("./get-everything-name-reports");
 
 const hacertran = require("./prueba1");
 

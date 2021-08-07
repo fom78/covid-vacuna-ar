@@ -67,9 +67,10 @@ export default function Progress({ data, totals }) {
   return (
     <>
       <h2>Estimación población vacunada</h2>
-      <small>Se toma en cuenta la media de los ultimos 7 dias.</small>
-      {totals.porcentajeSegundaDosis
+      {totals.porcentajeSegundaDosis && totals.porcentajeSegundaDosis < 1
         ? (
+          <>
+          <small>Se toma en cuenta la media de los ultimos 7 dias.</small>
           <section>
             {
               points.map(({ color, percentage,show }) => (
@@ -81,11 +82,16 @@ export default function Progress({ data, totals }) {
                 </div>
               ))
             }
-          </section>)
-        : (
-          <p>
-            <b>No disponemos de datos para esa fecha.</b>
-          </p>
+          </section>
+          </>)
+        : ( 
+          totals.porcentajeSegundaDosis >= 1
+            ?( <p>
+              <h1>TODOS VACUNADOS</h1>
+            </p>)
+            :( <p>
+                <b>No disponemos de datos para esa fecha.</b>
+              </p>)
         )}
 
       <style jsx>{`
