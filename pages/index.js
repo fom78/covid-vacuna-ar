@@ -43,8 +43,7 @@ export default function Home ({  data, info, reports, chartDatasets, newReports 
     [data, filter, reportFound]
   )
 useEffect(()=>{
-  ReactGA.pageview('/');
-  console.log('Visitante sumando...');
+  ReactGA.pageview('/')
 }),[]
 
 
@@ -286,8 +285,6 @@ export async function getStaticProps () {
       chartDatasets,
       reports,
       newReports
-      //temp
-      //contributors
     }
   }
 }

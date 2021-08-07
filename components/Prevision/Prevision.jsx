@@ -1,7 +1,7 @@
 import { useLocale } from 'hooks/useLocale.js'
 
- const { population } = require('public/data/bbdd.json')
- const dataLatest = require('public/data/latest.json')
+const { population } = require('public/data/bbdd.json')
+const dataLatest = require('public/data/latest.json')
 const dateTimeFormatOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 function getTotalPopulationToBeVaccinated(filter) {
@@ -11,54 +11,58 @@ function getTotalPopulationToBeVaccinated(filter) {
   return totalPopulationToBeVaccinated
 }
 
-function getMedia(newReports,filter) {
-  
+function getMedia(newReports, filter) {
+
   let vacunadosCompletos = 0
   let base = 0
   for (let i = 0; i < newReports.length; i++) {
     const element = newReports[i]
     const jurisdiccionActual = element.find(({ jurisdiccionNombre }) => jurisdiccionNombre === filter)
-    if (i===0) {
+    if (i === 0) {
       base = jurisdiccionActual.segundaDosisCantidad
     } else {
       vacunadosCompletos = vacunadosCompletos + jurisdiccionActual.segundaDosisCantidad - base
       base = jurisdiccionActual.segundaDosisCantidad
-    
+
     }
   }
-  
+
   const mediaOfLastsDays = vacunadosCompletos / 7 // la media es en la semana
   return mediaOfLastsDays
 }
 
-function prevision(filter,percentage,newReports) {
-  const mediaOfLastsDays = getMedia(newReports,filter)
-  const totalPopulationToBeVaccinated = getTotalPopulationToBeVaccinated(filter) * percentage/100
+function prevision(filter, percentage, newReports) {
+  const mediaOfLastsDays = getMedia(newReports, filter)
+  const totalPopulationToBeVaccinated = getTotalPopulationToBeVaccinated(filter) * percentage / 100
   const daysToComplete = parseInt((totalPopulationToBeVaccinated / mediaOfLastsDays))
-  
+
   const ahora = new Date()
   const previsionCalculada = ahora.setDate(ahora.getDate() + daysToComplete)
- 
+
   return new Date(previsionCalculada)
 
 }
 
-
-const points = [{
-  color: '#dd8f01',
-  percentage: 50
-}, {
-  color: '#a3dd01',
-  percentage: 75
-}, {
-  color: '#41ca0d',
-  percentage: 100
-}]
-
-export default function Progress ({ data, totals }) {
+export default function Progress({ data, totals }) {
   const { locale } = useLocale()
   const intl = new Intl.DateTimeFormat(locale, dateTimeFormatOptions)
 
+  const points = [
+    {
+      color: '#dd8f01',
+      percentage: 50,
+      show: (totals.porcentajeSegundaDosis >= 0.50) ? false : true
+    },
+    {
+      color: '#a3dd01',
+      percentage: 75,
+      show: (totals.porcentajeSegundaDosis >= 0.75) ? false : true
+    },
+    {
+      color: '#41ca0d',
+      percentage: 100,
+      show: (totals.porcentajeSegundaDosis >= 1) ? false : true
+    }]
 
   return (
     <>
@@ -68,22 +72,23 @@ export default function Progress ({ data, totals }) {
         ? (
           <section>
             {
-          points.map(({ color, percentage }) => (
-            <div className='card' key={percentage}>
-              <span style={{ '--color': color }}>{percentage}%</span>
-              <time>{intl.format(prevision(totals.jurisdiccionNombre,percentage,data))}</time>
-            {data.jurisdiccionNombre}
-            </div>
-          ))
-        }
+              points.map(({ color, percentage,show }) => (
+                show &&
+                <div className='card' key={percentage}>
+                  <span style={{ '--color': color }}>{percentage}%</span>
+                  <time>{intl.format(prevision(totals.jurisdiccionNombre, percentage, data))}</time>
+                  {data.jurisdiccionNombre}
+                </div>
+              ))
+            }
           </section>)
         : (
           <p>
             <b>No disponemos de datos para esa fecha.</b>
           </p>
-          )}
+        )}
 
-<style jsx>{`
+      <style jsx>{`
         section {
           align-items: center;
           display: flex;
