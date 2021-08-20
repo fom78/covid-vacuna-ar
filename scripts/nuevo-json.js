@@ -1,30 +1,14 @@
-
 const fs = require('fs-extra')
 const { population } = require('../public/data/bbdd.json')
 const { populationCodigo } = require('../public/data/bbddco.json')
 
-module.exports = async function crearJson (json, jsonFileName) {
+module.exports = async function crearJson(json, jsonFileName) {
   const nuevoJson = []
-  let COVISHIELDPrimeraDosis,
-    COVISHIELDSegundaDosis, sputnikPrimeraDosis, sputnikSegundaDosis,
-    otrasPrimeraDosis, otrasSegundaDosis, sinopharmPrimeraDosis, sinopharmSegundaDosis, astraZenecaPrimeraDosis, astraZenecaSegundaDosis, modernaPrimeraDosis, modernaSegundaDosis
 
   let obj = {}
-  let vacunas = {}
-  const totalesVacunas = {
-    COVISHIELDPrimeraDosis: 0,
-    COVISHIELDSegundaDosis: 0,
-    sputnikPrimeraDosis: 0,
-    sputnikSegundaDosis: 0,
-    sinopharmPrimeraDosis: 0,
-    sinopharmSegundaDosis: 0,
-    astraZenecaPrimeraDosis: 0,
-    astraZenecaSegundaDosis: 0,
-    modernaPrimeraDosis: 0,
-    modernaSegundaDosis: 0,
-    otrasPrimeraDosis: 0,
-    otrasSegundaDosis: 0
-  }
+  let vacunasPorProvincia = {}
+  let totalesVacunas = {}
+  let nombre = ''
   let totalesPrimerasDosis = 0
   let totalesSegundasDosis = 0
   let normalizedJurisdiccionNombre = 0
@@ -36,64 +20,56 @@ module.exports = async function crearJson (json, jsonFileName) {
     normalizedJurisdiccionNombre = populationCodigo[key]
     populationJurisdiccionNombre = population[normalizedJurisdiccionNombre]
     if (populationJurisdiccionNombre === 0) { populationJurisdiccionNombre = 0 }
-    // console.log('populationJurisdiccionNombre',populationJurisdiccionNombre);
+
     if (key !== '0') {
       obj = {}
-      COVISHIELDPrimeraDosis = 0
-      COVISHIELDSegundaDosis = 0
-      sputnikPrimeraDosis = 0
-      sputnikSegundaDosis = 0
-      sinopharmPrimeraDosis = 0
-      sinopharmSegundaDosis = 0
-      astraZenecaPrimeraDosis = 0
-      astraZenecaSegundaDosis = 0
-      modernaPrimeraDosis = 0
-      modernaSegundaDosis = 0
-      otrasPrimeraDosis = 0
-      otrasSegundaDosis = 0
       primeraDosisCantidad = 0
       segundaDosisCantidad = 0
-      // console.log(json);
-      json.map(e => {
-        if (Number(key) === e.jurisdiccionCodigoIndec) {
+      vacunasPorProvincia = {}
+      json
+        .filter( e =>e.jurisdiccionCodigoIndec === Number(key))
+        .map(e => {
           switch (e.vacunaNombre.substr(0, 4)) {
             case 'COVI':
-              COVISHIELDPrimeraDosis += e.primeraDosisCantidad
-              COVISHIELDSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.COVISHIELDPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.COVISHIELDSegundaDosis += e.segundaDosisCantidad
+              nombre = 'COVISHIELD'
               break
             case 'Sput':
-              sputnikPrimeraDosis += e.primeraDosisCantidad
-              sputnikSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.sputnikPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.sputnikSegundaDosis += e.segundaDosisCantidad
+              nombre = 'sputnik'
               break
             case 'Sino':
-              sinopharmPrimeraDosis += e.primeraDosisCantidad
-              sinopharmSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.sinopharmPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.sinopharmSegundaDosis += e.segundaDosisCantidad
+              nombre = 'sinopharm'
               break
             case 'Astr':
-              astraZenecaPrimeraDosis += e.primeraDosisCantidad
-              astraZenecaSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.astraZenecaPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.astraZenecaSegundaDosis += e.segundaDosisCantidad
+              nombre = 'astraZeneca'
               break
             case 'Mode':
-              modernaPrimeraDosis += e.primeraDosisCantidad
-              modernaSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.modernaPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.modernaSegundaDosis += e.segundaDosisCantidad
+              nombre = 'moderna'
               break
             default:
-              otrasPrimeraDosis += e.primeraDosisCantidad
-              otrasSegundaDosis += e.segundaDosisCantidad
-              totalesVacunas.otrasPrimeraDosis += e.primeraDosisCantidad
-              totalesVacunas.otrasSegundaDosis += e.segundaDosisCantidad
+              nombre = 'otras'
               break
           }
+
+          
+          // Para el objeto que lleva los totales (se pódria recorrer luego y sumar...)
+          if (!totalesVacunas.hasOwnProperty(`${nombre}PrimeraDosis`)) {
+            totalesVacunas[`${nombre}PrimeraDosis`] = 0
+          }
+          totalesVacunas[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
+          if (!totalesVacunas.hasOwnProperty(`${nombre}SegundaDosis`)) {
+            totalesVacunas[`${nombre}SegundaDosis`] = 0
+          }
+          totalesVacunas[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
+
+          // Vacunas en la provincia dada
+          if (!vacunasPorProvincia.hasOwnProperty(`${nombre}PrimeraDosis`)) {
+            vacunasPorProvincia[`${nombre}PrimeraDosis`] = 0
+          }
+          vacunasPorProvincia[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
+          if (!vacunasPorProvincia.hasOwnProperty(`${nombre}SegundaDosis`)) {
+            vacunasPorProvincia[`${nombre}SegundaDosis`] = 0
+          }
+          vacunasPorProvincia[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
 
           // Sumamos cantidades a provincia
           primeraDosisCantidad += e.primeraDosisCantidad
@@ -106,52 +82,29 @@ module.exports = async function crearJson (json, jsonFileName) {
             segundaDosisCantidad,
             totalDosisAplicadas: e.totalDosisAplicadas
           }
-        }
       })
 
-      vacunas = {
-        COVISHIELDPrimeraDosis,
-        COVISHIELDSegundaDosis,
-        sputnikPrimeraDosis,
-        sputnikSegundaDosis,
-        sinopharmPrimeraDosis,
-        sinopharmSegundaDosis,
-        astraZenecaPrimeraDosis,
-        astraZenecaSegundaDosis,
-        modernaPrimeraDosis,
-        modernaSegundaDosis,
-        otrasPrimeraDosis,
-        otrasSegundaDosis
+      // Sumamos el total de las dosis aplicadas para la provincia
+      let totalDosisAplicadasEnProvincia = 0
+      for (const prop in vacunasPorProvincia) {
+        totalDosisAplicadasEnProvincia += vacunasPorProvincia[prop]
       }
 
       obj = {
         ...obj,
-
-        totalDosisAplicadas: COVISHIELDPrimeraDosis + sputnikPrimeraDosis + otrasPrimeraDosis + COVISHIELDSegundaDosis + sputnikSegundaDosis + otrasSegundaDosis,
+        totalDosisAplicadas: totalDosisAplicadasEnProvincia,
         porcentajePrimeraDosis: primeraDosisCantidad / populationJurisdiccionNombre,
         porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre,
-        vacunas
+        vacunas:vacunasPorProvincia
       }
+
       totalesPrimerasDosis = totalesPrimerasDosis + primeraDosisCantidad
       totalesSegundasDosis = totalesSegundasDosis + segundaDosisCantidad
-      nuevoJson.push(obj)
+      nuevoJson.push(obj);
     }
   }
   populationJurisdiccionNombre = population.Totales
-  vacunas = {
-    COVISHIELDPrimeraDosis,
-    COVISHIELDSegundaDosis,
-    sputnikPrimeraDosis,
-    sputnikSegundaDosis,
-    sinopharmPrimeraDosis,
-    sinopharmSegundaDosis,
-    astraZenecaPrimeraDosis,
-    astraZenecaSegundaDosis,
-    modernaPrimeraDosis,
-    modernaSegundaDosis,
-    otrasPrimeraDosis,
-    otrasSegundaDosis
-  }
+  
   const totales = {
     jurisdiccionCodigoIndec: 0,
     jurisdiccionNombre: 'Totales',
@@ -163,6 +116,9 @@ module.exports = async function crearJson (json, jsonFileName) {
     vacunas: totalesVacunas
   }
   nuevoJson.push(totales)
-  // console.log('NuevoJson: ', nuevoJson)
   await fs.writeJson(`./public/data/${jsonFileName}`, nuevoJson, 'utf8')
+
+  console.log('##### Fin Ejecucion #####');
+  console.log(totalesVacunas);
+
 }

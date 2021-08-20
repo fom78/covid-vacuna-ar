@@ -6,5 +6,6 @@ module.exports = async (fecha) => {
   const filename = `${fecha}.csv`
   const jsonFileName = `${fecha}.json`
   const json = await transformCvsToJson(filename)
+  console.log('######Transformacion ok de csv a json');
   await fs.writeJson(`./public/data/${jsonFileName}`, json, 'utf8')
 }
