@@ -45,6 +45,12 @@ module.exports = async function crearJson(json, jsonFileName) {
             case 'Mode':
               nombre = 'moderna'
               break
+            case 'Pfiz':
+              nombre = 'pfizer'
+              break
+            case 'Cans':
+              nombre = 'cansino'
+              break
             default:
               nombre = 'otras'
               break

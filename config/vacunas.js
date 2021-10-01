@@ -39,5 +39,35 @@ export const vacunas = [
     src: '/moderna-logo.png',
     height: 20,
     width: 50
+  },
+  {
+    nombre: 'pfizer',
+    grupo: 'pfizer',
+    primeraDosis: ['pfizerPrimeraDosis'],
+    segundaDosis: ['pfizerSegundaDosis'],
+    alt: 'Pfizer Logo',
+    src: '/pfizer-logo.png',
+    height: 20,
+    width: 50
+  },
+  {
+    nombre: 'cansino',
+    grupo: 'cansino',
+    primeraDosis: ['cansinoPrimeraDosis'],
+    segundaDosis: ['cansinoSegundaDosis'],
+    alt: 'Cansino Logo',
+    src: '/cansinobio-logo.png',
+    height: 20,
+    width: 50
+  },
+  {
+    nombre: 'otras',
+    grupo: 'otras',
+    primeraDosis: ['otrasPrimeraDosis'],
+    segundaDosis: ['otrasSegundaDosis'],
+    alt: 'Otras Logo',
+    src: '/vacuna.png',
+    height: 20,
+    width: 50
   }
 ]
