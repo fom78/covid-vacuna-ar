@@ -27,7 +27,7 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
-import { vacunas } from 'config/vacunas'
+import { totalesVacunasPorDosis,totalesVacunas } from 'lib/vacunas'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-192099299-1')
@@ -44,6 +44,10 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
   useEffect(() => {
     ReactGA.pageview('/')
   }, [])
+
+  const vacunasPrimeraDosis = totalesVacunasPorDosis(totals.vacunas,"primeraDosis")
+  const vacunasSegundaDosis = totalesVacunasPorDosis(totals.vacunas,"segundaDosis")
+  const vacunasTotalesDosis=totalesVacunas(vacunasPrimeraDosis,vacunasSegundaDosis)
 
   return (
     <>
@@ -99,9 +103,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunas.map(vacuna => {
-                    let cantidadAgrupada = 0
-                    vacuna.primeraDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo] + totals.vacunas[vacuna.segundaDosis[index]]))
+                  {vacunasTotalesDosis.top.map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
@@ -109,7 +111,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                         src={vacuna.src}
                         height={vacuna.height}
                         width={vacuna.width}
-                        cantidad={cantidadAgrupada}
+                        cantidad={vacuna.cantidad}
                       />
                     )
                   })}
@@ -135,9 +137,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunas.map(vacuna => {
-                    let cantidadAgrupada = 0
-                    vacuna.primeraDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo]))
+                  {vacunasPrimeraDosis.top.map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
@@ -145,7 +145,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                         src={vacuna.src}
                         height={vacuna.height}
                         width={vacuna.width}
-                        cantidad={cantidadAgrupada}
+                        cantidad={vacuna.cantidad}
                       />
                     )
                   })}
@@ -171,9 +171,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunas.map(vacuna => {
-                    let cantidadAgrupada = 0
-                    vacuna.segundaDosis.map((tipo, index) => (cantidadAgrupada += totals.vacunas[tipo]))
+                  {vacunasSegundaDosis.top.map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
@@ -181,7 +179,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                         src={vacuna.src}
                         height={vacuna.height}
                         width={vacuna.width}
-                        cantidad={cantidadAgrupada}
+                        cantidad={vacuna.cantidad}
                       />
                     )
                   })}
