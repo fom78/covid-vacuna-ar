@@ -56,18 +56,30 @@ export const vacunas = [
     primeraDosis: ['cansinoPrimeraDosis'],
     segundaDosis: ['cansinoSegundaDosis'],
     alt: 'Cansino Logo',
-    src: '/cansinobio-logo.png',
-    height: 20,
-    width: 50
+    src: '/cansino01.png',
+    height: 55,
+    width: 72
   },
   {
     nombre: 'otras',
     grupo: 'otras',
     primeraDosis: ['otrasPrimeraDosis'],
     segundaDosis: ['otrasSegundaDosis'],
-    alt: 'Otras Logo',
-    src: '/vacuna.png',
+    alt: 'Otras Vacunas',
+    src: '/otras-vacunas.png',
     height: 20,
-    width: 50
+    width: 72
   }
 ]
+
+export const vacunasResto = 
+  {
+    nombre: 'resto',
+    grupo: 'resto',
+    primeraDosis: ['restoPrimeraDosis'],
+    segundaDosis: ['restoSegundaDosis'],
+    alt: 'Vacunas restantes',
+    src: '/resto-vacunas.png',
+    height: 20,
+    width: 72
+  }
