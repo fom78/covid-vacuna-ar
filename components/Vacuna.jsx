@@ -3,18 +3,18 @@ import Image from 'next/image'
 import NumberDigits from 'components/NumberDigits'
 import styles from 'styles/Home.module.css'
 
-export default function Vacuna ({ alt = 'Logo', src, height, width, cantidad = 0 }) {
-  const cantidadAMostrar = (!cantidad) ? 0 : cantidad
+export default function Vacuna ({ vacuna }) {
+  const cantidadAMostrar = (!vacuna.cantidad) ? 0 : vacuna.cantidad
   return (
-    (cantidad)
+    (vacuna.cantidad)
       ? (
         <small>
           <Image
-            alt={alt}
+            alt={vacuna.alt}
             className={styles.companyLogo}
-            src={src}
-            height={height}
-            width={width}
+            src={vacuna.src}
+            height={vacuna.height}
+            width={vacuna.width}
             priority
           />
           <span>
@@ -22,6 +22,9 @@ export default function Vacuna ({ alt = 'Logo', src, height, width, cantidad = 0
               {cantidadAMostrar}
             </NumberDigits>
           </span>
+          {(vacuna.nombre==='resto')
+            ? <span>###</span>
+            : null}
         </small>
         )
       : null

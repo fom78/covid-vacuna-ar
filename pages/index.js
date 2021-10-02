@@ -30,6 +30,7 @@ import ClientSideComponent from 'components/ClientSideComponent'
 import { totalesVacunasPorDosis,totalesVacunas } from 'lib/vacunas'
 
 import ReactGA from 'react-ga'
+import { vacunasResto } from 'config/vacunas'
 ReactGA.initialize('UA-192099299-1')
 
 export default function Home ({ data, info, reports, chartDatasets, newReports }) {
@@ -107,11 +108,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                     return (
                       <Vacuna
                         key={vacuna.grupo}
-                        alt={vacuna.alt}
-                        src={vacuna.src}
-                        height={vacuna.height}
-                        width={vacuna.width}
-                        cantidad={vacuna.cantidad}
+                        vacuna={vacuna}
                       />
                     )
                   })}
@@ -141,11 +138,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                     return (
                       <Vacuna
                         key={vacuna.grupo}
-                        alt={vacuna.alt}
-                        src={vacuna.src}
-                        height={vacuna.height}
-                        width={vacuna.width}
-                        cantidad={vacuna.cantidad}
+                        vacuna={vacuna}
                       />
                     )
                   })}
@@ -175,11 +168,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                     return (
                       <Vacuna
                         key={vacuna.grupo}
-                        alt={vacuna.alt}
-                        src={vacuna.src}
-                        height={vacuna.height}
-                        width={vacuna.width}
-                        cantidad={vacuna.cantidad}
+                        vacuna={vacuna}
                       />
                     )
                   })}
