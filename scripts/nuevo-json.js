@@ -1,13 +1,14 @@
 const fs = require('fs-extra')
 const { population } = require('../public/data/bbdd.json')
 const { populationCodigo } = require('../public/data/bbddco.json')
+const { inicialTotalesVacunas } = require('../config/totales.json')
 
 module.exports = async function crearJson(json, jsonFileName) {
   const nuevoJson = []
 
   let obj = {}
-  let vacunasPorProvincia = {}
-  let totalesVacunas = {}
+  let vacunasPorProvincia = {...inicialTotalesVacunas}
+  let totalesVacunas = {...inicialTotalesVacunas}
   let nombre = ''
   let totalesPrimerasDosis = 0
   let totalesSegundasDosis = 0
@@ -25,7 +26,7 @@ module.exports = async function crearJson(json, jsonFileName) {
       obj = {}
       primeraDosisCantidad = 0
       segundaDosisCantidad = 0
-      vacunasPorProvincia = {}
+      vacunasPorProvincia = {...inicialTotalesVacunas}
       json
         .filter( e =>e.jurisdiccionCodigoIndec === Number(key))
         .map(e => {
@@ -56,25 +57,10 @@ module.exports = async function crearJson(json, jsonFileName) {
               break
           }
 
-          
-          // Para el objeto que lleva los totales (se pódria recorrer luego y sumar...)
-          if (!totalesVacunas.hasOwnProperty(`${nombre}PrimeraDosis`)) {
-            totalesVacunas[`${nombre}PrimeraDosis`] = 0
-          }
+  
           totalesVacunas[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
-          if (!totalesVacunas.hasOwnProperty(`${nombre}SegundaDosis`)) {
-            totalesVacunas[`${nombre}SegundaDosis`] = 0
-          }
           totalesVacunas[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
-
-          // Vacunas en la provincia dada
-          if (!vacunasPorProvincia.hasOwnProperty(`${nombre}PrimeraDosis`)) {
-            vacunasPorProvincia[`${nombre}PrimeraDosis`] = 0
-          }
           vacunasPorProvincia[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
-          if (!vacunasPorProvincia.hasOwnProperty(`${nombre}SegundaDosis`)) {
-            vacunasPorProvincia[`${nombre}SegundaDosis`] = 0
-          }
           vacunasPorProvincia[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
 
           // Sumamos cantidades a provincia
@@ -121,10 +107,11 @@ module.exports = async function crearJson(json, jsonFileName) {
     porcentajeSegundaDosis: totalesSegundasDosis / populationJurisdiccionNombre,
     vacunas: totalesVacunas
   }
+
   nuevoJson.push(totales)
   await fs.writeJson(`./public/data/${jsonFileName}`, nuevoJson, 'utf8')
 
   console.log('##### Fin Ejecucion #####');
-  console.log(totalesVacunas);
+  console.log("fecha: ",jsonFileName,"  ",totalesVacunas);
 
 }
