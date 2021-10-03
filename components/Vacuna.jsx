@@ -5,8 +5,9 @@ import styles from 'styles/Home.module.css'
 
 export default function Vacuna ({ vacuna }) {
   const cantidadAMostrar = (!vacuna.cantidad) ? 0 : vacuna.cantidad
+
   return (
-    (vacuna.cantidad)
+    (vacuna)
       ? (
         <small>
           <Image
@@ -21,12 +22,10 @@ export default function Vacuna ({ vacuna }) {
             <NumberDigits>
               {cantidadAMostrar}
             </NumberDigits>
-          </span>
-          {(vacuna.nombre==='resto')
-            ? <span>###</span>
-            : null}
+          </span>  
         </small>
-        )
-      : null
+      )
+      : null   
   )
+
 }

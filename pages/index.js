@@ -9,6 +9,7 @@ import NumberDigits from 'components/NumberDigits'
 import Progress from 'components/Progress.jsx'
 import Prevision from 'components/Prevision/Prevision'
 import Select from 'components/Select'
+import RestoVacunas from 'components/RestoVacunas'
 import ScrollToTop from 'components/ScrollToTop'
 import Share from 'components/Share.jsx'
 import Table from 'components/Table.jsx'
@@ -30,12 +31,14 @@ import ClientSideComponent from 'components/ClientSideComponent'
 import { totalesVacunasPorDosis,totalesVacunas } from 'lib/vacunas'
 
 import ReactGA from 'react-ga'
-import { vacunasResto } from 'config/vacunas'
 ReactGA.initialize('UA-192099299-1')
 
 export default function Home ({ data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
+  const [clasificacion, setClasificacion] = useState('top')
+
+  const [mostrarTodasLasVacunas, setMostrarTodasLasVacunas] = useState(false)
   const reportFound = useSearch({ valueSearch })
 
   const totals = useMemo(
@@ -45,6 +48,14 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
   useEffect(() => {
     ReactGA.pageview('/')
   }, [])
+  useEffect(() => {
+    if (mostrarTodasLasVacunas) {
+       setClasificacion('totales')
+    }else{
+      setClasificacion('top')
+    }
+
+  }, [mostrarTodasLasVacunas])
 
   const vacunasPrimeraDosis = totalesVacunasPorDosis(totals.vacunas,"primeraDosis")
   const vacunasSegundaDosis = totalesVacunasPorDosis(totals.vacunas,"segundaDosis")
@@ -76,16 +87,11 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
           </small>
 
           <Select data={reports} onChange={setValueSearch} />
+          
+          <RestoVacunas mostrar={mostrarTodasLasVacunas} onClick={setMostrarTodasLasVacunas}>Ver Todas</RestoVacunas>
 
           <div className={styles.grid}>
             <div className={styles.card}>
-              <button
-                title='Abrir diálogo con explicación sobre Dosis Distribuidas'
-                onClick={() => { }}
-              >
-                ❔
-              </button>
-
               <header>
                 <Image
                   className={styles.cardImage}
@@ -104,7 +110,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunasTotalesDosis.top.map(vacuna => {
+                  {vacunasTotalesDosis[clasificacion].map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
@@ -134,7 +140,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunasPrimeraDosis.top.map(vacuna => {
+                  {vacunasPrimeraDosis[clasificacion].map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
@@ -164,7 +170,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
                   </p>
                 </div>
                 <div>
-                  {vacunasSegundaDosis.top.map(vacuna => {
+                  {vacunasSegundaDosis[clasificacion].map(vacuna => {
                     return (
                       <Vacuna
                         key={vacuna.grupo}
