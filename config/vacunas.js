@@ -65,6 +65,7 @@ export const vacunas = [
     grupo: 'otras',
     primeraDosis: ['otrasPrimeraDosis'],
     segundaDosis: ['otrasSegundaDosis'],
+    cantidad:0,
     alt: 'Otras Vacunas',
     src: '/otras-vacunas.png',
     height: 20,

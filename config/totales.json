@@ -1,0 +1,18 @@
+{"inicialTotalesVacunas":{
+    "astraZenecaPrimeraDosis": 0,
+    "astraZenecaSegundaDosis": 0,
+    "COVISHIELDPrimeraDosis": 0,
+    "COVISHIELDSegundaDosis": 0,
+    "cansinoPrimeraDosis": 0,
+    "cansinoSegundaDosis": 0,
+    "modernaPrimeraDosis": 0,
+    "modernaSegundaDosis": 0,
+    "pfizerPrimeraDosis": 0,
+    "pfizerSegundaDosis": 0,
+    "sinopharmPrimeraDosis": 0,
+    "sinopharmSegundaDosis": 0,
+    "sputnikPrimeraDosis": 0,
+    "sputnikSegundaDosis": 0,
+    "otrasPrimeraDosis": 0,
+    "otrasSegundaDosis": 0
+  }}
