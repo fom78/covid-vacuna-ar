@@ -235,6 +235,22 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
           </li>
         </ul>
 
+        <h2 className={styles.subtitle}>
+          Sobre Mi
+        </h2>
+        <span className={styles.linkPortfolio}>
+        Soy Fernando Masino (fom78)
+        <br/>Desarrollador web, en continua formación! 
+        Podes ver humilde portfolio desde &nbsp;
+        <a
+          target='_blank'
+          rel='noreferrer'
+          href='https://www.fom78.com.ar/'
+          
+        >
+          AQUI 
+        </a>
+        </span>
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
