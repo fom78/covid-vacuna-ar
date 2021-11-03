@@ -1,169 +1,169 @@
 "jurisdiccion_codigo_indec","jurisdiccion_nombre","vacuna_nombre",primera_dosis_cantidad,segunda_dosis_cantidad
-"06","Buenos Aires","AstraZeneca ChAdOx1 S recombinante",3423150,3730551
+"06","Buenos Aires","AstraZeneca ChAdOx1 S recombinante",3424395,3733687
 "06","Buenos Aires","COVISHIELD ChAdOx1nCoV COVID 19",251027,325
-"06","Buenos Aires","Cansino Ad5 nCoV",21530,0
-"06","Buenos Aires","Moderna ARNm",320324,978090
-"06","Buenos Aires","Pfizer BioNTech Comirnaty",727077,120903
-"06","Buenos Aires","Sinopharm Vacuna SARSCOV 2 inactivada",4526039,3086849
-"06","Buenos Aires","Sputnik V COVID19 Instituto Gamaleya",4126571,2319409
-"02","CABA","AstraZeneca ChAdOx1 S recombinante",680630,702863
-"02","CABA","COVISHIELD ChAdOx1nCoV COVID 19",65378,183
-"02","CABA","Cansino Ad5 nCoV",25947,0
-"02","CABA","Moderna ARNm",19281,245565
-"02","CABA","Pfizer BioNTech Comirnaty",138453,35006
-"02","CABA","Sinopharm Vacuna SARSCOV 2 inactivada",826027,649344
-"02","CABA","Sputnik V COVID19 Instituto Gamaleya",891777,561445
-"10","Catamarca","AstraZeneca ChAdOx1 S recombinante",84988,78923
+"06","Buenos Aires","Cansino Ad5 nCoV",21958,0
+"06","Buenos Aires","Moderna ARNm",320984,984233
+"06","Buenos Aires","Pfizer BioNTech Comirnaty",744179,138463
+"06","Buenos Aires","Sinopharm Vacuna SARSCOV 2 inactivada",4545078,3138511
+"06","Buenos Aires","Sputnik V COVID19 Instituto Gamaleya",4128036,2324057
+"02","CABA","AstraZeneca ChAdOx1 S recombinante",681119,703374
+"02","CABA","COVISHIELD ChAdOx1nCoV COVID 19",65379,183
+"02","CABA","Cansino Ad5 nCoV",25979,0
+"02","CABA","Moderna ARNm",19281,245621
+"02","CABA","Pfizer BioNTech Comirnaty",138952,35157
+"02","CABA","Sinopharm Vacuna SARSCOV 2 inactivada",827639,652906
+"02","CABA","Sputnik V COVID19 Instituto Gamaleya",891823,562408
+"10","Catamarca","AstraZeneca ChAdOx1 S recombinante",85065,79052
 "10","Catamarca","COVISHIELD ChAdOx1nCoV COVID 19",4752,4
 "10","Catamarca","Cansino Ad5 nCoV",1071,0
-"10","Catamarca","Moderna ARNm",7151,20559
-"10","Catamarca","Pfizer BioNTech Comirnaty",16807,34
-"10","Catamarca","Sinopharm Vacuna SARSCOV 2 inactivada",128064,90998
-"10","Catamarca","Sputnik V COVID19 Instituto Gamaleya",94424,59141
-"22","Chaco","AstraZeneca ChAdOx1 S recombinante",227268,181428
-"22","Chaco","COVISHIELD ChAdOx1nCoV COVID 19",15365,611
-"22","Chaco","Cansino Ad5 nCoV",958,0
-"22","Chaco","Moderna ARNm",25139,50936
-"22","Chaco","Pfizer BioNTech Comirnaty",22875,1435
-"22","Chaco","Sinopharm Vacuna SARSCOV 2 inactivada",263841,156449
-"22","Chaco","Sputnik V COVID19 Instituto Gamaleya",243576,140086
-"26","Chubut","AstraZeneca ChAdOx1 S recombinante",122761,113155
-"26","Chubut","COVISHIELD ChAdOx1nCoV COVID 19",11743,617
-"26","Chubut","Cansino Ad5 nCoV",51,0
-"26","Chubut","Moderna ARNm",17988,26520
-"26","Chubut","Pfizer BioNTech Comirnaty",13935,1204
-"26","Chubut","Sinopharm Vacuna SARSCOV 2 inactivada",123359,85612
-"26","Chubut","Sputnik V COVID19 Instituto Gamaleya",132515,83996
-"18","Corrientes","AstraZeneca ChAdOx1 S recombinante",179731,148789
+"10","Catamarca","Moderna ARNm",7191,20560
+"10","Catamarca","Pfizer BioNTech Comirnaty",16927,34
+"10","Catamarca","Sinopharm Vacuna SARSCOV 2 inactivada",128154,91062
+"10","Catamarca","Sputnik V COVID19 Instituto Gamaleya",94426,59313
+"22","Chaco","AstraZeneca ChAdOx1 S recombinante",227299,181861
+"22","Chaco","COVISHIELD ChAdOx1nCoV COVID 19",15365,615
+"22","Chaco","Cansino Ad5 nCoV",985,0
+"22","Chaco","Moderna ARNm",25146,51093
+"22","Chaco","Pfizer BioNTech Comirnaty",23288,1570
+"22","Chaco","Sinopharm Vacuna SARSCOV 2 inactivada",264676,156731
+"22","Chaco","Sputnik V COVID19 Instituto Gamaleya",243758,140403
+"26","Chubut","AstraZeneca ChAdOx1 S recombinante",122925,113379
+"26","Chubut","COVISHIELD ChAdOx1nCoV COVID 19",11744,617
+"26","Chubut","Cansino Ad5 nCoV",52,0
+"26","Chubut","Moderna ARNm",18017,26887
+"26","Chubut","Pfizer BioNTech Comirnaty",14584,1497
+"26","Chubut","Sinopharm Vacuna SARSCOV 2 inactivada",124742,85988
+"26","Chubut","Sputnik V COVID19 Instituto Gamaleya",132572,84853
+"18","Corrientes","AstraZeneca ChAdOx1 S recombinante",179825,149024
 "18","Corrientes","COVISHIELD ChAdOx1nCoV COVID 19",19701,397
-"18","Corrientes","Cansino Ad5 nCoV",3541,0
-"18","Corrientes","Moderna ARNm",24798,52038
-"18","Corrientes","Pfizer BioNTech Comirnaty",32422,838
-"18","Corrientes","Sinopharm Vacuna SARSCOV 2 inactivada",313693,182900
-"18","Corrientes","Sputnik V COVID19 Instituto Gamaleya",248321,130460
-"14","Córdoba","AstraZeneca ChAdOx1 S recombinante",778875,756684
-"14","Córdoba","COVISHIELD ChAdOx1nCoV COVID 19",44073,83
-"14","Córdoba","Cansino Ad5 nCoV",11780,200
-"14","Córdoba","Moderna ARNm",41265,244020
-"14","Córdoba","Pfizer BioNTech Comirnaty",188520,15611
-"14","Córdoba","Sinopharm Vacuna SARSCOV 2 inactivada",1028471,699795
-"14","Córdoba","Sputnik V COVID19 Instituto Gamaleya",884097,549269
-"30","Entre Ríos","AstraZeneca ChAdOx1 S recombinante",278221,242032
+"18","Corrientes","Cansino Ad5 nCoV",3545,0
+"18","Corrientes","Moderna ARNm",24796,52066
+"18","Corrientes","Pfizer BioNTech Comirnaty",36258,844
+"18","Corrientes","Sinopharm Vacuna SARSCOV 2 inactivada",314300,183283
+"18","Corrientes","Sputnik V COVID19 Instituto Gamaleya",248333,130871
+"14","Córdoba","AstraZeneca ChAdOx1 S recombinante",779480,757775
+"14","Córdoba","COVISHIELD ChAdOx1nCoV COVID 19",44074,84
+"14","Córdoba","Cansino Ad5 nCoV",12042,200
+"14","Córdoba","Moderna ARNm",41270,244670
+"14","Córdoba","Pfizer BioNTech Comirnaty",191919,16956
+"14","Córdoba","Sinopharm Vacuna SARSCOV 2 inactivada",1036730,701203
+"14","Córdoba","Sputnik V COVID19 Instituto Gamaleya",884495,552049
+"30","Entre Ríos","AstraZeneca ChAdOx1 S recombinante",278477,242575
 "30","Entre Ríos","COVISHIELD ChAdOx1nCoV COVID 19",17243,331
-"30","Entre Ríos","Cansino Ad5 nCoV",5975,0
-"30","Entre Ríos","Moderna ARNm",20472,68872
-"30","Entre Ríos","Pfizer BioNTech Comirnaty",39788,791
-"30","Entre Ríos","Sinopharm Vacuna SARSCOV 2 inactivada",323493,247192
-"30","Entre Ríos","Sputnik V COVID19 Instituto Gamaleya",305855,167213
-"34","Formosa","AstraZeneca ChAdOx1 S recombinante",117634,132913
+"30","Entre Ríos","Cansino Ad5 nCoV",6103,0
+"30","Entre Ríos","Moderna ARNm",20557,69184
+"30","Entre Ríos","Pfizer BioNTech Comirnaty",41793,1155
+"30","Entre Ríos","Sinopharm Vacuna SARSCOV 2 inactivada",328609,247887
+"30","Entre Ríos","Sputnik V COVID19 Instituto Gamaleya",306309,169318
+"34","Formosa","AstraZeneca ChAdOx1 S recombinante",117653,137292
 "34","Formosa","COVISHIELD ChAdOx1nCoV COVID 19",7347,1
 "34","Formosa","Cansino Ad5 nCoV",307,0
-"34","Formosa","Moderna ARNm",38858,4914
-"34","Formosa","Pfizer BioNTech Comirnaty",16168,20253
-"34","Formosa","Sinopharm Vacuna SARSCOV 2 inactivada",181584,118341
-"34","Formosa","Sputnik V COVID19 Instituto Gamaleya",132607,74857
-"38","Jujuy","AstraZeneca ChAdOx1 S recombinante",160726,134426
+"34","Formosa","Moderna ARNm",38865,4916
+"34","Formosa","Pfizer BioNTech Comirnaty",16329,23944
+"34","Formosa","Sinopharm Vacuna SARSCOV 2 inactivada",181641,118492
+"34","Formosa","Sputnik V COVID19 Instituto Gamaleya",132782,75239
+"38","Jujuy","AstraZeneca ChAdOx1 S recombinante",160741,134559
 "38","Jujuy","COVISHIELD ChAdOx1nCoV COVID 19",13972,286
 "38","Jujuy","Cansino Ad5 nCoV",43,0
-"38","Jujuy","Moderna ARNm",21299,25008
-"38","Jujuy","Pfizer BioNTech Comirnaty",22700,1114
-"38","Jujuy","Sinopharm Vacuna SARSCOV 2 inactivada",202365,116274
-"38","Jujuy","Sputnik V COVID19 Instituto Gamaleya",152872,111915
-"42","La Pampa","AstraZeneca ChAdOx1 S recombinante",67913,74129
+"38","Jujuy","Moderna ARNm",21316,25113
+"38","Jujuy","Pfizer BioNTech Comirnaty",22877,1151
+"38","Jujuy","Sinopharm Vacuna SARSCOV 2 inactivada",202599,116360
+"38","Jujuy","Sputnik V COVID19 Instituto Gamaleya",152873,111971
+"42","La Pampa","AstraZeneca ChAdOx1 S recombinante",67918,74145
 "42","La Pampa","COVISHIELD ChAdOx1nCoV COVID 19",4574,0
-"42","La Pampa","Cansino Ad5 nCoV",2555,0
-"42","La Pampa","Moderna ARNm",4857,24681
-"42","La Pampa","Pfizer BioNTech Comirnaty",22162,2414
-"42","La Pampa","Sinopharm Vacuna SARSCOV 2 inactivada",115681,83076
-"42","La Pampa","Sputnik V COVID19 Instituto Gamaleya",87032,55105
-"46","La Rioja","AstraZeneca ChAdOx1 S recombinante",77008,73714
+"42","La Pampa","Cansino Ad5 nCoV",2556,0
+"42","La Pampa","Moderna ARNm",4858,24758
+"42","La Pampa","Pfizer BioNTech Comirnaty",22255,2626
+"42","La Pampa","Sinopharm Vacuna SARSCOV 2 inactivada",115851,84391
+"42","La Pampa","Sputnik V COVID19 Instituto Gamaleya",87047,55204
+"46","La Rioja","AstraZeneca ChAdOx1 S recombinante",77021,73785
 "46","La Rioja","COVISHIELD ChAdOx1nCoV COVID 19",7202,110
-"46","La Rioja","Cansino Ad5 nCoV",2087,0
-"46","La Rioja","Moderna ARNm",9038,23357
-"46","La Rioja","Pfizer BioNTech Comirnaty",20708,2579
-"46","La Rioja","Sinopharm Vacuna SARSCOV 2 inactivada",117963,74493
-"46","La Rioja","Sputnik V COVID19 Instituto Gamaleya",92739,61028
-"50","Mendoza","AstraZeneca ChAdOx1 S recombinante",407876,365584
-"50","Mendoza","COVISHIELD ChAdOx1nCoV COVID 19",25251,410
-"50","Mendoza","Cansino Ad5 nCoV",3800,1
-"50","Mendoza","Moderna ARNm",23209,125508
-"50","Mendoza","Pfizer BioNTech Comirnaty",96040,16243
-"50","Mendoza","Sinopharm Vacuna SARSCOV 2 inactivada",384720,291424
-"50","Mendoza","Sputnik V COVID19 Instituto Gamaleya",454861,251883
-"54","Misiones","AstraZeneca ChAdOx1 S recombinante",212253,206969
-"54","Misiones","COVISHIELD ChAdOx1nCoV COVID 19",16682,791
-"54","Misiones","Cansino Ad5 nCoV",3213,0
-"54","Misiones","Moderna ARNm",38483,46677
-"54","Misiones","Pfizer BioNTech Comirnaty",19569,784
-"54","Misiones","Sinopharm Vacuna SARSCOV 2 inactivada",226677,133836
-"54","Misiones","Sputnik V COVID19 Instituto Gamaleya",236276,128503
-"58","Neuquén","AstraZeneca ChAdOx1 S recombinante",137579,123514
+"46","La Rioja","Cansino Ad5 nCoV",2089,0
+"46","La Rioja","Moderna ARNm",9043,23356
+"46","La Rioja","Pfizer BioNTech Comirnaty",20848,2981
+"46","La Rioja","Sinopharm Vacuna SARSCOV 2 inactivada",118586,74738
+"46","La Rioja","Sputnik V COVID19 Instituto Gamaleya",92758,61123
+"50","Mendoza","AstraZeneca ChAdOx1 S recombinante",408223,366283
+"50","Mendoza","COVISHIELD ChAdOx1nCoV COVID 19",25260,410
+"50","Mendoza","Cansino Ad5 nCoV",3822,1
+"50","Mendoza","Moderna ARNm",23225,125631
+"50","Mendoza","Pfizer BioNTech Comirnaty",97614,17109
+"50","Mendoza","Sinopharm Vacuna SARSCOV 2 inactivada",391759,292086
+"50","Mendoza","Sputnik V COVID19 Instituto Gamaleya",455219,252490
+"54","Misiones","AstraZeneca ChAdOx1 S recombinante",212476,207517
+"54","Misiones","COVISHIELD ChAdOx1nCoV COVID 19",16684,791
+"54","Misiones","Cansino Ad5 nCoV",3307,0
+"54","Misiones","Moderna ARNm",38585,46987
+"54","Misiones","Pfizer BioNTech Comirnaty",20200,928
+"54","Misiones","Sinopharm Vacuna SARSCOV 2 inactivada",228280,134490
+"54","Misiones","Sputnik V COVID19 Instituto Gamaleya",236578,129159
+"58","Neuquén","AstraZeneca ChAdOx1 S recombinante",137582,123679
 "58","Neuquén","COVISHIELD ChAdOx1nCoV COVID 19",12771,59
-"58","Neuquén","Cansino Ad5 nCoV",4486,0
-"58","Neuquén","Moderna ARNm",11436,36608
-"58","Neuquén","Pfizer BioNTech Comirnaty",26313,2029
-"58","Neuquén","Sinopharm Vacuna SARSCOV 2 inactivada",180555,119276
-"58","Neuquén","Sputnik V COVID19 Instituto Gamaleya",157976,96742
-"62","Río Negro","AstraZeneca ChAdOx1 S recombinante",142382,141910
+"58","Neuquén","Cansino Ad5 nCoV",4488,0
+"58","Neuquén","Moderna ARNm",11436,36609
+"58","Neuquén","Pfizer BioNTech Comirnaty",26909,2199
+"58","Neuquén","Sinopharm Vacuna SARSCOV 2 inactivada",181542,119363
+"58","Neuquén","Sputnik V COVID19 Instituto Gamaleya",158129,97132
+"62","Río Negro","AstraZeneca ChAdOx1 S recombinante",142437,142151
 "62","Río Negro","COVISHIELD ChAdOx1nCoV COVID 19",13965,89
-"62","Río Negro","Cansino Ad5 nCoV",1699,0
-"62","Río Negro","Moderna ARNm",8730,45431
-"62","Río Negro","Pfizer BioNTech Comirnaty",35607,3744
-"62","Río Negro","Sinopharm Vacuna SARSCOV 2 inactivada",232628,151995
-"62","Río Negro","Sputnik V COVID19 Instituto Gamaleya",170398,97146
-"66","Salta","AstraZeneca ChAdOx1 S recombinante",300874,239123
+"62","Río Negro","Cansino Ad5 nCoV",1729,0
+"62","Río Negro","Moderna ARNm",8771,45472
+"62","Río Negro","Pfizer BioNTech Comirnaty",36752,4305
+"62","Río Negro","Sinopharm Vacuna SARSCOV 2 inactivada",234003,152384
+"62","Río Negro","Sputnik V COVID19 Instituto Gamaleya",170511,97579
+"66","Salta","AstraZeneca ChAdOx1 S recombinante",301127,240190
 "66","Salta","COVISHIELD ChAdOx1nCoV COVID 19",17843,52
-"66","Salta","Cansino Ad5 nCoV",462,1
-"66","Salta","Moderna ARNm",22909,65848
-"66","Salta","Pfizer BioNTech Comirnaty",41043,3121
-"66","Salta","Sinopharm Vacuna SARSCOV 2 inactivada",286083,151647
-"66","Salta","Sputnik V COVID19 Instituto Gamaleya",292366,171302
-"70","San Juan","AstraZeneca ChAdOx1 S recombinante",147071,149889
+"66","Salta","Cansino Ad5 nCoV",497,1
+"66","Salta","Moderna ARNm",23327,65962
+"66","Salta","Pfizer BioNTech Comirnaty",42481,3345
+"66","Salta","Sinopharm Vacuna SARSCOV 2 inactivada",288660,152373
+"66","Salta","Sputnik V COVID19 Instituto Gamaleya",292514,172071
+"70","San Juan","AstraZeneca ChAdOx1 S recombinante",147234,150146
 "70","San Juan","COVISHIELD ChAdOx1nCoV COVID 19",8811,12
 "70","San Juan","Cansino Ad5 nCoV",72,0
-"70","San Juan","Moderna ARNm",14175,38284
-"70","San Juan","Pfizer BioNTech Comirnaty",32147,4309
-"70","San Juan","Sinopharm Vacuna SARSCOV 2 inactivada",188214,135903
-"70","San Juan","Sputnik V COVID19 Instituto Gamaleya",192647,116283
-"74","San Luis","AstraZeneca ChAdOx1 S recombinante",98105,104056
+"70","San Juan","Moderna ARNm",15783,38386
+"70","San Juan","Pfizer BioNTech Comirnaty",32172,4691
+"70","San Juan","Sinopharm Vacuna SARSCOV 2 inactivada",191482,136030
+"70","San Juan","Sputnik V COVID19 Instituto Gamaleya",192661,116719
+"74","San Luis","AstraZeneca ChAdOx1 S recombinante",98108,104059
 "74","San Luis","COVISHIELD ChAdOx1nCoV COVID 19",6829,0
-"74","San Luis","Cansino Ad5 nCoV",4085,0
-"74","San Luis","Moderna ARNm",8788,29941
-"74","San Luis","Pfizer BioNTech Comirnaty",28065,3681
-"74","San Luis","Sinopharm Vacuna SARSCOV 2 inactivada",151007,105095
-"74","San Luis","Sputnik V COVID19 Instituto Gamaleya",120852,84523
-"78","Santa Cruz","AstraZeneca ChAdOx1 S recombinante",60680,56817
-"78","Santa Cruz","COVISHIELD ChAdOx1nCoV COVID 19",5913,714
-"78","Santa Cruz","Cansino Ad5 nCoV",1365,0
-"78","Santa Cruz","Moderna ARNm",8480,15374
-"78","Santa Cruz","Pfizer BioNTech Comirnaty",13588,1319
-"78","Santa Cruz","Sinopharm Vacuna SARSCOV 2 inactivada",74710,52797
-"78","Santa Cruz","Sputnik V COVID19 Instituto Gamaleya",87974,56327
-"82","Santa Fe","AstraZeneca ChAdOx1 S recombinante",746067,736547
+"74","San Luis","Cansino Ad5 nCoV",4112,0
+"74","San Luis","Moderna ARNm",8796,29956
+"74","San Luis","Pfizer BioNTech Comirnaty",28348,4722
+"74","San Luis","Sinopharm Vacuna SARSCOV 2 inactivada",151676,106500
+"74","San Luis","Sputnik V COVID19 Instituto Gamaleya",120864,84569
+"78","Santa Cruz","AstraZeneca ChAdOx1 S recombinante",60733,56984
+"78","Santa Cruz","COVISHIELD ChAdOx1nCoV COVID 19",5914,715
+"78","Santa Cruz","Cansino Ad5 nCoV",1398,0
+"78","Santa Cruz","Moderna ARNm",8651,15791
+"78","Santa Cruz","Pfizer BioNTech Comirnaty",14048,2018
+"78","Santa Cruz","Sinopharm Vacuna SARSCOV 2 inactivada",75432,52937
+"78","Santa Cruz","Sputnik V COVID19 Instituto Gamaleya",88007,56610
+"82","Santa Fe","AstraZeneca ChAdOx1 S recombinante",746201,737404
 "82","Santa Fe","COVISHIELD ChAdOx1nCoV COVID 19",41234,52
-"82","Santa Fe","Cansino Ad5 nCoV",9370,0
-"82","Santa Fe","Moderna ARNm",36788,231377
-"82","Santa Fe","Pfizer BioNTech Comirnaty",162144,14604
-"82","Santa Fe","Sinopharm Vacuna SARSCOV 2 inactivada",896148,671241
-"82","Santa Fe","Sputnik V COVID19 Instituto Gamaleya",876242,529307
-"86","Santiago del Estero","AstraZeneca ChAdOx1 S recombinante",208037,196166
-"86","Santiago del Estero","COVISHIELD ChAdOx1nCoV COVID 19",11850,1168
-"86","Santiago del Estero","Cansino Ad5 nCoV",6328,1
-"86","Santiago del Estero","Moderna ARNm",9449,62436
-"86","Santiago del Estero","Pfizer BioNTech Comirnaty",56351,2064
-"86","Santiago del Estero","Sinopharm Vacuna SARSCOV 2 inactivada",317654,204960
-"86","Santiago del Estero","Sputnik V COVID19 Instituto Gamaleya",219062,129075
-"94","Tierra del Fuego","AstraZeneca ChAdOx1 S recombinante",32861,32373
+"82","Santa Fe","Cansino Ad5 nCoV",9713,0
+"82","Santa Fe","Moderna ARNm",36835,231509
+"82","Santa Fe","Pfizer BioNTech Comirnaty",166887,14886
+"82","Santa Fe","Sinopharm Vacuna SARSCOV 2 inactivada",909920,672023
+"82","Santa Fe","Sputnik V COVID19 Instituto Gamaleya",876719,532766
+"86","Santiago del Estero","AstraZeneca ChAdOx1 S recombinante",208060,196360
+"86","Santiago del Estero","COVISHIELD ChAdOx1nCoV COVID 19",11850,1169
+"86","Santiago del Estero","Cansino Ad5 nCoV",6348,1
+"86","Santiago del Estero","Moderna ARNm",9453,62444
+"86","Santiago del Estero","Pfizer BioNTech Comirnaty",56730,2195
+"86","Santiago del Estero","Sinopharm Vacuna SARSCOV 2 inactivada",318387,205124
+"86","Santiago del Estero","Sputnik V COVID19 Instituto Gamaleya",219094,129195
+"94","Tierra del Fuego","AstraZeneca ChAdOx1 S recombinante",32887,32395
 "94","Tierra del Fuego","COVISHIELD ChAdOx1nCoV COVID 19",2727,750
 "94","Tierra del Fuego","Cansino Ad5 nCoV",2,0
-"94","Tierra del Fuego","Moderna ARNm",1803,11105
-"94","Tierra del Fuego","Pfizer BioNTech Comirnaty",11850,1068
-"94","Tierra del Fuego","Sinopharm Vacuna SARSCOV 2 inactivada",46887,32702
-"94","Tierra del Fuego","Sputnik V COVID19 Instituto Gamaleya",43775,26016
+"94","Tierra del Fuego","Moderna ARNm",1816,11120
+"94","Tierra del Fuego","Pfizer BioNTech Comirnaty",11865,1068
+"94","Tierra del Fuego","Sinopharm Vacuna SARSCOV 2 inactivada",48057,32759
+"94","Tierra del Fuego","Sputnik V COVID19 Instituto Gamaleya",43794,26062
 "90","Tucumán","AstraZeneca ChAdOx1 S recombinante",301885,280069
 "90","Tucumán","COVISHIELD ChAdOx1nCoV COVID 19",20536,57
 "90","Tucumán","Cansino Ad5 nCoV",38,0
 "90","Tucumán","Moderna ARNm",30619,85018
-"90","Tucumán","Pfizer BioNTech Comirnaty",65945,9341
-"90","Tucumán","Sinopharm Vacuna SARSCOV 2 inactivada",386721,259846
-"90","Tucumán","Sputnik V COVID19 Instituto Gamaleya",394608,222922
+"90","Tucumán","Pfizer BioNTech Comirnaty",65947,9341
+"90","Tucumán","Sinopharm Vacuna SARSCOV 2 inactivada",387280,259861
+"90","Tucumán","Sputnik V COVID19 Instituto Gamaleya",394608,222923
