@@ -31,6 +31,7 @@
   line-height: 1.15;
   font-size: 2rem;
 }
+
 .linkPortfolio a {
   color: #09f;
 }
@@ -172,7 +173,7 @@
 }
 
 .card .secondary {
-  color:var(--text-secondary-color);
+  color: var(--text-secondary-color);
   font-size: 1.9rem;
 }
 
@@ -186,12 +187,22 @@
   padding: .3rem 0;
 }
 
-.card small > span {
+.card small>span {
   margin-left: 8px;
 }
 
 .logo {
   height: 2em;
+}
+
+.cafecito {
+  align-items: center;
+}
+
+.cafecito img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 @media (max-width: 600px) {

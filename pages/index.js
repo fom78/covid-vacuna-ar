@@ -28,12 +28,12 @@ import normalizeChartData from 'components/ProgressChart/utils/normalize-data'
 import getNewReports from 'components/Prevision/utils/get-lasts-reports'
 import ClientSideComponent from 'components/ClientSideComponent'
 
-import { totalesVacunasPorDosis,totalesVacunas } from 'lib/vacunas'
+import { totalesVacunasPorDosis, totalesVacunas } from 'lib/vacunas'
 
 import ReactGA from 'react-ga'
 ReactGA.initialize('UA-192099299-1')
 
-export default function Home ({ data, info, reports, chartDatasets, newReports }) {
+export default function Home({ data, info, reports, chartDatasets, newReports }) {
   const [filter, setFilter] = useState('Totales')
   const [valueSearch, setValueSearch] = useState('')
   const [clasificacion, setClasificacion] = useState('top')
@@ -50,16 +50,16 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
   }, [])
   useEffect(() => {
     if (mostrarTodasLasVacunas) {
-       setClasificacion('totales')
-    }else{
+      setClasificacion('totales')
+    } else {
       setClasificacion('top')
     }
 
   }, [mostrarTodasLasVacunas])
 
-  const vacunasPrimeraDosis = totalesVacunasPorDosis(totals.vacunas,"primeraDosis")
-  const vacunasSegundaDosis = totalesVacunasPorDosis(totals.vacunas,"segundaDosis")
-  const vacunasTotalesDosis=totalesVacunas(vacunasPrimeraDosis,vacunasSegundaDosis)
+  const vacunasPrimeraDosis = totalesVacunasPorDosis(totals.vacunas, "primeraDosis")
+  const vacunasSegundaDosis = totalesVacunasPorDosis(totals.vacunas, "segundaDosis")
+  const vacunasTotalesDosis = totalesVacunas(vacunasPrimeraDosis, vacunasSegundaDosis)
 
   return (
     <>
@@ -87,7 +87,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
           </small>
 
           <Select data={reports} onChange={setValueSearch} />
-          
+
           <RestoVacunas mostrar={mostrarTodasLasVacunas} onClick={setMostrarTodasLasVacunas}>Ver Todas</RestoVacunas>
 
           <div className={styles.grid}>
@@ -239,18 +239,24 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
           Sobre Mi
         </h2>
         <span className={styles.linkPortfolio}>
-        Soy Fernando Masino (fom78)
-        <br/>Desarrollador web, en continua formación! 
-        Podes ver humilde portfolio desde &nbsp;
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://www.fom78.com.ar/'
-          
-        >
-          AQUI 
-        </a>
+          Soy Fernando Masino (fom78)
+          <br />Desarrollador web, en continua formación!
+          Podes ver mi humilde portfolio desde &nbsp;
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href='https://www.fom78.com.ar/'
+
+          >
+            AQUI
+          </a>
         </span>
+        <div  className={styles.cafecito}>
+         <p> Si tenes ganas de ayudarme a mantener el sitio y dispones de MercadoPago </p>
+          <a href='https://cafecito.app/fom78' rel='noopener' target='_blank'>
+            <img srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' />
+          </a>
+        </div>
       </div>
 
       <dialog id='vacunas-distribuidas-dialog'>
@@ -271,7 +277,7 @@ export default function Home ({ data, info, reports, chartDatasets, newReports }
   )
 }
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   const data = require('../public/data/latest.json')
   const info = require('../public/data/info.json')
   const reports = require('../public/data/reports.json')
