@@ -110,17 +110,14 @@
   border: 0px;
   cursor: pointer;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   height: 24px;
   opacity: .5;
   place-content: center;
   place-items: center;
-  width: 24px;
-  position: absolute;
-  right: 8px;
-  top: 8px;
+  width: 100px;
+  position: relative;
   overflow: hidden;
-  display: none;
 }
 
 .card button:hover {
@@ -133,6 +130,36 @@
   outline: 0;
 }
 
+.otrasDosis {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 2px solid green; */
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.otrasDosis button {
+  background: rgba(26, 108, 163, 0.87);
+  color:#fff;
+}
+
+.otrasDosis button:hover {
+  background: #222;
+}
+.otrasDosis button:focus {
+  border-radius: 5000px;
+  box-shadow: 0 0 3px 3px rgb(28, 192, 6);
+  outline: 0;
+}
+
+.tituloOtrasDosis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+}
 .card header {
   background: var(--app-background-color);
   border-radius: 5000px;

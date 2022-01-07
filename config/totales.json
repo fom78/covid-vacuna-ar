@@ -1,18 +1,102 @@
 {"inicialTotalesVacunas":{
     "astraZenecaPrimeraDosis": 0,
     "astraZenecaSegundaDosis": 0,
+    "astraZenecaDosisUnica": 0,
+    "astraZenecaDosisAdicional": 0,
+    "astraZenecaDosisRefuerzo": 0,
     "COVISHIELDPrimeraDosis": 0,
     "COVISHIELDSegundaDosis": 0,
+    "COVISHIELDDosisUnica": 0,
+    "COVISHIELDDosisAdicional": 0,
+    "COVISHIELDDosisRefuerzo": 0,
     "cansinoPrimeraDosis": 0,
     "cansinoSegundaDosis": 0,
+    "cansinoDosisUnica": 0,
+    "cansinoDosisAdicional": 0,
+    "cansinoDosisRefuerzo": 0,
     "modernaPrimeraDosis": 0,
     "modernaSegundaDosis": 0,
+    "modernaDosisUnica": 0,
+    "modernaDosisAdicional": 0,
+    "modernaDosisRefuerzo": 0,
     "pfizerPrimeraDosis": 0,
     "pfizerSegundaDosis": 0,
+    "pfizerDosisUnica": 0,
+    "pfizerDosisAdicional": 0,
+    "pfizerDosisRefuerzo": 0,
     "sinopharmPrimeraDosis": 0,
     "sinopharmSegundaDosis": 0,
+    "sinopharmDosisUnica": 0,
+    "sinopharmDosisAdicional": 0,
+    "sinopharmDosisRefuerzo": 0,
     "sputnikPrimeraDosis": 0,
     "sputnikSegundaDosis": 0,
+    "sputnikDosisUnica": 0,
+    "sputnikDosisAdicional": 0,
+    "sputnikDosisRefuerzo": 0,
     "otrasPrimeraDosis": 0,
-    "otrasSegundaDosis": 0
-  }}
+    "otrasSegundaDosis": 0,
+    "otrasDosisUnica": 0,
+    "otrasDosisAdicional": 0,
+    "otrasDosisRefuerzo": 0
+  },
+  "inicialVacunas":{
+    "astraZeneca":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "COVISHIELD":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "cansino":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "moderna":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "pfizer":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "sinopharm":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "sputnik":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    },
+    "otras":{
+      "primeraDosisCantidad":0,
+      "segundaDosisCantidad":0,
+      "dosisUnicaCantidad":0,
+      "dosisAdicionalCantidad":0,
+      "dosisRefuerzoCantidad":0
+    }
+  }
+}
+

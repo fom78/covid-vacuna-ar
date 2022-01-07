@@ -39,6 +39,8 @@ export default function Home({ data, info, reports, chartDatasets, newReports })
   const [clasificacion, setClasificacion] = useState('top')
 
   const [mostrarTodasLasVacunas, setMostrarTodasLasVacunas] = useState(false)
+  const [toggleOtrasDosis, setToggleOtrasDosis] = useState(Number(1))
+
   const reportFound = useSearch({ valueSearch })
 
   const totals = useMemo(
@@ -57,8 +59,18 @@ export default function Home({ data, info, reports, chartDatasets, newReports })
 
   }, [mostrarTodasLasVacunas])
 
+
+  const handleOtrasDosis = e => {
+    e.preventDefault()
+    setToggleOtrasDosis(Number(e.target.value))
+    console.log(toggleOtrasDosis);
+  }
+
   const vacunasPrimeraDosis = totalesVacunasPorDosis(totals.vacunas, "primeraDosis")
   const vacunasSegundaDosis = totalesVacunasPorDosis(totals.vacunas, "segundaDosis")
+  const vacunasDosisUnica = totalesVacunasPorDosis(totals.vacunas, "dosisUnica")
+  const vacunasDosisAdicional = totalesVacunasPorDosis(totals.vacunas, "dosisAdicional")
+  const vacunasDosisRefuerzo = totalesVacunasPorDosis(totals.vacunas, "dosisRefuerzo")
   const vacunasTotalesDosis = totalesVacunas(vacunasPrimeraDosis, vacunasSegundaDosis)
 
   return (
@@ -106,7 +118,7 @@ export default function Home({ data, info, reports, chartDatasets, newReports })
                 <div>
                   <h3>Total de Dosis</h3>
                   <p>
-                    <NumberDigits>{totals.primeraDosisCantidad + totals.segundaDosisCantidad}</NumberDigits>
+                    <NumberDigits>{totals.totalDosisAplicadas}</NumberDigits>
                   </p>
                 </div>
                 <div>
@@ -181,6 +193,97 @@ export default function Home({ data, info, reports, chartDatasets, newReports })
                 </div>
               </section>
             </div>
+            {(totals.dosisUnicaCantidad) &&
+              <div className={styles.card}>
+                <header>
+                  <Image
+                    src='/vacuna.png'
+                    alt='Otras aplicaciones de Vacunas'
+                    width={150}
+                    height={150}
+                    priority
+                  />
+                </header>
+                <section>
+                  <div>
+                    <div className={styles.tituloOtrasDosis}>
+                    <h3>Otras Dosis</h3><span>(<NumberDigits>{totals.dosisUnicaCantidad + totals.dosisAdicionalCantidad + totals.dosisRefuerzoCantidad}</NumberDigits>)</span>
+                    </div>
+
+                    <div className={styles.otrasDosis}>
+                      <button className={toggleOtrasDosis === 1 ? styles.activo : ''}
+                        onClick={handleOtrasDosis}
+                        value={1}
+                      >
+                        Unicas
+                      </button>
+                      <button
+                        onClick={handleOtrasDosis}
+                        value={2}
+                      >
+                        Adicional
+                      </button><button
+                        onClick={handleOtrasDosis}
+                        value={3}
+                      >
+                        Refuerzo
+                      </button>
+                    </div>
+                  </div>
+                  {toggleOtrasDosis === 1 &&
+                    <div>
+                      <p>
+                        <NumberDigits>{totals.dosisUnicaCantidad}</NumberDigits>
+                      </p>
+                      <div>
+                        {vacunasDosisUnica[clasificacion].map(vacuna => {
+                          return (
+                            <Vacuna
+                              key={vacuna.grupo}
+                              vacuna={vacuna}
+                            />
+                          )
+                        })}
+                      </div>
+                    </div>
+                  }
+                  {toggleOtrasDosis === 2 &&
+                    <div>
+                      <p>
+                        <NumberDigits>{totals.dosisAdicionalCantidad}</NumberDigits>
+                      </p>
+                      <div>
+                        {vacunasDosisAdicional[clasificacion].map(vacuna => {
+                          return (
+                            <Vacuna
+                              key={vacuna.grupo}
+                              vacuna={vacuna}
+                            />
+                          )
+                        })}
+                      </div>
+                    </div>
+                  }
+                  {toggleOtrasDosis === 3 &&
+                    <div>
+                      <p>
+                        <NumberDigits>{totals.dosisRefuerzoCantidad}</NumberDigits>
+                      </p>
+                      <div>
+                        {vacunasDosisRefuerzo[clasificacion].map(vacuna => {
+                          return (
+                            <Vacuna
+                              key={vacuna.grupo}
+                              vacuna={vacuna}
+                            />
+                          )
+                        })}
+                      </div>
+                    </div>
+                  }
+                </section>
+              </div>
+            }
           </div>
 
           <Progress totals={totals} />
@@ -251,10 +354,10 @@ export default function Home({ data, info, reports, chartDatasets, newReports })
             AQUI
           </a>
         </span>
-        <div  className={styles.cafecito}>
-         <p> Si tenes ganas de ayudarme a mantener el sitio y dispones de MercadoPago </p>
+        <div className={styles.cafecito}>
+          <p> Si tenes ganas de ayudarme a mantener el sitio y dispones de MercadoPago </p>
           <a href='https://cafecito.app/fom78' rel='noopener' target='_blank'>
-            <img srcset='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' />
+            <img srcSet='https://cdn.cafecito.app/imgs/buttons/button_3.png 1x, https://cdn.cafecito.app/imgs/buttons/button_3_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_3_3.75x.png 3.75x' src='https://cdn.cafecito.app/imgs/buttons/button_3.png' alt='Invitame un café en cafecito.app' />
           </a>
         </div>
       </div>

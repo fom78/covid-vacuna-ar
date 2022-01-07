@@ -3,13 +3,14 @@ const fs = require('fs-extra')
 const hacertran = require('./prueba1')
 
 const crearJson = require('./nuevo-json')
+// const crearJson = require('./crearJSON')
 
-const year = '2021'
-const month = '09'
+const year = '2022'
+const month = '01'
 
 // Colocar de que dia a que dia del mes arriba colocado se rehace todo.
-const dayInicial = 01
-const dayFinal = 30
+const dayInicial = 1
+const dayFinal = 6
 // Damos una fecha lee el csv y lo transforma a json "hacertran"
 // Luego si es exitoso lee el json y genera el nuevo para tipos de vacunas.
 for (let i = dayInicial; i <= dayFinal; i++) {
