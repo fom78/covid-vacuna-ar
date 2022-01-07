@@ -1,27 +1,22 @@
 const fs = require('fs-extra')
 const { population } = require('../public/data/bbdd.json')
 const { populationCodigo } = require('../public/data/bbddco.json')
-const { inicialTotalesVacunas } = require('../config/totales.json')
+const { inicialTotalesVacunas, inicialVacunas } = require('../config/totales.json')
+const { totalesVacunas } = require('lib/vacunas')
 
 module.exports = async function crearJson(json, jsonFileName) {
   const nuevoJson = []
-
+console.log("json que viene",json);
   let obj = {}
-  let vacunasPorProvincia = {...inicialTotalesVacunas}
-  let totalesVacunas = {...inicialTotalesVacunas}
+  let vacunasPorProvincia = {...inicialVacunas}
+  const totalesVacunas = {...inicialVacunas}
   let nombre = ''
   let totalesPrimerasDosis = 0
   let totalesSegundasDosis = 0
-  let totalesDosisUnica = 0
-  let totalesDosisAdicional = 0
-  let totalesDosisRefuerzo = 0
   let normalizedJurisdiccionNombre = 0
   let populationJurisdiccionNombre = 0
   let primeraDosisCantidad = 0
   let segundaDosisCantidad = 0
-  let dosisUnicaCantidad = 0
-  let dosisAdicionalCantidad = 0
-  let dosisRefuerzoCantidad = 0
 
   for (var key in populationCodigo) {
     normalizedJurisdiccionNombre = populationCodigo[key]
@@ -32,10 +27,7 @@ module.exports = async function crearJson(json, jsonFileName) {
       obj = {}
       primeraDosisCantidad = 0
       segundaDosisCantidad = 0
-      dosisUnicaCantidad = 0
-      dosisAdicionalCantidad = 0
-      dosisRefuerzoCantidad = 0
-      vacunasPorProvincia = {...inicialTotalesVacunas}
+      vacunasPorProvincia = {...inicialVacunas}
       json
         .filter( e =>e.jurisdiccionCodigoIndec === Number(key))
         .map(e => {
@@ -66,42 +58,32 @@ module.exports = async function crearJson(json, jsonFileName) {
               break
           }
 
-  
-          totalesVacunas[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
-          totalesVacunas[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
-          totalesVacunas[`${nombre}DosisUnica`] += e.dosisUnicaCantidad
-          totalesVacunas[`${nombre}DosisAdicional`] += e.dosisAdicionalCantidad
-          totalesVacunas[`${nombre}DosisRefuerzo`] += e.dosisRefuerzoCantidad
-          vacunasPorProvincia[`${nombre}PrimeraDosis`] += e.primeraDosisCantidad
-          vacunasPorProvincia[`${nombre}SegundaDosis`] += e.segundaDosisCantidad
-          vacunasPorProvincia[`${nombre}DosisUnica`] += e.dosisUnicaCantidad
-          vacunasPorProvincia[`${nombre}DosisAdicional`] += e.dosisAdicionalCantidad
-          vacunasPorProvincia[`${nombre}DosisRefuerzo`] += e.dosisRefuerzoCantidad
+          vacunasPorProvincia[`${nombre}`].primeraDosisCantidad = e.primeraDosisCantidad
+          vacunasPorProvincia[`${nombre}`].segundaDosisCantidad = e.segundaDosisCantidad
+          vacunasPorProvincia[`${nombre}`].dosisUnicaCantidad = e.dosisUnicaCantidad
+          vacunasPorProvincia[`${nombre}`].dosisAdicionalCantidad = e.dosisAdicionalCantidad
+          vacunasPorProvincia[`${nombre}`].dosisRefuerzoCantidad = e.dosisRefuerzoCantidad
 
           // Sumamos cantidades a provincia
           primeraDosisCantidad += e.primeraDosisCantidad
           segundaDosisCantidad += e.segundaDosisCantidad
-          dosisUnicaCantidad += e.dosisUnicaCantidad
-          dosisAdicionalCantidad += e.dosisAdicionalCantidad
-          dosisRefuerzoCantidad += e.dosisRefuerzoCantidad
-
 
           obj = {
             jurisdiccionCodigoIndec: e.jurisdiccionCodigoIndec,
             jurisdiccionNombre: e.jurisdiccionNombre,
             primeraDosisCantidad,
             segundaDosisCantidad,
-            dosisUnicaCantidad,
-            dosisAdicionalCantidad,
-            dosisRefuerzoCantidad,
             totalDosisAplicadas: e.totalDosisAplicadas
           }
       })
 
-      // Sumamos el total de las dosis aplicadas para la provincia
+      // Sumamos el total de las dosis aplicadas para la provincia accediendo dentro de cada vacuna a la cantidad segun cada dosis
       let totalDosisAplicadasEnProvincia = 0
       for (const prop in vacunasPorProvincia) {
-        totalDosisAplicadasEnProvincia += vacunasPorProvincia[prop]
+      for (const cantidad in vacunasPorProvincia[prop]) {
+        totalDosisAplicadasEnProvincia += vacunasPorProvincia[prop][cantidad]
+      }
+
       }
 
       obj = {
@@ -111,27 +93,29 @@ module.exports = async function crearJson(json, jsonFileName) {
         porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre,
         vacunas:vacunasPorProvincia
       }
-
+      // console.log(vacunasPorProvincia);
       totalesPrimerasDosis = totalesPrimerasDosis + primeraDosisCantidad
       totalesSegundasDosis = totalesSegundasDosis + segundaDosisCantidad
-      totalesDosisUnica = totalesDosisUnica + dosisUnicaCantidad
-      totalesDosisAdicional = totalesDosisAdicional + dosisAdicionalCantidad
-      totalesDosisRefuerzo = totalesDosisRefuerzo + dosisRefuerzoCantidad
-
       nuevoJson.push(obj);
     }
   }
   populationJurisdiccionNombre = population.Totales
   
+// Sumar el total de vacunas aca
+// const puto1 = nuevoJson.map((provincia)=> {
+//   const totalesVacunas1 = {...totalesVacunas, 'astraZeneca.primeraDosisCantidad': astraZeneca.primeraDosisCantidad+ provincia.astraZeneca.primeraDosisCantidad}
+//   return totalesVacunas1
+// })
+
+// console.log(puto1);
+
+
   const totales = {
     jurisdiccionCodigoIndec: 0,
     jurisdiccionNombre: 'Totales',
-    totalDosisAplicadas: totalesPrimerasDosis + totalesSegundasDosis + totalesDosisUnica + totalesDosisAdicional + totalesDosisRefuerzo,
+    totalDosisAplicadas: totalesPrimerasDosis + totalesSegundasDosis,
     primeraDosisCantidad: totalesPrimerasDosis,
     segundaDosisCantidad: totalesSegundasDosis,
-    dosisUnicaCantidad: totalesDosisUnica,
-    dosisAdicionalCantidad: totalesDosisAdicional,
-    dosisRefuerzoCantidad: totalesDosisRefuerzo,
     porcentajePrimeraDosis: totalesPrimerasDosis / populationJurisdiccionNombre,
     porcentajeSegundaDosis: totalesSegundasDosis / populationJurisdiccionNombre,
     vacunas: totalesVacunas
@@ -141,6 +125,6 @@ module.exports = async function crearJson(json, jsonFileName) {
   await fs.writeJson(`./public/data/${jsonFileName}`, nuevoJson, 'utf8')
 
   console.log('##### Fin Ejecucion #####');
-  console.log("fecha: ",jsonFileName,"  ",totalesVacunas);
+  // console.log("fecha: ",jsonFileName,"  ",totalesVacunas);
 
 }

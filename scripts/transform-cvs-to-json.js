@@ -21,18 +21,22 @@ module.exports = async function transformCvsToJson (cvsFileName) {
 
   const json = XLSX.utils.sheet_to_json(sheet)
   json.push(totales)
+
   return json.map(element => {
     let {
       jurisdiccion_codigo_indec: jurisdiccionCodigoIndec,
       jurisdiccion_nombre: jurisdiccionNombre,
       vacuna_nombre: vacunaNombre,
       primera_dosis_cantidad: primeraDosisCantidad,
-      segunda_dosis_cantidad: segundaDosisCantidad
-
+      segunda_dosis_cantidad: segundaDosisCantidad,
+      dosis_unica_cantidad: dosisUnicaCantidad,
+      dosis_adicional_cantidad: dosisAdicionalCantidad,
+      dosis_refuerzo_cantidad: dosisRefuerzoCantidad
     } = element
+
     jurisdiccionNombre = populationCodigo[jurisdiccionCodigoIndec]
 
-    const totalDosisAplicadas = primeraDosisCantidad + segundaDosisCantidad
+    const totalDosisAplicadas = primeraDosisCantidad + segundaDosisCantidad + dosisUnicaCantidad + dosisAdicionalCantidad + dosisRefuerzoCantidad
     const normalizedJurisdiccionNombre = populationCodigo[jurisdiccionCodigoIndec]
     let populationJurisdiccionNombre = population[normalizedJurisdiccionNombre]
     if (populationJurisdiccionNombre === 0) { populationJurisdiccionNombre = 0 }
@@ -44,6 +48,9 @@ module.exports = async function transformCvsToJson (cvsFileName) {
       vacunaNombre,
       primeraDosisCantidad,
       segundaDosisCantidad,
+      dosisUnicaCantidad,
+      dosisAdicionalCantidad,
+      dosisRefuerzoCantidad,
       totalDosisAplicadas,
       porcentajePrimeraDosis: primeraDosisCantidad / populationJurisdiccionNombre,
       porcentajeSegundaDosis: segundaDosisCantidad / populationJurisdiccionNombre

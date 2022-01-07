@@ -31,6 +31,7 @@
   line-height: 1.15;
   font-size: 2rem;
 }
+
 .linkPortfolio a {
   color: #09f;
 }
@@ -109,17 +110,14 @@
   border: 0px;
   cursor: pointer;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   height: 24px;
   opacity: .5;
   place-content: center;
   place-items: center;
-  width: 24px;
-  position: absolute;
-  right: 8px;
-  top: 8px;
+  width: 100px;
+  position: relative;
   overflow: hidden;
-  display: none;
 }
 
 .card button:hover {
@@ -132,6 +130,36 @@
   outline: 0;
 }
 
+.otrasDosis {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  /* border: 2px solid green; */
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.otrasDosis button {
+  background: rgba(26, 108, 163, 0.87);
+  color:#fff;
+}
+
+.otrasDosis button:hover {
+  background: #222;
+}
+.otrasDosis button:focus {
+  border-radius: 5000px;
+  box-shadow: 0 0 3px 3px rgb(28, 192, 6);
+  outline: 0;
+}
+
+.tituloOtrasDosis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+}
 .card header {
   background: var(--app-background-color);
   border-radius: 5000px;
@@ -172,7 +200,7 @@
 }
 
 .card .secondary {
-  color:var(--text-secondary-color);
+  color: var(--text-secondary-color);
   font-size: 1.9rem;
 }
 
@@ -186,12 +214,22 @@
   padding: .3rem 0;
 }
 
-.card small > span {
+.card small>span {
   margin-left: 8px;
 }
 
 .logo {
   height: 2em;
+}
+
+.cafecito {
+  align-items: center;
+}
+
+.cafecito img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 @media (max-width: 600px) {
